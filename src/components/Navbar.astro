@@ -1,0 +1,75 @@
+---
+// Sticky nav that goes opaque on scroll
+---
+
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      <!-- Logo -->
+      <a href="#" class="flex items-center space-x-2">
+        <div class="w-10 h-10 bg-brand-500 rounded-lg flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 7h8m-8 4h8m-4 4v4m-6-4h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <span class="font-heading font-extrabold text-xl nav-logo-text text-white">Fill &amp; Haul</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#services" class="text-sm font-medium text-white/80 hover:text-white transition">Services</a>
+        <a href="#how-it-works" class="text-sm font-medium text-white/80 hover:text-white transition">How It Works</a>
+        <a href="#areas" class="text-sm font-medium text-white/80 hover:text-white transition">Service Areas</a>
+        <a href="#contact"
+          class="bg-brand-500 hover:bg-brand-600 text-white font-semibold px-5 py-2.5 rounded-lg transition text-sm">
+          Get Free Estimate
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-white p-2" aria-label="Open menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div id="mobile-menu" class="md:hidden hidden pb-4">
+      <div class="flex flex-col space-y-3">
+        <a href="#services" class="mobile-link text-white/80 hover:text-white transition px-2 py-1">Services</a>
+        <a href="#how-it-works" class="mobile-link text-white/80 hover:text-white transition px-2 py-1">How It Works</a>
+        <a href="#areas" class="mobile-link text-white/80 hover:text-white transition px-2 py-1">Service Areas</a>
+        <a href="#contact"
+          class="mobile-link bg-brand-500 hover:bg-brand-600 text-white font-semibold px-5 py-2.5 rounded-lg transition text-center">
+          Get Free Estimate
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Sticky nav background on scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar?.classList.add('bg-navy-900/95', 'backdrop-blur-sm', 'shadow-lg');
+      navbar?.classList.remove('bg-transparent');
+    } else {
+      navbar?.classList.remove('bg-navy-900/95', 'backdrop-blur-sm', 'shadow-lg');
+      navbar?.classList.add('bg-transparent');
+    }
+  });
+
+  // Mobile menu toggle
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
+
+  // Close mobile menu on link click
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => menu?.classList.add('hidden'));
+  });
+</script>

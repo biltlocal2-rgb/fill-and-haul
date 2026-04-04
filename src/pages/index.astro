@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import SocialProof from '../components/SocialProof.astro';
+import Services from '../components/Services.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import WhyUs from '../components/WhyUs.astro';
+import ServiceAreas from '../components/ServiceAreas.astro';
+import Testimonials from '../components/Testimonials.astro';
+import ContactForm from '../components/ContactForm.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Fill & Haul | Phoenix Junk Removal & Hauling Services">
+  <Navbar />
+  <Hero />
+  <SocialProof />
+  <Services />
+  <HowItWorks />
+  <WhyUs />
+  <ServiceAreas />
+  <Testimonials />
+  <ContactForm />
+  <CtaBanner />
+  <Footer />
+
+  <!-- Toast notification -->
+  <div id="toast" class="toast">
+    <div class="bg-green-600 text-white px-6 py-3 rounded-xl shadow-xl flex items-center gap-3">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      </svg>
+      <span class="font-medium text-sm">Estimate request submitted!</span>
+    </div>
+  </div>
+
+  <!-- Form handling + scroll animations -->
+  <script>
+    // ─── Scroll‐reveal ───
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // ─── Toast helper ───
+    function showToast() {
+      const toast = document.getElementById('toast');
+      toast?.classList.add('show');
+      setTimeout(() => toast?.classList.remove('show'), 4000);
+    }
+
+    // ─── Form submission ───
+    async function handleSubmit(e: SubmitEvent) {
+      e.preventDefault();
+      const form = e.target as HTMLFormElement;
+      const data = Object.fromEntries(new FormData(form));
+
+      const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+      const originalText = btn.textContent;
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      try {
+        // POST to Cloudflare Pages Function
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        if (!res.ok) throw new Error('Network error');
+
+        // Show success
+        if (form.dataset.form === 'main') {
+          form.classList.add('hidden');
+          document.getElementById('form-success')?.classList.remove('hidden');
+        } else {
+          form.reset();
+          showToast();
+        }
+      } catch {
+        // Fallback: open mailto with the form data
+        const subject = encodeURIComponent('New Estimate Request from ' + (data.name || 'Website'));
+        const body = encodeURIComponent(
+          Object.entries(data).map(([k, v]) => `${k}: ${v}`).join('\n')
+        );
+        window.location.href = `mailto:info@fillandhaul.com?subject=${subject}&body=${body}`;
+      } finally {
+        btn.textContent = originalText;
+        btn.disabled = false;
+      }
+    }
+
+    document.getElementById('hero-form')?.addEventListener('submit', handleSubmit);
+    document.getElementById('main-form')?.addEventListener('submit', handleSubmit);
+  </script>
+</Layout>

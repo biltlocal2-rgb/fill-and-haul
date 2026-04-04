@@ -1,0 +1,57 @@
+---
+const reviews = [
+  {
+    text: 'Had a full garage cleanout done in under 2 hours. The crew was professional, on time, and priced fairly. Highly recommend for any homeowner in Phoenix!',
+    initials: 'MR',
+    bgClass: 'bg-brand-100',
+    textClass: 'text-brand-700',
+    name: 'Maria R.',
+    role: 'Homeowner, Scottsdale',
+  },
+  {
+    text: "As a realtor, I need reliable partners. Fill & Haul has been my go-to for property cleanouts. They make my listings shine. Fast, fair, and always available.",
+    initials: 'JT',
+    bgClass: 'bg-blue-100',
+    textClass: 'text-blue-700',
+    name: 'James T.',
+    role: 'Realtor, Chandler',
+  },
+  {
+    text: "We manage 200+ units and use Fill & Haul for all our tenant turnovers. They're responsive, competitively priced, and always leave units broom-clean.",
+    initials: 'SP',
+    bgClass: 'bg-purple-100',
+    textClass: 'text-purple-700',
+    name: 'Sarah P.',
+    role: 'Property Manager, Mesa',
+  },
+];
+---
+
+<section class="py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 fade-in">
+      <span class="inline-block text-brand-600 font-semibold text-sm uppercase tracking-wider mb-3">Testimonials</span>
+      <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-navy-900 mb-4">What Our Customers Say</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 fade-in">
+      {reviews.map(r => (
+        <div class="bg-navy-50 rounded-2xl p-8">
+          <div class="flex gap-1 mb-4">
+            <span class="text-yellow-400 text-lg">★★★★★</span>
+          </div>
+          <p class="text-navy-600 mb-6 leading-relaxed">"{r.text}"</p>
+          <div class="flex items-center gap-3">
+            <div class:list={['w-10 h-10 rounded-full flex items-center justify-center', r.bgClass]}>
+              <span class:list={['font-semibold text-sm', r.textClass]}>{r.initials}</span>
+            </div>
+            <div>
+              <div class="font-semibold text-navy-800 text-sm">{r.name}</div>
+              <div class="text-navy-400 text-xs">{r.role}</div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

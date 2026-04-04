@@ -1,0 +1,54 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'Fast, affordable junk removal and hauling services in Phoenix and Maricopa County. Serving homeowners, realtors, and property managers. Get a free estimate today!',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="junk removal Phoenix, hauling services Maricopa County, junk hauling Arizona, property cleanout Phoenix, furniture removal, appliance hauling, Fill and Haul" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+
+    <!-- Local Business Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Fill & Haul",
+      "description": "Professional junk removal and hauling services in Phoenix and Maricopa County, Arizona.",
+      "areaServed": { "@type": "AdministrativeArea", "name": "Maricopa County, Arizona" },
+      "serviceType": ["Junk Removal", "Hauling", "Property Cleanout", "Debris Removal"],
+      "address": { "@type": "PostalAddress", "addressLocality": "Phoenix", "addressRegion": "AZ", "addressCountry": "US" }
+    })} />
+  </head>
+  <body class="bg-white text-navy-900 antialiased">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>

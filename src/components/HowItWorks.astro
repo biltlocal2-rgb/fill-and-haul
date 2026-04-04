@@ -1,0 +1,56 @@
+---
+const steps = [
+  {
+    num: '1',
+    title: 'Request a Quote',
+    desc: 'Fill out our quick form or give us a call. Tell us what you need hauled and we\'ll get back to you fast.',
+  },
+  {
+    num: '2',
+    title: 'We Show Up',
+    desc: 'Our crew arrives on time with the right equipment. We give you an upfront price — no hidden fees, ever.',
+  },
+  {
+    num: '3',
+    title: 'Junk Disappears',
+    desc: 'We load, haul, and dispose of everything responsibly. You\'re left with a clean space and peace of mind.',
+  },
+];
+---
+
+<section id="how-it-works" class="py-20 lg:py-28 bg-navy-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 fade-in">
+      <span class="inline-block text-brand-600 font-semibold text-sm uppercase tracking-wider mb-3">Simple Process</span>
+      <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-navy-900 mb-4">How It Works</h2>
+      <p class="text-navy-500 max-w-xl mx-auto text-lg">Three easy steps to a clutter-free space.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+      {steps.map((s, i) => (
+        <div class:list={['relative text-center fade-in', { 'step-connector': i < steps.length - 1 }]}>
+          <div class="w-16 h-16 bg-brand-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-brand-500/30">
+            <span class="text-white font-heading font-extrabold text-2xl">{s.num}</span>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-navy-900 mb-3">{s.title}</h3>
+          <p class="text-navy-500 leading-relaxed">{s.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .step-connector::after {
+    content: '';
+    position: absolute;
+    top: 2rem;
+    left: calc(50% + 2rem);
+    width: calc(100% - 4rem);
+    height: 2px;
+    background: linear-gradient(90deg, #f97316, #fed7aa);
+  }
+  @media (max-width: 768px) {
+    .step-connector::after { display: none; }
+  }
+</style>

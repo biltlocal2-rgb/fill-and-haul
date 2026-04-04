@@ -1,0 +1,26 @@
+---
+const stats = [
+  { value: '500+', label: 'Jobs Completed' },
+  { value: '4.9★', label: 'Customer Rating' },
+  { value: 'Same Day', label: 'Service Available' },
+  { value: '100%', label: 'Satisfaction Guaranteed' },
+];
+---
+
+<section class="bg-navy-50 border-y border-navy-100 py-6">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 text-center">
+      {stats.map((s, i) => (
+        <>
+          <div>
+            <div class="text-2xl font-extrabold text-navy-800">{s.value}</div>
+            <div class="text-sm text-navy-500">{s.label}</div>
+          </div>
+          {i < stats.length - 1 && (
+            <div class="hidden sm:block h-8 w-px bg-navy-200" />
+          )}
+        </>
+      ))}
+    </div>
+  </div>
+</section>

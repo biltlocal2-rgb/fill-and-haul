@@ -1,0 +1,34 @@
+---
+const areas = [
+  'Phoenix', 'Scottsdale', 'Tempe', 'Mesa',
+  'Chandler', 'Gilbert', 'Glendale', 'Peoria',
+  'Surprise', 'Goodyear', 'Buckeye', 'Avondale',
+];
+---
+
+<section id="areas" class="py-20 lg:py-28 bg-navy-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 fade-in">
+      <span class="inline-block text-brand-600 font-semibold text-sm uppercase tracking-wider mb-3">Where We Operate</span>
+      <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-navy-900 mb-4">
+        Serving Phoenix &amp; Maricopa County
+      </h2>
+      <p class="text-navy-500 max-w-2xl mx-auto text-lg">
+        We cover the entire Valley. If you're in Maricopa County, we've got you covered.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 fade-in">
+      {areas.map(a => (
+        <div class="bg-white rounded-xl p-4 text-center border border-navy-100 hover:border-brand-300 transition">
+          <div class="font-semibold text-navy-800">{a}</div>
+        </div>
+      ))}
+    </div>
+
+    <p class="text-center text-navy-400 mt-6 text-sm">
+      Don't see your area?{' '}
+      <a href="#contact" class="text-brand-600 font-medium hover:underline">Contact us</a> — we likely cover it!
+    </p>
+  </div>
+</section>
