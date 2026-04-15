@@ -51,7 +51,10 @@ const year = new Date().getFullYear();
 
     <div class="border-t border-navy-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
       <p class="text-sm">&copy; {year} Fill &amp; Haul. All rights reserved.</p>
-      <p class="text-sm text-navy-500">Proudly serving the Phoenix Metro Area</p>
+      <div class="flex items-center gap-4 text-sm text-navy-500">
+        <span>Proudly serving the Phoenix Metro Area</span>
+        <a href="/sitemap-index.xml" class="hover:text-white transition">Sitemap</a>
+      </div>
     </div>
   </div>
 </footer>
