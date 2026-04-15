@@ -1,0 +1,166 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+
+const pageTitle = 'Junk Removal Phoenix AZ | Same-Day Service | Fill & Haul';
+const pageDescription = 'Professional junk removal in Phoenix, AZ. Fill & Haul hauls away furniture, appliances, electronics, and all types of junk. Same-day service available across all Phoenix neighborhoods. Free estimates.';
+
+const faqs = [
+  { q: 'How much does junk removal cost in Phoenix?', a: 'Junk removal in Phoenix typically costs between $150 and $700 depending on the volume of items. We offer free on-site estimates with no obligation.' },
+  { q: 'What items do you remove in Phoenix?', a: 'We remove furniture, appliances, electronics, mattresses, exercise equipment, boxes, general household junk, and much more. We cannot accept hazardous materials, chemicals, or medical waste.' },
+  { q: 'How fast can you pick up junk in Phoenix?', a: 'We offer same-day and next-day junk removal throughout Phoenix. Call (602) 632-5794 early in the day for same-day availability.' },
+  { q: 'Do I need to move items to the curb?', a: 'No. Our crew will enter your home, garage, or property and remove items from wherever they are - no need to move anything beforehand.' },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Junk Removal in Phoenix, AZ",
+      "provider": { "@type": "LocalBusiness", "name": "Fill & Haul", "telephone": "+16026325794" },
+      "areaServed": { "@type": "City", "name": "Phoenix, Arizona" },
+      "description": pageDescription,
+      "url": "https://fillandhaul.com/phoenix/junk-removal/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question", "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Phoenix Hauling Services", "item": "https://fillandhaul.com/phoenix-hauling-services/" },
+        { "@type": "ListItem", "position": 3, "name": "Junk Removal", "item": "https://fillandhaul.com/phoenix/junk-removal/" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+
+  <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-200 mt-16 lg:mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-brand-600 transition">Home</a></li>
+        <li class="text-gray-400">/</li>
+        <li><a href="/phoenix-hauling-services/" class="hover:text-brand-600 transition">Phoenix Hauling Services</a></li>
+        <li class="text-gray-400">/</li>
+        <li class="text-gray-700 font-medium">Junk Removal</li>
+      </ol>
+    </div>
+  </nav>
+
+  <section class="bg-navy-900 text-white py-20" style="background: linear-gradient(135deg, #102a43 0%, #243b53 60%, #334e68 100%)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+      <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-center lg:text-left">
+        Junk Removal in <span class="text-brand-400">Phoenix, AZ</span>
+      </h1>
+      <p class="text-xl text-navy-200 mb-8 text-center lg:text-left">Fast, affordable junk removal for Phoenix homeowners and businesses. We haul it all - furniture, appliances, electronics, and more. Same-day service available.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+        <a href="/#contact" class="inline-flex items-center justify-center bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-4 rounded-xl transition text-lg">Get a Free Estimate</a>
+        <a href="tel:+16026325794" class="inline-flex items-center justify-center border border-white/30 hover:border-white/60 text-white font-medium px-8 py-4 rounded-xl transition text-lg">(602) 632-5794</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="bg-white">
+    <section class="py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto space-y-6 text-gray-600">
+          <h2 class="font-heading text-3xl font-bold text-navy-900">Phoenix's Trusted Junk Removal Company</h2>
+          <p>Fill &amp; Haul makes junk removal in Phoenix simple. We show up on time, haul everything away, and leave your space clean. No hidden fees. No hassle.</p>
+          <p>Whether you have a garage full of old furniture, a house overflowing with decades of accumulated belongings, or just a few bulky items you need gone, we're the team to call. Our two-person crews are trained, professional, and equipped to handle any size job throughout Phoenix and the Valley.</p>
+          <p>We serve all of Phoenix including Central Phoenix, North Phoenix, South Phoenix, Arcadia, Ahwatukee, Biltmore, Camelback East, Deer Valley, Maryvale, North Mountain, and Paradise Valley Village with flexible morning and afternoon appointment windows. Same-day availability is often possible when you call early.</p>
+
+          <h2 class="font-heading text-3xl font-bold text-navy-900 pt-4">What We Haul Away in Phoenix</h2>
+          <div class="grid sm:grid-cols-2 gap-3 not-prose">
+            {['Old furniture (sofas, chairs, tables, dressers)', 'Appliances (refrigerators, washers, dryers)', 'Electronics (TVs, computers, printers)', 'Mattresses and box springs', 'Exercise equipment', 'Boxes and general household clutter', 'Carpets and flooring materials', 'Hot tubs and outdoor furniture', 'Sheds and playsets (disassembly included)', 'Moving junk and storage unit cleanouts'].map(item => (
+              <div class="flex items-start gap-2 text-sm bg-gray-50 rounded-lg p-3">
+                <svg class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                {item}
+              </div>
+            ))}
+          </div>
+
+          <h2 class="font-heading text-3xl font-bold text-navy-900 pt-4">Signs You Need Junk Removal in Phoenix</h2>
+          <p>Not sure if it's time to call? Here are common situations where Phoenix homeowners reach out to Fill &amp; Haul:</p>
+          <ul class="space-y-2 list-disc list-inside">
+            <li>Your garage hasn't had a car in it for years</li>
+            <li>You're moving and don't want to take everything with you</li>
+            <li>You're handling an estate or helping an elderly relative downsize</li>
+            <li>You just finished a renovation and have leftover materials and old fixtures</li>
+            <li>Your storage unit is overflowing and you want to clear it out</li>
+          </ul>
+
+          <h2 class="font-heading text-3xl font-bold text-navy-900 pt-4">Our Junk Removal Process in Phoenix</h2>
+          <ol class="space-y-4 list-none">
+            {[
+              { n: '1', t: 'Call or Request Online', d: 'Contact us by phone at (602) 632-5794 or fill out our online form. We will confirm availability and give you a free estimate.' },
+              { n: '2', t: 'We Arrive On Time', d: 'Our two-person crew shows up at your Phoenix property, reviews the items with you, and gets to work immediately.' },
+              { n: '3', t: 'We Haul It All Away', d: 'We load every item, sweep up, and haul everything away. Usable items are donated, recyclables are recycled, and the rest is properly disposed of.' },
+            ].map(s => (
+              <li class="flex gap-4 bg-gray-50 rounded-xl p-5">
+                <span class="w-10 h-10 bg-brand-500 text-white rounded-lg flex items-center justify-center font-bold text-lg flex-shrink-0">{s.n}</span>
+                <div>
+                  <strong class="text-navy-900">{s.t}</strong>
+                  <p class="text-sm mt-1">{s.d}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-bold text-navy-900 mb-8 text-center">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {faqs.map((faq, i) => (
+            <details class="bg-white border border-gray-200 rounded-xl overflow-hidden group">
+              <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-navy-900 hover:bg-gray-50 transition list-none">
+                {faq.q}
+                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 ml-4 transition group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <div class="px-6 pb-5 text-gray-600 text-sm border-t border-gray-100 pt-4">{faq.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-2xl font-bold text-navy-900 mb-6 text-center">Related Phoenix Services</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <a href="/phoenix-hauling-services/" class="text-center p-4 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition text-sm font-semibold text-navy-700 hover:text-brand-700">All Phoenix Services</a>
+          <a href="/phoenix/debris-removal/" class="text-center p-4 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition text-sm font-semibold text-navy-700 hover:text-brand-700">Debris Removal</a>
+          <a href="/phoenix/furniture-appliance-removal/" class="text-center p-4 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition text-sm font-semibold text-navy-700 hover:text-brand-700">Furniture &amp; Appliance Removal</a>
+          <a href="/phoenix/yard-waste-hauling/" class="text-center p-4 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition text-sm font-semibold text-navy-700 hover:text-brand-700">Yard Waste Hauling</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-brand-500">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-heading text-3xl font-bold text-white mb-4">Ready to Clear the Clutter in Phoenix?</h2>
+        <p class="text-xl text-white/80 mb-8">Get a free junk removal estimate in Phoenix today. Same-day service available.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#contact" class="inline-flex items-center justify-center bg-white text-brand-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition text-lg">Get a Free Estimate</a>
+          <a href="tel:+16026325794" class="inline-flex items-center justify-center border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition text-lg">(602) 632-5794</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Footer />
+</Layout>
