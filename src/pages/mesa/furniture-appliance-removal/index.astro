@@ -1,0 +1,179 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+
+const pageTitle = 'Furniture & Appliance Removal Mesa AZ | Fill & Haul';
+const pageDescription = 'Professional furniture and appliance removal in Mesa, AZ. Fill & Haul removes old sofas, beds, refrigerators, washers, dryers, and bulky items from Mesa homes and businesses. Same-day service available.';
+
+const faqs = [
+  { q: 'Do you remove large furniture from Mesa homes?', a: 'Yes! We remove all types of furniture from Mesa homes including sofas, sectionals, beds, dressers, dining sets, office furniture, and outdoor furniture.' },
+  { q: 'Can you haul appliances in Mesa?', a: 'Absolutely. We remove all major appliances from Mesa properties including refrigerators, washers, dryers, dishwashers, ovens, and more with eco-friendly disposal.' },
+  { q: 'Do you offer same-day furniture removal in Mesa?', a: 'Yes! We provide same-day furniture and appliance removal in Mesa when scheduled before noon. All Mesa neighborhoods served.' },
+  { q: 'Do you remove hot tubs or exercise equipment in Mesa?', a: 'Yes, we specialize in heavy and bulky item removal from Mesa homes including hot tubs, treadmills, ellipticals, weight equipment, and piano removal.' },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Furniture & Appliance Removal in Mesa, AZ",
+      "provider": { "@type": "LocalBusiness", "name": "Fill & Haul", "telephone": "+16026325794" },
+      "areaServed": { "@type": "City", "name": "Mesa, Arizona" },
+      "description": pageDescription,
+      "url": "https://fillandhaul.com/mesa/furniture-appliance-removal/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Mesa", "item": "https://fillandhaul.com/mesa/" },
+        { "@type": "ListItem", "position": 3, "name": "Furniture & Appliance Removal", "item": "https://fillandhaul.com/mesa/furniture-appliance-removal/" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+  <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-200 mt-16 lg:mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center space-x-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-brand-600 transition">Home</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li><a href="/mesa/" class="hover:text-brand-600 transition">Mesa</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li class="text-navy-700 font-medium">Furniture &amp; Appliance Removal</li>
+      </ol>
+    </div>
+  </nav>
+
+  <section class="bg-navy-900 text-white py-20" style="background: linear-gradient(135deg, #102a43 0%, #243b53 60%, #334e68 100%)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-center lg:text-left">
+          Furniture &amp; Appliance Removal in <span class="text-brand-400">Mesa, AZ</span>
+        </h1>
+        <p class="text-xl text-navy-200 mb-8 text-center lg:text-left">Old furniture and appliances taking up space in your Mesa home? Fill & Haul removes and recycles bulky items from Mesa homes, estates, and businesses — same-day available, fully insured.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <a href="/#contact" class="inline-flex items-center justify-center bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-4 rounded-xl transition text-lg">Get a Free Estimate</a>
+          <a href="tel:+16026325794" class="inline-flex items-center justify-center border border-white/30 hover:border-white/60 text-white font-medium px-8 py-4 rounded-xl transition text-lg">(602) 632-5794</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">Items We Remove in Mesa</h2>
+        <div class="grid sm:grid-cols-2 gap-3 max-w-4xl mx-auto">
+          {[
+            'Sofas, sectionals & loveseats', 'Beds, mattresses & bedroom sets',
+            'Refrigerators & freezers', 'Washers & dryers',
+            'Dishwashers & ovens', 'Hot tubs & Jacuzzis',
+            'Exercise equipment & treadmills', 'Office desks & cubicles',
+            'Outdoor furniture & patio sets', 'Pianos & large instruments',
+          ].map(item => (
+            <div class="flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3">
+              <span class="text-brand-500 font-bold text-lg">&#10003;</span>
+              <span class="text-navy-700 text-sm font-medium">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">When to Schedule Furniture & Appliance Removal in Mesa</h2>
+        <ul class="space-y-4 text-navy-600">
+          <li class="flex gap-3"><span class="text-brand-500 font-bold mt-1">&#10003;</span><span>You are redecorating or upgrading your Mesa home and need old furniture and appliances hauled away.</span></li>
+          <li class="flex gap-3"><span class="text-brand-500 font-bold mt-1">&#10003;</span><span>You are preparing a Mesa estate for sale and need all remaining furniture and appliances cleared out fast.</span></li>
+          <li class="flex gap-3"><span class="text-brand-500 font-bold mt-1">&#10003;</span><span>Your Mesa office or business is relocating and needs commercial furniture, desks, and equipment removed.</span></li>
+          <li class="flex gap-3"><span class="text-brand-500 font-bold mt-1">&#10003;</span><span>You have a hot tub, exercise equipment, or heavy item in your Mesa home that no one else will take.</span></li>
+          <li class="flex gap-3"><span class="text-brand-500 font-bold mt-1">&#10003;</span><span>Your Mesa rental property needs a full turnover cleanout including furniture and appliances left by tenants.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-12 text-center">Our Mesa Furniture & Appliance Removal Process</h2>
+        <div class="space-y-8">
+          {[
+            { step: '1', title: 'Schedule in Mesa', desc: 'Call (602) 632-5794 or request a free estimate. Same-day furniture and appliance removal available across all Mesa neighborhoods.' },
+            { step: '2', title: 'Flat-Rate Quote', desc: 'Our crew arrives at your Mesa home or business, reviews the items, and provides a firm upfront price. No hourly surprises.' },
+            { step: '3', title: 'Haul & Recycle', desc: 'We carefully remove all furniture and appliances, donating functional items and responsibly recycling the rest.' },
+          ].map(p => (
+            <div class="flex gap-6 items-start">
+              <div class="flex-shrink-0 w-12 h-12 bg-brand-500 text-white rounded-full flex items-center justify-center font-heading font-extrabold text-xl">{p.step}</div>
+              <div>
+                <h3 class="font-heading font-bold text-xl text-navy-900 mb-2">{p.title}</h3>
+                <p class="text-navy-500">{p.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">Mesa Furniture & Appliance Removal FAQ</h2>
+        <div class="space-y-4">
+          {faqs.map(f => (
+            <details class="group bg-white rounded-2xl border border-navy-100 overflow-hidden">
+              <summary class="list-none flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-navy-900">
+                {f.q}
+                <svg class="w-5 h-5 text-brand-500 flex-shrink-0 ml-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="px-6 pb-4 text-navy-500 text-sm">{f.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">More Mesa Hauling Services</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { title: 'Mesa Hauling Services', href: '/mesa-hauling-services/' },
+            { title: 'Junk Removal', href: '/mesa/junk-removal/' },
+            { title: 'Debris Removal', href: '/mesa/debris-removal/' },
+            { title: 'Yard Waste Hauling', href: '/mesa/yard-waste-hauling/' },
+          ].map(s => (
+            <a href={s.href} class="bg-gray-50 border border-navy-100 rounded-xl p-4 text-center hover:border-brand-300 hover:shadow-sm transition">
+              <span class="font-semibold text-navy-800 text-sm">{s.title}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-brand-500">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-heading text-3xl font-extrabold text-white mb-4">Schedule Furniture & Appliance Removal in Mesa</h2>
+        <p class="text-white/90 text-lg mb-8">Same-day service. Heavy items, no problem. Serving all Mesa neighborhoods.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:+16026325794" class="inline-flex items-center justify-center bg-white text-brand-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition text-lg">(602) 632-5794</a>
+          <a href="/#contact" class="inline-flex items-center justify-center border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition text-lg">Get a Free Estimate</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
