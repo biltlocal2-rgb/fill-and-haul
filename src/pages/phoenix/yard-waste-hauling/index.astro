@@ -1,0 +1,166 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+
+const pageTitle = 'Yard Waste Hauling Phoenix AZ | Same-Day Pickup | Fill & Haul';
+const pageDescription = 'Professional yard waste hauling in Phoenix, AZ. Fill & Haul removes tree branches, brush, grass clippings, landscaping debris, rocks, and dirt. Same-day service available. Free estimates.';
+
+const faqs = [
+  { q: 'What yard waste do you haul in Phoenix?', a: 'We haul tree branches, brush piles, grass clippings, leaves, landscaping debris, rocks, dirt, old sod, palm fronds, cacti cuttings, and other yard waste throughout Phoenix.' },
+  { q: 'How much does yard waste hauling cost in Phoenix?', a: 'Yard waste hauling in Phoenix typically costs between $125 and $500 depending on volume and type. Heavy materials like rocks and dirt cost more. We offer free on-site estimates.' },
+  { q: 'Do you haul palm fronds and cactus waste in Phoenix?', a: 'Yes! We regularly haul palm fronds, cactus cuttings, and desert landscaping debris common in Phoenix. Our crews are equipped to handle all types of Arizona yard waste safely.' },
+  { q: 'Can you remove old landscaping rocks in Phoenix?', a: 'Absolutely. We haul decorative rock, gravel, river rock, and landscape boulders from Phoenix properties. Heavy material pricing applies based on weight and volume.' },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Yard Waste Hauling in Phoenix, AZ",
+      "provider": { "@type": "LocalBusiness", "name": "Fill & Haul", "telephone": "+16026325794" },
+      "areaServed": { "@type": "City", "name": "Phoenix, Arizona" },
+      "description": pageDescription,
+      "url": "https://fillandhaul.com/phoenix/yard-waste-hauling/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question", "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Phoenix Hauling Services", "item": "https://fillandhaul.com/phoenix-hauling-services/" },
+        { "@type": "ListItem", "position": 3, "name": "Yard Waste Hauling", "item": "https://fillandhaul.com/phoenix/yard-waste-hauling/" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+
+  <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-200 mt-16 lg:mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-brand-600 transition">Home</a></li>
+        <li class="text-gray-400">/</li>
+        <li><a href="/phoenix-hauling-services/" class="hover:text-brand-600 transition">Phoenix Hauling Services</a></li>
+        <li class="text-gray-400">/</li>
+        <li class="text-gray-700 font-medium">Yard Waste Hauling</li>
+      </ol>
+    </div>
+  </nav>
+
+  <section class="bg-navy-900 text-white py-20" style="background: linear-gradient(135deg, #102a43 0%, #243b53 60%, #334e68 100%)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+      <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-center lg:text-left">
+        Yard Waste Hauling in <span class="text-brand-400">Phoenix, AZ</span>
+      </h1>
+      <p class="text-xl text-navy-200 mb-8 text-center lg:text-left">Fast, affordable yard waste hauling for Phoenix homeowners. We haul away tree branches, brush, rocks, dirt, palm fronds, and all landscaping debris. Same-day service available.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+        <a href="/#contact" class="inline-flex items-center justify-center bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-4 rounded-xl transition text-lg">Get a Free Estimate</a>
+        <a href="tel:+16026325794" class="inline-flex items-center justify-center border border-white/30 hover:border-white/60 text-white font-medium px-8 py-4 rounded-xl transition text-lg">(602) 632-5794</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="bg-white">
+    <section class="py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto space-y-6 text-gray-600">
+          <h2 class="font-heading text-3xl font-bold text-navy-900">Phoenix Yard Waste Hauling - We Handle the Heavy Lifting</h2>
+          <p>Phoenix's desert climate comes with unique landscaping challenges. From palm fronds and cactus cuttings to heavy decorative rock and desert brush, Fill &amp; Haul is equipped to handle all types of yard waste common to the Phoenix area.</p>
+          <p>Whether you've just completed a major landscaping project, had trees trimmed after a monsoon storm, or are updating your desert landscape, our crews arrive quickly, load everything up, and leave your yard clean.</p>
+          <p>We serve all Phoenix neighborhoods including Arcadia, Ahwatukee, Biltmore, Camelback, Deer Valley, North Phoenix, South Phoenix, and every community in between with flexible same-day and next-day service windows.</p>
+
+          <h2 class="font-heading text-3xl font-bold text-navy-900 pt-4">Yard Waste We Haul in Phoenix</h2>
+          <div class="grid sm:grid-cols-2 gap-3 not-prose">
+            {['Tree branches and limbs (trimmed or fallen)', 'Palm fronds and palm tree debris', 'Cactus cuttings and desert plant waste', 'Brush piles and shrub clippings', 'Grass clippings and leaves', 'Old sod and ground cover', 'Decorative rocks, gravel, and boulders', 'Dirt and soil from landscaping projects', 'Old fencing and garden borders', 'Monsoon storm debris cleanup'].map(item => (
+              <div class="flex items-start gap-2 text-sm bg-gray-50 rounded-lg p-3">
+                <svg class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                {item}
+              </div>
+            ))}
+          </div>
+
+          <h2 class="font-heading text-3xl font-bold text-navy-900 pt-4">When Phoenix Homeowners Call Us for Yard Waste Hauling</h2>
+          <p>Here are the most common situations when Phoenix residents reach out to Fill &amp; Haul for yard waste removal:</p>
+          <ul class="space-y-2 list-disc list-inside">
+            <li>After tree trimming services leave behind large piles of branches</li>
+            <li>Following monsoon storms that bring down branches and scatter debris</li>
+            <li>When updating a traditional grass lawn to desert landscaping</li>
+            <li>After a full landscape redesign that generates significant green waste</li>
+            <li>When replacing old decorative rocks with new landscaping material</li>
+          </ul>
+
+          <h2 class="font-heading text-3xl font-bold text-navy-900 pt-4">Our Yard Waste Hauling Process in Phoenix</h2>
+          <ol class="space-y-4 list-none">
+            {[
+              { n: '1', t: 'Get a Free Estimate', d: 'Call (602) 632-5794 or request online. We confirm availability and provide upfront pricing based on volume and material type.' },
+              { n: '2', t: 'We Arrive and Load', d: 'Our crew shows up at your Phoenix property on schedule and loads all yard waste onto our truck. No need to bag or sort anything.' },
+              { n: '3', t: 'Responsible Disposal', d: 'We haul all yard waste to licensed facilities where organic material is composted or chipped. We prioritize eco-friendly disposal throughout the Phoenix area.' },
+            ].map(s => (
+              <li class="flex gap-4 bg-gray-50 rounded-xl p-5">
+                <span class="w-10 h-10 bg-brand-500 text-white rounded-lg flex items-center justify-center font-bold text-lg flex-shrink-0">{s.n}</span>
+                <div>
+                  <strong class="text-navy-900">{s.t}</strong>
+                  <p class="text-sm mt-1">{s.d}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-bold text-navy-900 mb-8 text-center">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {faqs.map((faq, i) => (
+            <details class="bg-white border border-gray-200 rounded-xl overflow-hidden group">
+              <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-navy-900 hover:bg-gray-50 transition list-none">
+                {faq.q}
+                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 ml-4 transition group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <div class="px-6 pb-5 text-gray-600 text-sm border-t border-gray-100 pt-4">{faq.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-2xl font-bold text-navy-900 mb-6 text-center">Related Phoenix Services</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <a href="/phoenix-hauling-services/" class="text-center p-4 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition text-sm font-semibold text-navy-700 hover:text-brand-700">All Phoenix Services</a>
+          <a href="/phoenix/junk-removal/" class="text-center p-4 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition text-sm font-semibold text-navy-700 hover:text-brand-700">Junk Removal</a>
+          <a href="/phoenix/debris-removal/" class="text-center p-4 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition text-sm font-semibold text-navy-700 hover:text-brand-700">Debris Removal</a>
+          <a href="/phoenix/construction-debris-removal/" class="text-center p-4 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition text-sm font-semibold text-navy-700 hover:text-brand-700">Construction Debris</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-brand-500">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-heading text-3xl font-bold text-white mb-4">Need Yard Waste Hauled Away in Phoenix?</h2>
+        <p class="text-xl text-white/80 mb-8">Get a free yard waste hauling estimate in Phoenix today. Same-day service available.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#contact" class="inline-flex items-center justify-center bg-white text-brand-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition text-lg">Get a Free Estimate</a>
+          <a href="tel:+16026325794" class="inline-flex items-center justify-center border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition text-lg">(602) 632-5794</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Footer />
+</Layout>
