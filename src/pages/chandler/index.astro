@@ -1,0 +1,163 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+
+const pageTitle = 'Junk Removal Chandler AZ | Same-Day Hauling | Fill & Haul';
+const pageDescription = 'Professional junk removal and hauling in Chandler, AZ. Fill & Haul serves all of Chandler with fast, affordable same-day service. Furniture, appliances, debris, and more. Free estimates.';
+
+const faqs = [
+  { q: 'Do you offer junk removal in Chandler, AZ?', a: 'Yes! Fill & Haul serves all of Chandler including 85224, 85225, 85226, 85248, 85249 and surrounding zip codes. Same-day and next-day appointments available.' },
+  { q: 'How much does junk removal cost in Chandler?', a: 'Most Chandler jobs range from $150 for small loads to $600+ for full property cleanouts. We provide free on-site estimates before any work begins.' },
+  { q: 'What neighborhoods in Chandler do you serve?', a: 'We serve all of Chandler including Ocotillo, Fulton Ranch, Sun Lakes, Ahwatukee-adjacent areas, Downtown Chandler, and all surrounding communities.' },
+  { q: 'Can you haul away construction debris in Chandler?', a: 'Absolutely. We handle drywall, lumber, concrete, roofing materials, and all types of construction and renovation debris from Chandler job sites.' },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Junk Removal in Chandler, AZ",
+      "provider": { "@type": "LocalBusiness", "name": "Fill & Haul", "telephone": "+16026325794" },
+      "areaServed": { "@type": "City", "name": "Chandler, Arizona" },
+      "description": pageDescription,
+      "url": "https://fillandhaul.com/chandler/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question", "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Chandler Junk Removal", "item": "https://fillandhaul.com/chandler/" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+  <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-200 mt-16 lg:mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center space-x-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-brand-600 transition">Home</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li class="text-navy-700 font-medium">Chandler Junk Removal</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="bg-navy-900 text-white py-20" style="background: linear-gradient(135deg, #102a43 0%, #243b53 60%, #334e68 100%)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-center lg:text-left">
+          Junk Removal in <span class="text-brand-400">Chandler, AZ</span>
+        </h1>
+        <p class="text-xl text-navy-200 mb-8 text-center lg:text-left">Fast, reliable junk removal for Chandler homeowners and businesses. We haul furniture, appliances, yard waste, construction debris, and more - with same-day service available across all of Chandler.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <a href="/#contact" class="inline-flex items-center justify-center bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-4 rounded-xl transition text-lg">Get a Free Estimate</a>
+          <a href="tel:+16026325794" class="inline-flex items-center justify-center border border-white/30 hover:border-white/60 text-white font-medium px-8 py-4 rounded-xl transition text-lg">(602) 632-5794</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-navy-900 mb-4">Chandler's Trusted Junk Removal Team</h2>
+        <p class="text-navy-500 text-lg max-w-2xl mx-auto">From single-item pickups to full estate cleanouts, Fill & Haul delivers professional service throughout Chandler and the Southeast Valley.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { icon: '&#128336;', title: 'Same-Day Service', desc: 'Call before noon and we can often be at your Chandler property the same day.' },
+          { icon: '&#128176;', title: 'Flat-Rate Pricing', desc: 'No surprise charges. You get a firm price before we load a single item.' },
+          { icon: '&#9989;', title: 'Licensed & Insured', desc: 'Fully licensed and insured for residential and commercial jobs in Chandler.' },
+          { icon: '&#127807;', title: 'Eco-Friendly', desc: 'We donate usable items and recycle materials to minimize landfill impact.' },
+        ].map(item => (
+          <div class="bg-gray-50 rounded-2xl p-6 text-center">
+            <div class="text-4xl mb-3" set:html={item.icon}></div>
+            <h3 class="font-heading font-bold text-lg text-navy-900 mb-2">{item.title}</h3>
+            <p class="text-navy-500 text-sm">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services in Chandler -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-4">What We Haul in Chandler</h2>
+        <p class="text-navy-500 text-lg">Comprehensive junk removal for Chandler homes, businesses, and job sites.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: 'Furniture Removal', desc: 'Sofas, beds, desks, dressers - we clear out any furniture from Chandler homes and offices.' },
+          { title: 'Appliance Hauling', desc: 'Refrigerators, washers, dryers, ovens - safe and responsible appliance removal in Chandler.' },
+          { title: 'Construction Debris', desc: 'Job site cleanups for Chandler contractors - drywall, lumber, concrete, and roofing waste.' },
+          { title: 'Yard Waste Hauling', desc: 'Tree branches, landscaping debris, dirt, and rocks removed from Chandler properties.' },
+          { title: 'Estate & Property Cleanouts', desc: 'Full cleanouts for estate sales, foreclosures, and rental turnovers throughout Chandler.' },
+          { title: 'Garage Cleanouts', desc: 'Declutter and reclaim your Chandler garage with our complete cleanout service.' },
+        ].map(s => (
+          <div class="bg-white border border-navy-100 rounded-2xl p-6 hover:shadow-md transition">
+            <h3 class="font-heading font-bold text-lg text-navy-900 mb-2">{s.title}</h3>
+            <p class="text-navy-500 text-sm">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-4">Serving All of Chandler, AZ</h2>
+        <p class="text-navy-500 text-lg mb-6">We cover all Chandler zip codes including 85224, 85225, 85226, 85244, 85246, 85248, and 85249 - plus surrounding Southeast Valley communities.</p>
+        <p class="text-navy-500">Also serving nearby: <a href="/mesa/" class="text-brand-600 hover:underline">Mesa</a>, <a href="/tempe/" class="text-brand-600 hover:underline">Tempe</a>, <a href="/gilbert/" class="text-brand-600 hover:underline">Gilbert</a>, and <a href="/scottsdale/" class="text-brand-600 hover:underline">Scottsdale</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">Chandler Junk Removal FAQ</h2>
+      <div class="space-y-4">
+        {faqs.map(f => (
+          <div class="bg-white rounded-2xl p-6 border border-navy-100">
+            <h3 class="font-semibold text-navy-900 mb-2">{f.q}</h3>
+            <p class="text-navy-500 text-sm">{f.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-brand-500">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-heading text-3xl font-extrabold text-white mb-4">Book Junk Removal in Chandler Today</h2>
+      <p class="text-white/90 text-lg mb-8">Same-day service available. Serving all of Chandler and the Southeast Valley with fast, affordable haul-away.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+16026325794" class="inline-flex items-center justify-center bg-white text-brand-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition text-lg">(602) 632-5794</a>
+        <a href="/#contact" class="inline-flex items-center justify-center border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition text-lg">Get a Free Estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
