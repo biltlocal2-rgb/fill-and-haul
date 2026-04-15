@@ -1,0 +1,210 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+
+const pageTitle = 'Construction Debris Removal Tempe AZ | Job Site Cleanup | Fill & Haul';
+const pageDescription = 'Fast construction debris removal in Tempe, AZ. Fill & Haul hauls drywall, lumber, concrete, roofing materials, and job site waste for contractors and homeowners. Call (602) 632-5794.';
+
+const faqs = [
+  { q: 'Do you haul construction debris for contractors in Tempe?', a: 'Yes. We work with general contractors, subcontractors, home builders, and remodelers throughout Tempe. We offer scheduled job site cleanups — daily, weekly, or on-call — to keep your site clean and OSHA compliant.' },
+  { q: 'What construction materials do you haul away?', a: 'We haul drywall, lumber, framing scraps, concrete, roofing shingles, tile, flooring, insulation, plumbing fixtures, electrical conduit, windows, doors, and general construction waste. We do not haul hazardous materials like asbestos or lead paint.' },
+  { q: 'Can you provide a bin or dumpster for a job site?', a: 'Fill & Haul specializes in full-service haul-away rather than bin rental. We bring our truck, load everything, and haul it away — which is often faster and more cost-effective than a dumpster for smaller to mid-sized jobs in Tempe.' },
+  { q: 'How quickly can you respond to a construction site cleanup in Tempe?', a: 'We offer same-day and next-day construction debris removal for most Tempe job sites. For regularly scheduled contractor cleanups, we can set a recurring schedule that works around your crew.' },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Service", "name": "Construction Debris Removal in Tempe, AZ", "provider": { "@type": "LocalBusiness", "name": "Fill & Haul", "telephone": "+16026325794" }, "areaServed": { "@type": "City", "name": "Tempe" }, "serviceType": "Construction Debris Removal", "url": "https://fillandhaul.com/tempe/construction-debris-removal/" },
+    { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
+    { "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tempe Hauling Services", "item": "https://fillandhaul.com/tempe-hauling-services/" },
+      { "@type": "ListItem", "position": 3, "name": "Construction Debris Removal", "item": "https://fillandhaul.com/tempe/construction-debris-removal/" }
+    ]}
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+
+  <nav aria-label="Breadcrumb" class="bg-gray-100 border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-4 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-600">
+        <li><a href="/" class="hover:text-brand-500">Home</a></li>
+        <li class="text-gray-400">/</li>
+        <li><a href="/tempe-hauling-services/" class="hover:text-brand-500">Tempe Hauling Services</a></li>
+        <li class="text-gray-400">/</li>
+        <li class="text-gray-900 font-medium">Construction Debris Removal</li>
+      </ol>
+    </div>
+  </nav>
+
+  <section class="bg-slate-800 text-white py-20 px-4">
+    <div class="max-w-5xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+        Construction Debris Removal in <span class="text-brand-500">Tempe, AZ</span>
+      </h1>
+      <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+        Fast, reliable job site cleanup for Tempe contractors and homeowners. We haul drywall, lumber, concrete, roofing, and all construction waste — same-day and scheduled service available.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:6026325794" class="bg-brand-500 hover:bg-brand-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors">Call (602) 632-5794</a>
+        <a href="/#estimate" class="border-2 border-white text-white hover:bg-white hover:text-slate-800 font-bold py-4 px-8 rounded-lg text-lg transition-colors">Get Free Estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="max-w-5xl mx-auto px-4 py-16">
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-slate-800 mb-6">Tempe's Go-To Construction Debris Removal Crew</h2>
+      <p class="text-lg text-slate-600 mb-4">Construction and renovation projects generate massive amounts of debris — and hauling it away is a job that takes time, trucks, and labor. Fill & Haul handles all of it so your crew can stay focused on the build.</p>
+      <p class="text-lg text-slate-600 mb-4">We work with general contractors, specialty subs, home builders, remodelers, and property owners throughout Tempe. Whether it is a kitchen gut-out, a full interior demo, a roofing project, or a new construction site cleanup, we bring the manpower and trucks to get it done right and fast.</p>
+      <p class="text-lg text-slate-600">Our volume-based pricing means you pay only for what we haul, with no hidden fees or minimum charges that penalize small loads. We quote every job before we start — always.</p>
+    </section>
+
+    <section class="mb-16 bg-gray-50 rounded-2xl p-8">
+      <h2 class="text-3xl font-bold text-slate-800 mb-6">Construction Materials We Remove in Tempe</h2>
+      <p class="text-slate-600 mb-6">We handle all standard construction and demolition waste from Tempe residential and commercial projects:</p>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        {[
+          'Drywall & gypsum board',
+          'Lumber & framing scraps',
+          'Concrete, masonry & brick',
+          'Roofing shingles & felt paper',
+          'Tile & flooring materials',
+          'Insulation (non-hazardous)',
+          'Plumbing fixtures & pipe',
+          'Electrical conduit & wiring scraps',
+          'Windows, doors & frames',
+          'Cabinets & countertops',
+          'Packaging & pallets',
+          'General construction site trash',
+        ].map(item => (
+          <li class="flex items-center gap-3 text-slate-700"><span class="text-brand-500 font-bold text-lg">✓</span>{item}</li>
+        ))}
+      </ul>
+      <p class="text-sm text-slate-500 mt-6">Note: We do not haul hazardous materials including asbestos, lead paint, or contaminated soil. These require licensed hazmat disposal contractors.</p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-slate-800 mb-8">Why Tempe Contractors Choose Fill & Haul</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          { icon: '📅', title: 'Scheduled Site Cleanups', desc: 'Set a recurring pickup schedule — daily, twice weekly, or weekly — to keep your Tempe job site clean and code-compliant throughout the project.' },
+          { icon: '⚡', title: 'Same-Day Response', desc: 'When debris piles up unexpectedly, we respond fast. Most Tempe construction cleanup requests can be fulfilled same-day or next-day.' },
+          { icon: '💪', title: 'Full Crew & Equipment', desc: 'We show up with the labor and the truck. Your team does not touch the debris — we load, haul, and dispose of everything for you.' },
+          { icon: '💰', title: 'Volume-Based Pricing', desc: 'Pay for what you use — not a flat daily rate. Our transparent pricing is based on truck load volume, making it cost-effective for any size job.' },
+          { icon: '📋', title: 'OSHA Site Compliance', desc: 'A clean job site is a safer job site. Regular debris removal helps Tempe contractors maintain OSHA cleanliness standards and reduce liability.' },
+          { icon: '♻️', title: 'Responsible Disposal', desc: 'We sort and divert recyclable construction materials — concrete, metal, clean wood — from landfills whenever possible.' },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+            <div class="text-4xl mb-4">{item.icon}</div>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">{item.title}</h3>
+            <p class="text-slate-600 text-sm">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mb-16 bg-orange-50 border border-orange-200 rounded-2xl p-8">
+      <h2 class="text-3xl font-bold text-slate-800 mb-6">Construction Debris Hauling for Every Project Type</h2>
+      <p class="text-slate-700 mb-4">Fill & Haul supports construction debris removal across all phases and project types in Tempe. We work alongside remodeling crews doing kitchen and bathroom renovations, roofing contractors finishing installs, flooring teams ripping out old material, and general contractors managing full interior or exterior demolitions.</p>
+      <p class="text-slate-700 mb-4">For new construction projects, we provide recurring cleanup service that keeps the site clean between trades — reducing trip hazards, protecting materials, and making inspections go smoothly. We coordinate with site supers and PMs to schedule around crew schedules.</p>
+      <p class="text-slate-700">For homeowners doing DIY remodels or managing their own contractors, we provide the same fast, professional debris removal service with the same transparent pricing — no contractor account required.</p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-slate-800 mb-6">Common Construction Cleanup Scenarios We Handle</h2>
+      <div class="space-y-4">
+        {[
+          { title: 'Post-Demo Cleanouts', desc: 'After interior demolition — walls, flooring, ceilings — we clear all the debris and waste materials so the next trade can begin immediately.' },
+          { title: 'Roofing Project Cleanup', desc: 'Old shingles, underlayment, and roofing debris piling up in driveways and yards. We haul it all before it creates issues with neighbors or HOAs.' },
+          { title: 'Kitchen & Bathroom Remodels', desc: 'Old cabinets, tile, countertops, fixtures, and drywall — all of it removed and hauled away as part of your remodel process.' },
+          { title: 'New Construction Site Cleanups', desc: 'Ongoing scheduled pickups for active build sites — lumber scraps, drywall cutoffs, packaging, and daily construction waste kept under control.' },
+          { title: 'Flooring Replacement', desc: 'Old carpet, hardwood, vinyl, tile, and underlayment — demolition debris hauled away quickly so installation can begin.' },
+          { title: 'Commercial Renovation Debris', desc: 'Office buildouts, retail space renovations, and commercial property remodels generate significant debris. We serve commercial clients throughout Tempe.' },
+        ].map(item => (
+          <div class="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl shadow-sm">
+            <span class="text-brand-500 text-2xl mt-1">→</span>
+            <div>
+              <h3 class="font-bold text-slate-800 mb-1">{item.title}</h3>
+              <p class="text-slate-600 text-sm">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mb-16 bg-slate-800 text-white rounded-2xl p-8">
+      <h2 class="text-3xl font-bold mb-8 text-center">How Construction Debris Removal Works</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        {[
+          { step: '1', title: 'Call or Book Online', desc: 'Tell us your project type, location in Tempe, and estimated debris volume. We give you a price estimate immediately.' },
+          { step: '2', title: 'Schedule Your Pickup', desc: 'Same-day, next-day, or recurring scheduled service. We work around your crew and project timeline.' },
+          { step: '3', title: 'We Load Everything', desc: 'Our crew loads all the construction debris from your site — you do not move a thing. We work efficiently to minimize disruption.' },
+          { step: '4', title: 'Clean Site, Responsible Disposal', desc: 'We transport debris to licensed disposal facilities, recycling what we can to keep materials out of landfills.' },
+        ].map(item => (
+          <div class="text-center">
+            <div class="w-12 h-12 rounded-full bg-brand-500 text-white font-bold text-xl flex items-center justify-center mx-auto mb-4">{item.step}</div>
+            <h3 class="font-bold text-lg mb-2">{item.title}</h3>
+            <p class="text-slate-300 text-sm">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-slate-800 mb-8">Frequently Asked Questions — Construction Debris Removal Tempe</h2>
+      <div class="space-y-4">
+        {faqs.map(faq => (
+          <details class="border border-gray-200 rounded-xl overflow-hidden group">
+            <summary class="flex items-center justify-between p-5 cursor-pointer bg-white hover:bg-gray-50 font-semibold text-slate-800 list-none">
+              {faq.q}
+              <span class="text-brand-500 text-xl transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="p-5 pt-0 bg-white text-slate-600">
+              <p class="pt-4 border-t border-gray-100">{faq.a}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-slate-800 mb-6">Related Hauling Services in Tempe</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {[
+          { title: 'Junk Removal', desc: 'Household junk, furniture, appliances, and general clutter removed fast.', href: '/tempe/junk-removal/' },
+          { title: 'Debris Removal', desc: 'All types of demolition and renovation debris hauled away.', href: '/tempe/debris-removal/' },
+          { title: 'Yard Waste Hauling', desc: 'Grass, branches, leaves, and landscaping debris removed.', href: '/tempe/yard-waste-hauling/' },
+          { title: 'Furniture & Appliance Removal', desc: 'Old couches, refrigerators, mattresses, and more removed and disposed.', href: '/tempe/furniture-appliance-removal/' },
+          { title: 'All Tempe Hauling Services', desc: 'See our full range of hauling and removal services for Tempe.', href: '/tempe-hauling-services/' },
+        ].map(link => (
+          <a href={link.href} class="block p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:border-brand-500 hover:shadow-md transition-all">
+            <h3 class="font-bold text-slate-800 mb-1">{link.title}</h3>
+            <p class="text-sm text-slate-500">{link.desc}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+  </main>
+
+  <section class="bg-brand-500 text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Need Job Site Cleanup in Tempe?</h2>
+      <p class="text-lg mb-8 text-orange-100">Same-day and scheduled construction debris removal for Tempe contractors and homeowners. Get a free quote in minutes.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:6026325794" class="bg-white text-brand-500 hover:bg-orange-50 font-bold py-4 px-8 rounded-lg text-lg transition-colors">Call (602) 632-5794</a>
+        <a href="/#estimate" class="border-2 border-white text-white hover:bg-orange-600 font-bold py-4 px-8 rounded-lg text-lg transition-colors">Get Free Estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Footer />
+</Layout>
