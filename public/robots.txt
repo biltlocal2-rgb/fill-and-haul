@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fillandhaul.com/sitemap-index.xml
