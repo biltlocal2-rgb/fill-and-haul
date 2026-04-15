@@ -3,14 +3,14 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 
-const pageTitle = 'Junk Removal Mesa AZ | Same-Day Hauling | Fill & Haul';
-const pageDescription = 'Professional junk removal and hauling in Mesa, AZ. Fill & Haul serves all of Mesa with fast, affordable same-day service. Furniture, appliances, debris, and more. Free estimates.';
+const pageTitle = 'Junk Removal & Hauling Services Mesa AZ | Fill & Haul';
+const pageDescription = 'Professional junk removal and hauling services in Mesa, AZ. Fill & Haul serves all of Mesa with same-day service for junk removal, debris removal, yard waste hauling, construction debris, and furniture & appliance removal. Free estimates.';
 
 const faqs = [
-  { q: 'Do you offer junk removal in Mesa, AZ?', a: 'Yes! Fill & Haul serves all of Mesa including 85201, 85202, 85203, 85204, 85205, 85206, and surrounding zip codes. We offer same-day and next-day appointments.' },
-  { q: 'How much does junk removal cost in Mesa?', a: 'Our pricing is based on the volume of items. Most Mesa jobs range from $150 for small loads to $600+ for full property cleanouts. We provide free on-site estimates with no obligation.' },
-  { q: 'What areas of Mesa do you serve?', a: 'We serve all of Mesa including Downtown Mesa, East Mesa, West Mesa, North Mesa, and the surrounding Southeast Valley communities.' },
-  { q: 'Can you haul away large items in Mesa?', a: 'Absolutely. We handle furniture, appliances, mattresses, exercise equipment, construction debris, yard waste, and general household junk throughout Mesa.' },
+  { q: 'Do you offer junk removal in Mesa, AZ?', a: 'Yes! Fill & Haul serves all of Mesa including Dobson Ranch, Red Mountain, East Mesa, Fiesta District, and zip codes 85201-85213. Same-day service available.' },
+  { q: 'Do you handle estate cleanouts in Mesa?', a: 'Absolutely. We specialize in full estate cleanouts for Mesa homeowners, realtors, and property managers throughout all Mesa neighborhoods.' },
+  { q: 'How much does junk removal cost in Mesa?', a: 'Mesa pricing typically ranges from $150 for small loads to $700+ for large estate or commercial cleanouts. Free on-site estimates with no obligation.' },
+  { q: 'Do you serve all Mesa neighborhoods?', a: 'Yes, we serve all of Mesa including Dobson Ranch, Red Mountain, East Mesa, Fiesta District, Mesa Grande, North Mesa, and all surrounding zip codes.' },
 ];
 
 const schema = {
@@ -18,7 +18,7 @@ const schema = {
   "@graph": [
     {
       "@type": "Service",
-      "name": "Junk Removal in Mesa, AZ",
+      "name": "Junk Removal & Hauling in Mesa, AZ",
       "provider": { "@type": "LocalBusiness", "name": "Fill & Haul", "telephone": "+16026325794" },
       "areaServed": { "@type": "City", "name": "Mesa, Arizona" },
       "description": pageDescription,
@@ -35,7 +35,7 @@ const schema = {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Mesa Junk Removal", "item": "https://fillandhaul.com/mesa/" }
+        { "@type": "ListItem", "position": 2, "name": "Mesa Hauling Services", "item": "https://fillandhaul.com/mesa/" }
       ]
     }
   ]
@@ -49,19 +49,18 @@ const schema = {
       <ol class="flex items-center space-x-2 text-sm text-gray-500">
         <li><a href="/" class="hover:text-brand-600 transition">Home</a></li>
         <li><span class="mx-1">/</span></li>
-        <li class="text-navy-700 font-medium">Mesa Junk Removal</li>
+        <li class="text-navy-700 font-medium">Mesa</li>
       </ol>
     </div>
   </nav>
 
-  <!-- Hero -->
   <section class="bg-navy-900 text-white py-20" style="background: linear-gradient(135deg, #102a43 0%, #243b53 60%, #334e68 100%)">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl">
         <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-center lg:text-left">
           Junk Removal in <span class="text-brand-400">Mesa, AZ</span>
         </h1>
-        <p class="text-xl text-navy-200 mb-8 text-center lg:text-left">Fast, affordable junk removal for Mesa homeowners and businesses. We haul furniture, appliances, construction debris, and more. Same-day service available throughout Mesa and the Southeast Valley.</p>
+        <p class="text-xl text-navy-200 mb-8 text-center lg:text-left">Professional junk removal and hauling for Mesa homes, businesses, and commercial properties. Serving Dobson Ranch, Red Mountain, East Mesa, and all Mesa neighborhoods — same-day service, flat-rate pricing.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
           <a href="/#contact" class="inline-flex items-center justify-center bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-4 rounded-xl transition text-lg">Get a Free Estimate</a>
           <a href="tel:+16026325794" class="inline-flex items-center justify-center border border-white/30 hover:border-white/60 text-white font-medium px-8 py-4 rounded-xl transition text-lg">(602) 632-5794</a>
@@ -70,21 +69,44 @@ const schema = {
     </div>
   </section>
 
-  <!-- Why Choose Us -->
   <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-navy-900 mb-4">Mesa's Trusted Junk Removal Team</h2>
-        <p class="text-navy-500 text-lg max-w-2xl mx-auto">From small pickups to full property cleanouts, Fill & Haul handles it all across Mesa with speed and professionalism.</p>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-navy-900 mb-4">Mesa Hauling Services</h2>
+        <p class="text-navy-500 text-lg max-w-2xl mx-auto">From estate cleanouts in Dobson Ranch to renovation debris on East Mesa job sites — we handle every type of hauling need.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: 'Junk Removal', href: '/mesa/junk-removal/', desc: 'Full-service junk removal for Mesa homes, estates, and commercial properties. Same-day available.' },
+          { title: 'Debris Removal', href: '/mesa/debris-removal/', desc: 'Post-renovation and remodel debris cleanup for Mesa homeowners and contractors.' },
+          { title: 'Yard Waste Hauling', href: '/mesa/yard-waste-hauling/', desc: 'Tree trimmings, palm fronds, brush, and organic yard waste hauled from Mesa properties.' },
+          { title: 'Construction Debris Removal', href: '/mesa/construction-debris-removal/', desc: 'Heavy-load construction debris haul-away for Mesa job sites and remodel projects.' },
+          { title: 'Furniture & Appliance Removal', href: '/mesa/furniture-appliance-removal/', desc: 'Old furniture and appliances removed and recycled from Mesa homes and businesses.' },
+          { title: 'All Mesa Services', href: '/mesa-hauling-services/', desc: 'View our complete Mesa hauling services guide with pricing and service area details.' },
+        ].map(s => (
+          <a href={s.href} class="bg-gray-50 border border-navy-100 rounded-2xl p-6 hover:shadow-md hover:border-brand-300 transition block">
+            <h3 class="font-heading font-bold text-lg text-navy-900 mb-2">{s.title} <span class="text-brand-500">→</span></h3>
+            <p class="text-navy-500 text-sm">{s.desc}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-navy-900 mb-4">Mesa's Professional Junk Removal Team</h2>
+        <p class="text-navy-500 text-lg max-w-2xl mx-auto">Fill & Haul brings reliable, professional junk removal to Mesa's homes, businesses, and commercial properties.</p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
-          { icon: '&#128336;', title: 'Same-Day Service', desc: 'Call before noon and we can often arrive the same day anywhere in Mesa.' },
-          { icon: '&#128176;', title: 'Transparent Pricing', desc: 'No hidden fees. We give you a firm price before we start loading.' },
-          { icon: '&#9989;', title: 'Licensed & Insured', desc: 'Fully licensed and insured for your peace of mind in Mesa and beyond.' },
-          { icon: '&#127807;', title: 'Eco-Friendly Disposal', desc: 'We donate and recycle whenever possible to keep Mesa green.' },
+          { icon: '&#128336;', title: 'Same-Day Service', desc: 'Fast response throughout Mesa - often same-day if you call before noon.' },
+          { icon: '&#128176;', title: 'Transparent Pricing', desc: 'Firm upfront quotes before any work begins. No hidden costs.' },
+          { icon: '&#9989;', title: 'Licensed & Insured', desc: 'Fully licensed and insured for Mesa residential and commercial work.' },
+          { icon: '&#127807;', title: 'Responsible Disposal', desc: 'We donate and recycle whenever possible - good for Mesa and the planet.' },
         ].map(item => (
-          <div class="bg-gray-50 rounded-2xl p-6 text-center">
+          <div class="bg-white rounded-2xl p-6 text-center">
             <div class="text-4xl mb-3" set:html={item.icon}></div>
             <h3 class="font-heading font-bold text-lg text-navy-900 mb-2">{item.title}</h3>
             <p class="text-navy-500 text-sm">{item.desc}</p>
@@ -94,43 +116,16 @@ const schema = {
     </div>
   </section>
 
-  <!-- Services in Mesa -->
-  <section class="py-16 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-4">What We Haul in Mesa</h2>
-        <p class="text-navy-500 text-lg">Residential and commercial junk removal services across all of Mesa.</p>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {[
-          { title: 'Furniture Removal', desc: 'Sofas, beds, tables, dressers - we remove any furniture from anywhere in your Mesa home.' },
-          { title: 'Appliance Hauling', desc: 'Refrigerators, washers, dryers, ovens - safe and responsible appliance removal in Mesa.' },
-          { title: 'Construction Debris', desc: 'Drywall, lumber, concrete, roofing - fast job site cleanup for Mesa contractors.' },
-          { title: 'Yard Waste', desc: 'Tree trimmings, landscaping waste, dirt, and rocks hauled away from Mesa properties.' },
-          { title: 'Property Cleanouts', desc: 'Estate sales, foreclosures, and rental turnovers - full cleanout service in Mesa.' },
-          { title: 'Garage Cleanouts', desc: 'Clear out your Mesa garage top to bottom. We sort, haul, and clean up after ourselves.' },
-        ].map(s => (
-          <div class="bg-white border border-navy-100 rounded-2xl p-6 hover:shadow-md transition">
-            <h3 class="font-heading font-bold text-lg text-navy-900 mb-2">{s.title}</h3>
-            <p class="text-navy-500 text-sm">{s.desc}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Service Area -->
   <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto text-center">
         <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-4">Serving All of Mesa, AZ</h2>
-        <p class="text-navy-500 text-lg mb-6">We cover every corner of Mesa including zip codes 85201, 85202, 85203, 85204, 85205, 85206, 85207, 85208, 85209, 85210, 85212, 85213, 85215, and 85216.</p>
-        <p class="text-navy-500">Also serving nearby communities: <a href="/tempe/" class="text-brand-600 hover:underline">Tempe</a>, <a href="/chandler/" class="text-brand-600 hover:underline">Chandler</a>, <a href="/gilbert/" class="text-brand-600 hover:underline">Gilbert</a>, and <a href="/scottsdale/" class="text-brand-600 hover:underline">Scottsdale</a>.</p>
+        <p class="text-navy-500 text-lg mb-6">We cover all Mesa zip codes including 85201, 85202, 85203, 85204, 85205, 85206, 85207, 85208, 85209, 85210, 85211, 85212, 85213 and all surrounding Mesa areas.</p>
+        <p class="text-navy-500">Also serving: <a href="/tempe/" class="text-brand-600 hover:underline">Tempe</a>, <a href="/chandler/" class="text-brand-600 hover:underline">Chandler</a>, <a href="/gilbert/" class="text-brand-600 hover:underline">Gilbert</a>, and <a href="/scottsdale/" class="text-brand-600 hover:underline">Scottsdale</a>.</p>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
   <section class="py-16 bg-gray-50">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">Mesa Junk Removal FAQ</h2>
@@ -145,11 +140,10 @@ const schema = {
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="py-16 bg-brand-500">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-heading text-3xl font-extrabold text-white mb-4">Ready for Same-Day Junk Removal in Mesa?</h2>
-      <p class="text-white/90 text-lg mb-8">Call or text us now. We serve all of Mesa and the Southeast Valley with fast, affordable haul-away service.</p>
+      <h2 class="font-heading text-3xl font-extrabold text-white mb-4">Book Junk Removal in Mesa Today</h2>
+      <p class="text-white/90 text-lg mb-8">Professional service throughout Mesa and the Greater Phoenix area.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="tel:+16026325794" class="inline-flex items-center justify-center bg-white text-brand-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition text-lg">(602) 632-5794</a>
         <a href="/#contact" class="inline-flex items-center justify-center border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition text-lg">Get a Free Estimate</a>
