@@ -1,0 +1,74 @@
+{
+  "tempe": {
+    "city": "Tempe",
+    "slug": "tempe",
+    "state": "Arizona",
+    "state_abbr": "AZ",
+    "county": "Maricopa County",
+    "population": "195000",
+    "zip_codes": ["85281", "85282", "85283", "85284", "85285"],
+    "nearby": ["phoenix", "scottsdale", "mesa", "chandler", "gilbert"],
+    "description": "Tempe is a vibrant city in the East Valley of the Phoenix metropolitan area, home to Arizona State University and thousands of residents and businesses who rely on professional junk removal and hauling services.",
+    "service_area": "Tempe and East Valley"
+  },
+  "phoenix": {
+    "city": "Phoenix",
+    "slug": "phoenix",
+    "state": "Arizona",
+    "state_abbr": "AZ",
+    "county": "Maricopa County",
+    "population": "1625000",
+    "zip_codes": ["85001", "85002", "85003", "85004", "85006", "85007", "85008", "85009", "85012", "85013", "85014", "85015", "85016", "85017", "85018", "85019", "85020", "85021"],
+    "nearby": ["tempe", "scottsdale", "mesa", "chandler", "gilbert", "glendale", "peoria"],
+    "description": "Phoenix is the capital and most populous city in Arizona, the fifth-largest city in the United States, and a major hub for junk removal and hauling services across the Valley.",
+    "service_area": "Phoenix and Greater Phoenix Metro"
+  },
+  "scottsdale": {
+    "city": "Scottsdale",
+    "slug": "scottsdale",
+    "state": "Arizona",
+    "state_abbr": "AZ",
+    "county": "Maricopa County",
+    "population": "258069",
+    "zip_codes": ["85250", "85251", "85252", "85253", "85254", "85255", "85257", "85258", "85259", "85260", "85261", "85262", "85266", "85268"],
+    "nearby": ["phoenix", "tempe", "mesa", "fountain-hills", "paradise-valley"],
+    "description": "Scottsdale is an affluent city in Maricopa County known for its luxury real estate, thriving commercial sector, and high demand for professional junk removal and estate cleanout services.",
+    "service_area": "Scottsdale and North Valley"
+  },
+  "mesa": {
+    "city": "Mesa",
+    "slug": "mesa",
+    "state": "Arizona",
+    "state_abbr": "AZ",
+    "county": "Maricopa County",
+    "population": "508958",
+    "zip_codes": ["85201", "85202", "85203", "85204", "85205", "85206", "85207", "85208", "85209", "85210", "85212", "85213", "85215", "85216"],
+    "nearby": ["tempe", "chandler", "gilbert", "phoenix", "scottsdale"],
+    "description": "Mesa is the third-largest city in Arizona and one of the fastest-growing cities in the United States, with a high demand for residential and commercial junk removal services.",
+    "service_area": "Mesa and Southeast Valley"
+  },
+  "chandler": {
+    "city": "Chandler",
+    "slug": "chandler",
+    "state": "Arizona",
+    "state_abbr": "AZ",
+    "county": "Maricopa County",
+    "population": "275987",
+    "zip_codes": ["85224", "85225", "85226", "85244", "85246", "85248", "85249"],
+    "nearby": ["mesa", "tempe", "gilbert", "sun-lakes", "ahwatukee"],
+    "description": "Chandler is a technology hub in the Southeast Valley of the Phoenix metro area, home to major corporations and thousands of families requiring reliable junk removal and hauling services.",
+    "service_area": "Chandler and South East Valley"
+  },
+  "gilbert": {
+    "city": "Gilbert",
+    "slug": "gilbert",
+    "state": "Arizona",
+    "state_abbr": "AZ",
+    "county": "Maricopa County",
+    "population": "267918",
+    "zip_codes": ["85233", "85234", "85295", "85296", "85297", "85298", "85299"],
+    "nearby": ["chandler", "mesa", "tempe", "queen-creek", "san-tan-valley"],
+    "description": "Gilbert is one of the fastest-growing communities in the United States, with a family-friendly environment and strong demand for residential junk removal, yard waste hauling, and property cleanout services.",
+    "service_area": "Gilbert and South East Valley"
+  }
+}
