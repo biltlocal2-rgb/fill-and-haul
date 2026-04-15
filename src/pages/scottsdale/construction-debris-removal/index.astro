@@ -1,0 +1,182 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+
+const pageTitle = 'Construction Debris Removal Scottsdale AZ | Job Site Cleanup | Fill & Haul';
+const pageDescription = 'Construction debris removal in Scottsdale, AZ. Fill & Haul hauls away drywall, lumber, concrete, tile, and remodel waste from Scottsdale construction and renovation sites. Fast, same-day service.';
+
+const faqs = [
+  { q: 'Do you remove construction debris from Scottsdale job sites?', a: 'Yes! We provide fast construction debris removal for Scottsdale contractors, builders, and homeowners. We handle drywall, lumber, concrete, tile, and all types of construction waste.' },
+  { q: 'Can you handle large volumes of construction debris in Scottsdale?', a: 'Absolutely. Our heavy-duty trucks are equipped for large-volume construction debris removal from Scottsdale job sites, remodels, and new builds.' },
+  { q: 'Do you haul concrete and masonry from Scottsdale projects?', a: 'Yes, we specialize in heavy material haul-away including concrete slabs, pavers, masonry, and tile demolition debris from Scottsdale properties.' },
+  { q: 'Can you do same-day construction debris pickup in Scottsdale?', a: 'Yes! We offer same-day construction debris removal throughout Scottsdale when you call before noon. We serve all Scottsdale zip codes.' },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Construction Debris Removal in Scottsdale, AZ",
+      "provider": { "@type": "LocalBusiness", "name": "Fill & Haul", "telephone": "+16026325794" },
+      "areaServed": { "@type": "City", "name": "Scottsdale, Arizona" },
+      "description": pageDescription,
+      "url": "https://fillandhaul.com/scottsdale/construction-debris-removal/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question", "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Scottsdale", "item": "https://fillandhaul.com/scottsdale/" },
+        { "@type": "ListItem", "position": 3, "name": "Construction Debris Removal", "item": "https://fillandhaul.com/scottsdale/construction-debris-removal/" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+  <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-200 mt-16 lg:mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center space-x-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-brand-600 transition">Home</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li><a href="/scottsdale/" class="hover:text-brand-600 transition">Scottsdale</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li class="text-navy-700 font-medium">Construction Debris Removal</li>
+      </ol>
+    </div>
+  </nav>
+
+  <section class="bg-navy-900 text-white py-20" style="background: linear-gradient(135deg, #102a43 0%, #243b53 60%, #334e68 100%)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-center lg:text-left">
+          Construction Debris Removal in <span class="text-brand-400">Scottsdale, AZ</span>
+        </h1>
+        <p class="text-xl text-navy-200 mb-8 text-center lg:text-left">Scottsdale's go-to construction debris removal team. We haul drywall, lumber, concrete, tile, and all renovation waste from Scottsdale job sites — same-day service, heavy-load capability.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <a href="/#contact" class="inline-flex items-center justify-center bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-4 rounded-xl transition text-lg">Get a Free Estimate</a>
+          <a href="tel:+16026325794" class="inline-flex items-center justify-center border border-white/30 hover:border-white/60 text-white font-medium px-8 py-4 rounded-xl transition text-lg">(602) 632-5794</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">Construction Debris We Remove in Scottsdale</h2>
+        <div class="grid sm:grid-cols-2 gap-3 max-w-4xl mx-auto">
+          {[
+            'Drywall & gypsum board', 'Lumber & dimensional wood',
+            'Concrete slabs & blocks', 'Tile & ceramic flooring',
+            'Roofing shingles & underlayment', 'Insulation & batts',
+            'Old cabinetry & fixtures', 'Masonry & pavers',
+            'Scrap metal & pipes', 'Mixed renovation waste',
+          ].map(item => (
+            <div class="flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3">
+              <span class="text-brand-500 font-bold text-lg">&#10003;</span>
+              <span class="text-navy-700 text-sm font-medium">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">When to Call for Construction Debris Removal in Scottsdale</h2>
+        <ul class="space-y-4 text-navy-600">
+          <li class="flex gap-3"><span class="text-brand-500 font-bold mt-1">&#10003;</span><span>Your Scottsdale remodel has generated piles of drywall, tile, and demo debris that need to be cleared quickly.</span></li>
+          <li class="flex gap-3"><span class="text-brand-500 font-bold mt-1">&#10003;</span><span>Your Scottsdale contractor needs a reliable debris haul partner to keep active job sites clean and code-compliant.</span></li>
+          <li class="flex gap-3"><span class="text-brand-500 font-bold mt-1">&#10003;</span><span>You have heavy concrete, pavers, or masonry that needs to be hauled from a Scottsdale pool, patio, or hardscape project.</span></li>
+          <li class="flex gap-3"><span class="text-brand-500 font-bold mt-1">&#10003;</span><span>A new build or major renovation in North or South Scottsdale has accumulated waste that can't wait for a dumpster pickup.</span></li>
+          <li class="flex gap-3"><span class="text-brand-500 font-bold mt-1">&#10003;</span><span>Your Scottsdale commercial construction site needs same-day debris haul-away to keep operations moving.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-12 text-center">Our Scottsdale Construction Debris Removal Process</h2>
+        <div class="space-y-8">
+          {[
+            { step: '1', title: 'Call or Request Online', desc: 'Contact Fill & Haul at (602) 632-5794 or submit your estimate request. We offer same-day service throughout Scottsdale.' },
+            { step: '2', title: 'On-Site Quote', desc: 'We assess the debris type and volume at your Scottsdale job site and provide a firm upfront price before we load anything.' },
+            { step: '3', title: 'Heavy Haul & Cleanup', desc: 'Our heavy-duty trucks handle the toughest loads. We haul everything away and ensure your Scottsdale site is clear and clean.' },
+          ].map(p => (
+            <div class="flex gap-6 items-start">
+              <div class="flex-shrink-0 w-12 h-12 bg-brand-500 text-white rounded-full flex items-center justify-center font-heading font-extrabold text-xl">{p.step}</div>
+              <div>
+                <h3 class="font-heading font-bold text-xl text-navy-900 mb-2">{p.title}</h3>
+                <p class="text-navy-500">{p.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">Construction Debris Removal FAQ — Scottsdale</h2>
+        <div class="space-y-4">
+          {faqs.map(f => (
+            <details class="group bg-white rounded-2xl border border-navy-100 overflow-hidden">
+              <summary class="list-none flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-navy-900">
+                {f.q}
+                <svg class="w-5 h-5 text-brand-500 flex-shrink-0 ml-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="px-6 pb-4 text-navy-500 text-sm">{f.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">More Scottsdale Hauling Services</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { title: 'Scottsdale Hauling Services', href: '/scottsdale-hauling-services/' },
+            { title: 'Junk Removal', href: '/scottsdale/junk-removal/' },
+            { title: 'Debris Removal', href: '/scottsdale/debris-removal/' },
+            { title: 'Furniture & Appliance Removal', href: '/scottsdale/furniture-appliance-removal/' },
+          ].map(s => (
+            <a href={s.href} class="bg-gray-50 border border-navy-100 rounded-xl p-4 text-center hover:border-brand-300 hover:shadow-sm transition">
+              <span class="font-semibold text-navy-800 text-sm">{s.title}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-brand-500">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-heading text-3xl font-extrabold text-white mb-4">Schedule Construction Debris Removal in Scottsdale</h2>
+        <p class="text-white/90 text-lg mb-8">Heavy-load capable. Same-day available. Serving all Scottsdale construction sites and remodel projects.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:+16026325794" class="inline-flex items-center justify-center bg-white text-brand-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition text-lg">(602) 632-5794</a>
+          <a href="/#contact" class="inline-flex items-center justify-center border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition text-lg">Get a Free Estimate</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
