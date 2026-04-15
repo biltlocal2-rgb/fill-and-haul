@@ -1,0 +1,119 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+
+const pageTitle = 'Debris Removal Tempe AZ | Construction & Renovation Debris | Fill & Haul';
+const pageDescription = 'Fast debris removal in Tempe, AZ. Fill & Haul removes construction debris, renovation waste, and general debris from residential and commercial properties. Free estimates.';
+
+const faqs = [
+  { q: 'What types of debris do you remove in Tempe?', a: 'We remove construction debris, renovation waste, drywall, lumber, tile, concrete, roofing materials, flooring, insulation, and general property debris.' },
+  { q: 'Can you haul away post-renovation debris?', a: 'Absolutely. Post-renovation debris removal is one of our most common services. We clean up after kitchens, bathrooms, additions, and full-home renovations throughout Tempe.' },
+  { q: 'Do you work with contractors?', a: 'Yes. We partner with Tempe contractors and builders to provide regular job site cleanups and debris haul-away services on flexible schedules.' },
+  { q: 'How quickly can you remove debris in Tempe?', a: 'We offer same-day and next-day debris removal throughout Tempe. Commercial and contractor clients can arrange scheduled recurring pickups.' },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Service", "name": "Debris Removal in Tempe, AZ", "provider": { "@type": "LocalBusiness", "name": "Fill & Haul", "telephone": "+16026325794" }, "areaServed": { "@type": "City", "name": "Tempe, Arizona" }, "description": pageDescription, "url": "https://fillandhaul.com/tempe/debris-removal/" },
+    { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
+    { "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tempe Hauling Services", "item": "https://fillandhaul.com/tempe-hauling-services/" },
+      { "@type": "ListItem", "position": 3, "name": "Debris Removal", "item": "https://fillandhaul.com/tempe/debris-removal/" }
+    ]}
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+  <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-brand-600 transition">Home</a></li>
+        <li class="text-gray-400">/</li>
+        <li><a href="/tempe-hauling-services/" class="hover:text-brand-600 transition">Tempe Hauling Services</a></li>
+        <li class="text-gray-400">/</li>
+        <li class="text-gray-700 font-medium">Debris Removal</li>
+      </ol>
+    </div>
+  </nav>
+  <section class="bg-navy-900 text-white py-20" style="background: linear-gradient(135deg, #102a43 0%, #243b53 60%, #334e68 100%)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">Debris Removal in <span class="text-brand-400">Tempe, AZ</span></h1>
+        <p class="text-xl text-navy-200 mb-8">Construction, renovation, and property debris hauled away fast. Fill &amp; Haul keeps your Tempe job sites clean and compliant.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/#contact" class="inline-flex items-center justify-center bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-4 rounded-xl transition text-lg">Get a Free Estimate</a>
+          <a href="tel:+16026325794" class="inline-flex items-center justify-center border border-white/30 hover:border-white/60 text-white font-medium px-8 py-4 rounded-xl transition text-lg">(602) 632-5794</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <main class="bg-white">
+    <section class="py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto space-y-6 text-gray-600">
+          <h2 class="font-heading text-3xl font-bold text-navy-900">Tempe Debris Removal Services</h2>
+          <p>Whether you're wrapping up a renovation, managing a construction site, or clearing a property after storm damage, Fill &amp; Haul provides fast and reliable debris removal throughout Tempe and the East Valley.</p>
+          <p>We work with homeowners, contractors, property managers, and developers to keep job sites clean, neighborhoods tidy, and schedules on track. Our trucks are fully equipped to handle large volumes of construction and renovation debris in a single haul.</p>
+          <h2 class="font-heading text-3xl font-bold text-navy-900 pt-4">Types of Debris We Remove</h2>
+          <div class="grid sm:grid-cols-2 gap-3">
+            {['Construction & renovation debris', 'Drywall and plaster', 'Lumber and wood scraps', 'Concrete, brick, and tile', 'Roofing materials and shingles', 'Old flooring and carpet', 'Insulation and weatherproofing', 'Storm damage and tree debris', 'Demolition waste', 'Post-cleanout property debris'].map(item => (
+              <div class="flex items-start gap-2 text-sm bg-gray-50 rounded-lg p-3">
+                <svg class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                {item}
+              </div>
+            ))}
+          </div>
+          <h2 class="font-heading text-3xl font-bold text-navy-900 pt-4">Why Tempe Contractors Choose Fill & Haul</h2>
+          <p>Contractors throughout Tempe rely on Fill &amp; Haul because we show up on time, work efficiently, and keep job sites clean without slowing down your crew. We offer flexible scheduling including early morning pickups and can accommodate recurring service arrangements for longer-term projects.</p>
+          <p>Our pricing is straightforward — flat rates based on volume, not hourly guesswork. You'll always know exactly what to expect before we start.</p>
+          <h2 class="font-heading text-3xl font-bold text-navy-900 pt-4">Eco-Friendly Debris Disposal</h2>
+          <p>Wherever possible, we sort and recycle construction materials including metals, concrete, and clean wood. This keeps usable materials out of landfills and helps our Tempe clients maintain green building compliance where required.</p>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-bold text-navy-900 mb-8 text-center">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {faqs.map(faq => (
+            <details class="bg-white border border-gray-200 rounded-xl overflow-hidden group">
+              <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-navy-900 hover:bg-gray-50 transition list-none">
+                {faq.q}
+                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 ml-4 transition group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <div class="px-6 pb-5 text-gray-600 text-sm border-t border-gray-100 pt-4">{faq.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+    <section class="py-16 bg-white border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-2xl font-bold text-navy-900 mb-6 text-center">Related Tempe Services</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <a href="/tempe-hauling-services/" class="text-center p-4 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition text-sm font-semibold text-navy-700 hover:text-brand-700">All Tempe Services</a>
+          <a href="/tempe/junk-removal/" class="text-center p-4 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition text-sm font-semibold text-navy-700 hover:text-brand-700">Junk Removal</a>
+          <a href="/tempe/construction-debris-removal/" class="text-center p-4 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition text-sm font-semibold text-navy-700 hover:text-brand-700">Construction Debris</a>
+          <a href="/tempe/yard-waste-hauling/" class="text-center p-4 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition text-sm font-semibold text-navy-700 hover:text-brand-700">Yard Waste Hauling</a>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 bg-brand-500">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-heading text-3xl font-bold text-white mb-4">Need Debris Removed in Tempe?</h2>
+        <p class="text-xl text-white/80 mb-8">Get a free estimate today. Same-day and contractor scheduling available.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#contact" class="inline-flex items-center justify-center bg-white text-brand-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition text-lg">Get a Free Estimate</a>
+          <a href="tel:+16026325794" class="inline-flex items-center justify-center border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition text-lg">(602) 632-5794</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Footer />
+</Layout>
