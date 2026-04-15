@@ -8,6 +8,8 @@ const {
   title,
   description = 'Fast, affordable junk removal and hauling services in Phoenix and Maricopa County. Serving homeowners, realtors, and property managers. Get a free estimate today!',
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, 'https://fillandhaul.com');
 ---
 
 <!doctype html>
@@ -18,11 +20,13 @@ const {
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content="junk removal Phoenix, hauling services Maricopa County, junk hauling Arizona, property cleanout Phoenix, furniture removal, appliance hauling, Fill and Haul" />
+    <link rel="canonical" href={canonicalURL} />
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:locale" content="en_US" />
 
     <!-- Favicon -->
@@ -39,6 +43,23 @@ const {
       "@type": "LocalBusiness",
       "name": "Fill & Haul",
       "description": "Professional junk removal and hauling services in Phoenix and Maricopa County, Arizona.",
+      "url": "https://fillandhaul.com",
+      "telephone": "+16026325794",
+      "priceRange": "$150-$1000+",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday"],
+          "opens": "08:00",
+          "closes": "14:00"
+        }
+      ],
       "areaServed": { "@type": "AdministrativeArea", "name": "Maricopa County, Arizona" },
       "serviceType": ["Junk Removal", "Hauling", "Property Cleanout", "Debris Removal"],
       "address": { "@type": "PostalAddress", "addressLocality": "Phoenix", "addressRegion": "AZ", "addressCountry": "US" }
