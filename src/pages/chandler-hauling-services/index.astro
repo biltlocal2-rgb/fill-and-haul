@@ -1,0 +1,215 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+
+const pageTitle = 'Chandler Hauling Services | Junk Removal & Debris Hauling | Fill & Haul';
+const pageDescription = 'Complete hauling and junk removal services in Chandler, AZ. Fill & Haul handles junk removal, debris removal, yard waste hauling, construction debris, and furniture & appliance removal throughout Chandler including Ocotillo, Sun Lakes, Fulton Ranch, and all Chandler neighborhoods.';
+
+const faqs = [
+  { q: 'What hauling services does Fill & Haul offer in Chandler?', a: 'We offer junk removal, debris removal, yard waste hauling, construction debris haul-away, and furniture & appliance removal throughout Chandler, AZ. Same-day service available.' },
+  { q: 'Do you serve all Chandler neighborhoods?', a: 'Yes! We serve all areas of Chandler including Ocotillo, Sun Lakes, Fulton Ranch, Chandler Heights, Alma School Corridor, and all zip codes in the Chandler area.' },
+  { q: 'How much does hauling cost in Chandler?', a: 'Chandler hauling pricing starts around $150 for small loads and ranges to $700+ for large commercial or estate cleanouts. Free on-site estimates with no obligation.' },
+  { q: 'Are you licensed and insured in Chandler?', a: 'Yes, Fill & Haul is fully licensed and insured for all residential and commercial hauling work throughout Chandler and Maricopa County.' },
+  { q: 'Can you handle same-day hauling requests in Chandler?', a: 'Absolutely. We offer same-day hauling in Chandler when you call before noon. All Chandler zip codes served including 85224-85249.' },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Fill & Haul",
+      "telephone": "+16026325794",
+      "areaServed": { "@type": "City", "name": "Chandler, Arizona" },
+      "url": "https://fillandhaul.com/chandler-hauling-services/",
+      "description": pageDescription
+    },
+    {
+      "@type": "Service",
+      "name": "Chandler Hauling Services",
+      "provider": { "@type": "LocalBusiness", "name": "Fill & Haul", "telephone": "+16026325794" },
+      "areaServed": { "@type": "City", "name": "Chandler, Arizona" },
+      "description": pageDescription,
+      "url": "https://fillandhaul.com/chandler-hauling-services/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question", "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Chandler Hauling Services", "item": "https://fillandhaul.com/chandler-hauling-services/" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+  <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-200 mt-16 lg:mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center space-x-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-brand-600 transition">Home</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li><a href="/chandler/" class="hover:text-brand-600 transition">Chandler</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li class="text-navy-700 font-medium">Hauling Services</li>
+      </ol>
+    </div>
+  </nav>
+
+  <section class="bg-navy-900 text-white py-20" style="background: linear-gradient(135deg, #102a43 0%, #243b53 60%, #334e68 100%)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-center lg:text-left">
+          Chandler Hauling &amp; <span class="text-brand-400">Junk Removal Services</span>
+        </h1>
+        <p class="text-xl text-navy-200 mb-8 text-center lg:text-left">Full-service junk removal and hauling for Chandler homes, businesses, and commercial properties. Serving Ocotillo, Sun Lakes, Fulton Ranch, and all of Chandler — same-day service, flat-rate pricing.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <a href="/#contact" class="inline-flex items-center justify-center bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-4 rounded-xl transition text-lg">Get a Free Estimate</a>
+          <a href="tel:+16026325794" class="inline-flex items-center justify-center border border-white/30 hover:border-white/60 text-white font-medium px-8 py-4 rounded-xl transition text-lg">(602) 632-5794</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-navy-900 mb-4">Chandler's Trusted Hauling Company</h2>
+        <p class="text-navy-500 text-lg max-w-2xl mx-auto">Fill & Haul provides reliable, professional hauling services across all Chandler neighborhoods from Ocotillo to Chandler Heights.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { icon: '&#128336;', title: 'Same-Day Service', desc: 'Fast response across all of Chandler - call before noon for same-day hauling.' },
+          { icon: '&#128176;', title: 'Flat-Rate Pricing', desc: 'Upfront quotes with no hidden fees. Know the price before we start.' },
+          { icon: '&#9989;', title: 'Licensed & Insured', desc: 'Fully licensed and insured for Chandler residential and commercial hauling.' },
+          { icon: '&#127807;', title: 'Eco-Friendly Disposal', desc: 'We donate, recycle, and responsibly dispose of materials from Chandler properties.' },
+        ].map(item => (
+          <div class="bg-gray-50 rounded-2xl p-6 text-center">
+            <div class="text-4xl mb-3" set:html={item.icon}></div>
+            <h3 class="font-heading font-bold text-lg text-navy-900 mb-2">{item.title}</h3>
+            <p class="text-navy-500 text-sm">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-4">Our Chandler Hauling Services</h2>
+        <p class="text-navy-500 text-lg">Full-service hauling solutions for every residential and commercial need in Chandler.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: 'Junk Removal', href: '/chandler/junk-removal/', desc: 'Full-service junk removal for Chandler homes, estates, and commercial spaces.' },
+          { title: 'Debris Removal', href: '/chandler/debris-removal/', desc: 'Post-renovation and general debris cleanup for Chandler homeowners and contractors.' },
+          { title: 'Yard Waste Hauling', href: '/chandler/yard-waste-hauling/', desc: 'Tree trimmings, brush, clippings, and organic waste hauled from Chandler yards.' },
+          { title: 'Construction Debris Removal', href: '/chandler/construction-debris-removal/', desc: 'Drywall, tile, lumber, and remodel waste removed from Chandler job sites.' },
+          { title: 'Furniture & Appliance Removal', href: '/chandler/furniture-appliance-removal/', desc: 'Old furniture and appliances removed and recycled from Chandler homes.' },
+          { title: 'Commercial Hauling', href: '/chandler/junk-removal/', desc: 'Commercial cleanouts for Chandler offices, retail spaces, and industrial properties.' },
+        ].map(s => (
+          <a href={s.href} class="bg-white border border-navy-100 rounded-2xl p-6 hover:shadow-md hover:border-brand-300 transition block">
+            <h3 class="font-heading font-bold text-lg text-navy-900 mb-2">{s.title} <span class="text-brand-500">→</span></h3>
+            <p class="text-navy-500 text-sm">{s.desc}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">What We Haul in Chandler</h2>
+        <div class="grid sm:grid-cols-2 gap-3">
+          {[
+            'Furniture & sofas', 'Appliances & electronics', 'Estate & garage cleanout items',
+            'Renovation & construction debris', 'Yard waste & green waste', 'Mattresses & box springs',
+            'Office equipment & cubicles', 'Hot tubs & exercise equipment', 'Pavers, gravel & concrete',
+            'Scrap metal & HVAC units',
+          ].map(item => (
+            <div class="flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3">
+              <span class="text-brand-500 font-bold text-lg">&#10003;</span>
+              <span class="text-navy-700 text-sm font-medium">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-12 text-center">How Our Chandler Hauling Works</h2>
+      <div class="space-y-8">
+        {[
+          { step: '1', title: 'Call or Request Online', desc: 'Contact Fill & Haul at (602) 632-5794 or submit a free estimate request. We schedule same-day or next-day service throughout Chandler.' },
+          { step: '2', title: 'On-Site Assessment & Quote', desc: 'Our Chandler team arrives on time, assesses the job, and provides a firm upfront price — no surprises.' },
+          { step: '3', title: 'We Haul Everything Away', desc: 'We handle all the heavy lifting and cleanup. We donate, recycle, and properly dispose of items throughout Chandler.' },
+        ].map(p => (
+          <div class="flex gap-6 items-start">
+            <div class="flex-shrink-0 w-12 h-12 bg-brand-500 text-white rounded-full flex items-center justify-center font-heading font-extrabold text-xl">{p.step}</div>
+            <div>
+              <h3 class="font-heading font-bold text-xl text-navy-900 mb-2">{p.title}</h3>
+              <p class="text-navy-500">{p.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-4">Serving All of Chandler, AZ</h2>
+        <p class="text-navy-500 text-lg mb-6">We cover all Chandler neighborhoods including Ocotillo (85249), Sun Lakes (85248), Fulton Ranch (85248), Chandler Heights (85249), Pecos Ranch (85225), and all Chandler zip codes 85224-85249.</p>
+        <p class="text-navy-500">Also serving nearby: <a href="/mesa/" class="text-brand-600 hover:underline">Mesa</a>, <a href="/gilbert/" class="text-brand-600 hover:underline">Gilbert</a>, <a href="/tempe/" class="text-brand-600 hover:underline">Tempe</a>, and <a href="/phoenix/" class="text-brand-600 hover:underline">Phoenix</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">Chandler Hauling Services FAQ</h2>
+      <div class="space-y-4">
+        {faqs.map(f => (
+          <details class="group bg-white rounded-2xl border border-navy-100 overflow-hidden">
+            <summary class="list-none flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-navy-900">
+              {f.q}
+              <svg class="w-5 h-5 text-brand-500 flex-shrink-0 ml-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-4 text-navy-500 text-sm">{f.a}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-brand-500">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-heading text-3xl font-extrabold text-white mb-4">Ready to Haul? Book Chandler Service Today</h2>
+      <p class="text-white/90 text-lg mb-8">Professional hauling for Chandler homes and businesses. Same-day availability. Flat-rate pricing.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+16026325794" class="inline-flex items-center justify-center bg-white text-brand-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition text-lg">(602) 632-5794</a>
+        <a href="/#contact" class="inline-flex items-center justify-center border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition text-lg">Get a Free Estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
