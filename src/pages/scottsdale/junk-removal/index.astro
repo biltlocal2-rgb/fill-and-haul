@@ -1,0 +1,190 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+
+const pageTitle = 'Junk Removal Scottsdale AZ | Same-Day Service | Fill & Haul';
+const pageDescription = 'Professional junk removal in Scottsdale, AZ. Fill & Haul provides fast, affordable junk removal for homes, estates, and businesses throughout Scottsdale. Same-day service. Free estimates. (602) 632-5794.';
+
+const faqs = [
+  { q: 'What items can you remove in Scottsdale?', a: 'We remove virtually anything non-hazardous in Scottsdale: furniture, appliances, electronics, mattresses, exercise equipment, office items, general household junk, estate cleanout items, and more.' },
+  { q: 'Do you offer same-day junk removal in Scottsdale?', a: 'Yes! We offer same-day junk removal throughout Scottsdale when you call before noon. We serve all Scottsdale zip codes including 85250-85262, 85266, and 85268.' },
+  { q: 'How much does junk removal cost in Scottsdale?', a: 'Junk removal in Scottsdale starts around $150 for small loads and ranges to $650+ for full loads. Pricing depends on volume and type of material. Free on-site estimates with no obligation.' },
+  { q: 'Do you handle Scottsdale estate cleanouts?', a: 'Absolutely. We specialize in full estate cleanouts across Scottsdale including North Scottsdale, Old Town, McCormick Ranch, DC Ranch, and all surrounding neighborhoods.' },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Junk Removal in Scottsdale, AZ",
+      "provider": { "@type": "LocalBusiness", "name": "Fill & Haul", "telephone": "+16026325794" },
+      "areaServed": { "@type": "City", "name": "Scottsdale, Arizona" },
+      "description": pageDescription,
+      "url": "https://fillandhaul.com/scottsdale/junk-removal/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question", "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Scottsdale", "item": "https://fillandhaul.com/scottsdale/" },
+        { "@type": "ListItem", "position": 3, "name": "Junk Removal", "item": "https://fillandhaul.com/scottsdale/junk-removal/" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+  <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-200 mt-16 lg:mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center space-x-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-brand-600 transition">Home</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li><a href="/scottsdale/" class="hover:text-brand-600 transition">Scottsdale</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li class="text-navy-700 font-medium">Junk Removal</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="bg-navy-900 text-white py-20" style="background: linear-gradient(135deg, #102a43 0%, #243b53 60%, #334e68 100%)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-center lg:text-left">
+          Junk Removal in <span class="text-brand-400">Scottsdale, AZ</span>
+        </h1>
+        <p class="text-xl text-navy-200 mb-8 text-center lg:text-left">Scottsdale's trusted junk removal team. We haul away anything — from luxury estate cleanouts in North Scottsdale to apartment and office junk removal in Old Town. Same-day service, no-hassle pricing.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <a href="/#contact" class="inline-flex items-center justify-center bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-4 rounded-xl transition text-lg">Get a Free Estimate</a>
+          <a href="tel:+16026325794" class="inline-flex items-center justify-center border border-white/30 hover:border-white/60 text-white font-medium px-8 py-4 rounded-xl transition text-lg">(602) 632-5794</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <!-- What We Haul -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">What We Remove in Scottsdale</h2>
+        <div class="grid sm:grid-cols-2 gap-3 max-w-4xl mx-auto">
+          {[
+            'Sofas, couches & sectionals', 'Beds, dressers & bedroom sets',
+            'Appliances (fridges, washers, dryers)', 'Electronics & TVs',
+            'Exercise equipment & hot tubs', 'Office furniture & cubicles',
+            'Estate & garage cleanout items', 'Mattresses & box springs',
+            'Outdoor furniture & BBQ grills', 'General household junk & clutter',
+          ].map(item => (
+            <div class="flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3">
+              <span class="text-brand-500 font-bold text-lg">&#10003;</span>
+              <span class="text-navy-700 text-sm font-medium">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Signs You Need It -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">Signs You Need Junk Removal in Scottsdale</h2>
+        <ul class="space-y-4 text-navy-600">
+          <li class="flex gap-3"><span class="text-brand-500 font-bold mt-1">&#10003;</span><span>Your Scottsdale garage, storage room, or guest room has become a dumping ground for unused items.</span></li>
+          <li class="flex gap-3"><span class="text-brand-500 font-bold mt-1">&#10003;</span><span>You're preparing a Scottsdale estate or property for sale and need a fast, thorough cleanout.</span></li>
+          <li class="flex gap-3"><span class="text-brand-500 font-bold mt-1">&#10003;</span><span>You've completed a home renovation and have leftover debris, old fixtures, or unwanted items.</span></li>
+          <li class="flex gap-3"><span class="text-brand-500 font-bold mt-1">&#10003;</span><span>You're downsizing or moving within the Scottsdale area and need to remove bulky items that won't fit in the new space.</span></li>
+          <li class="flex gap-3"><span class="text-brand-500 font-bold mt-1">&#10003;</span><span>Your Scottsdale commercial property needs an office cleanout, retail space refresh, or tenant turnover junk haul.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-12 text-center">Our Scottsdale Junk Removal Process</h2>
+        <div class="space-y-8">
+          {[
+            { step: '1', title: 'Schedule in Scottsdale', desc: 'Call (602) 632-5794 or submit your estimate request online. We offer same-day service for Scottsdale customers who call before noon.' },
+            { step: '2', title: 'Upfront Quote', desc: 'Our Scottsdale team arrives on time, assesses your junk, and gives you a firm price before we touch a single item. No surprises.' },
+            { step: '3', title: 'We Haul It All Away', desc: 'We do all the heavy lifting, loading, and cleanup. We donate usable items and recycle whenever possible, keeping Scottsdale green.' },
+          ].map(p => (
+            <div class="flex gap-6 items-start">
+              <div class="flex-shrink-0 w-12 h-12 bg-brand-500 text-white rounded-full flex items-center justify-center font-heading font-extrabold text-xl">{p.step}</div>
+              <div>
+                <h3 class="font-heading font-bold text-xl text-navy-900 mb-2">{p.title}</h3>
+                <p class="text-navy-500">{p.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">Scottsdale Junk Removal FAQ</h2>
+        <div class="space-y-4">
+          {faqs.map(f => (
+            <details class="group bg-white rounded-2xl border border-navy-100 overflow-hidden">
+              <summary class="list-none flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-navy-900">
+                {f.q}
+                <svg class="w-5 h-5 text-brand-500 flex-shrink-0 ml-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="px-6 pb-4 text-navy-500 text-sm">{f.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">More Scottsdale Hauling Services</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { title: 'Scottsdale Hauling Services', href: '/scottsdale-hauling-services/' },
+            { title: 'Debris Removal', href: '/scottsdale/debris-removal/' },
+            { title: 'Yard Waste Hauling', href: '/scottsdale/yard-waste-hauling/' },
+            { title: 'Furniture & Appliance Removal', href: '/scottsdale/furniture-appliance-removal/' },
+          ].map(s => (
+            <a href={s.href} class="bg-gray-50 border border-navy-100 rounded-xl p-4 text-center hover:border-brand-300 hover:shadow-sm transition">
+              <span class="font-semibold text-navy-800 text-sm">{s.title}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-brand-500">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-heading text-3xl font-extrabold text-white mb-4">Schedule Junk Removal in Scottsdale Today</h2>
+        <p class="text-white/90 text-lg mb-8">Same-day service available. Serving all Scottsdale neighborhoods from Old Town to North Scottsdale.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:+16026325794" class="inline-flex items-center justify-center bg-white text-brand-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition text-lg">(602) 632-5794</a>
+          <a href="/#contact" class="inline-flex items-center justify-center border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition text-lg">Get a Free Estimate</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
