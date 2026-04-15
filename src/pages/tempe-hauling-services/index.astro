@@ -1,0 +1,407 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import cities from '../../../data/cities.json';
+
+const city = cities.tempe;
+const pageTitle = 'Tempe Hauling Services | Junk Removal, Debris & Hauling | Fill & Haul';
+const pageDescription = 'Fill & Haul provides professional hauling and junk removal services throughout Tempe, AZ. Same-day service for residential and commercial clients across the East Valley.';
+
+const services = [
+  { id: 'junk-removal', title: 'Junk Removal & Hauling', href: '/tempe/junk-removal/', desc: 'Full-service junk removal for homes, garages, offices, and storage units. We load and haul everything from single items to entire property cleanouts.' },
+  { id: 'debris-removal', title: 'Debris Removal', href: '/tempe/debris-removal/', desc: 'Fast removal of construction debris, renovation waste, and general debris from residential and commercial job sites throughout Tempe.' },
+  { id: 'yard-waste', title: 'Yard Waste Hauling', href: '/tempe/yard-waste-hauling/', desc: 'Branches, leaves, grass clippings, old landscaping materials — we haul it all away so your yard stays clean and code-compliant.' },
+  { id: 'construction', title: 'Construction Debris Removal', href: '/tempe/construction-debris-removal/', desc: 'Drywall, lumber, concrete, roofing materials and more. We keep your job site clean with reliable construction debris hauling.' },
+  { id: 'furniture', title: 'Furniture & Appliance Removal', href: '/tempe/furniture-appliance-removal/', desc: 'Old sofas, refrigerators, washers, mattresses — we remove and responsibly dispose of bulky items from anywhere on your property.' },
+];
+
+const faqs = [
+  { q: 'How much does junk removal in Tempe cost?', a: 'Our pricing ranges from $150 for small single-item pickups to $1,000+ for full property cleanouts. We provide free estimates before any work begins so there are never surprise charges.' },
+  { q: 'Do you offer same-day junk removal in Tempe?', a: 'Yes! We offer same-day and next-day service throughout Tempe and the East Valley. Call (602) 632-5794 early in the day for same-day availability.' },
+  { q: 'What items do you haul away?', a: 'We haul nearly everything: furniture, appliances, electronics, yard waste, construction debris, mattresses, hot tubs, exercise equipment, and general household junk. We cannot accept hazardous materials, chemicals, or biological waste.' },
+  { q: 'Are you licensed and insured?', a: 'Yes. Fill & Haul is fully licensed and insured in Arizona. Our team is professional, background-checked, and trained in safe removal practices.' },
+  { q: 'Do you recycle or donate items?', a: "Absolutely. We prioritize eco-friendly disposal. Usable items are donated to local Tempe-area charities, and recyclable materials are taken to certified recycling facilities." },
+  { q: 'How do I prepare for a junk removal appointment?', a: "You don't need to do much. Just make sure the items are accessible and point our crew to what needs to go. We handle all the heavy lifting, loading, and hauling." },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Fill & Haul",
+      "url": "https://fillandhaul.com",
+      "telephone": "+16026325794",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tempe",
+        "addressRegion": "AZ",
+        "addressCountry": "US"
+      },
+      "areaServed": { "@type": "City", "name": "Tempe", "sameAs": "https://en.wikipedia.org/wiki/Tempe,_Arizona" },
+      "serviceType": ["Junk Removal", "Hauling Services", "Debris Removal", "Yard Waste Hauling", "Construction Debris Removal", "Furniture Removal"]
+    },
+    {
+      "@type": "Service",
+      "name": "Tempe Hauling Services",
+      "provider": { "@type": "LocalBusiness", "name": "Fill & Haul" },
+      "areaServed": { "@type": "City", "name": "Tempe, Arizona" },
+      "description": "Professional hauling and junk removal services throughout Tempe, AZ including residential cleanouts, commercial hauling, debris removal, and yard waste hauling.",
+      "url": "https://fillandhaul.com/tempe-hauling-services/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Tempe Hauling Services", "item": "https://fillandhaul.com/tempe-hauling-services/" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-brand-600 transition">Home</a></li>
+        <li class="text-gray-400">/</li>
+        <li class="text-gray-700 font-medium">Tempe Hauling Services</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="bg-navy-900 text-white py-20 lg:py-28" style="background: linear-gradient(135deg, #102a43 0%, #243b53 60%, #334e68 100%)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+          Tempe Hauling &amp; <span class="text-brand-400">Junk Removal</span> Services
+        </h1>
+        <p class="text-xl text-navy-200 mb-8 leading-relaxed">
+          Fill &amp; Haul is Tempe's trusted hauling and junk removal company. We provide fast, affordable, and eco-friendly removal services for homeowners, realtors, property managers, and commercial clients throughout Tempe and the East Valley.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/#contact" class="inline-flex items-center justify-center bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-4 rounded-xl transition text-lg">
+            Get a Free Estimate
+          </a>
+          <a href="tel:+16026325794" class="inline-flex items-center justify-center border border-white/30 hover:border-white/60 text-white font-medium px-8 py-4 rounded-xl transition text-lg">
+            (602) 632-5794
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Table of Contents -->
+  <section class="bg-white border-b border-gray-200 sticky top-0 z-30 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex gap-1 overflow-x-auto py-3 text-sm font-medium scrollbar-hide">
+        <span class="text-gray-400 pr-3 flex-shrink-0">Jump to:</span>
+        <a href="#overview" class="flex-shrink-0 px-3 py-1.5 rounded-lg hover:bg-gray-100 text-gray-600 hover:text-gray-900 transition whitespace-nowrap">Overview</a>
+        <a href="#services" class="flex-shrink-0 px-3 py-1.5 rounded-lg hover:bg-gray-100 text-gray-600 hover:text-gray-900 transition whitespace-nowrap">Services</a>
+        <a href="#residential" class="flex-shrink-0 px-3 py-1.5 rounded-lg hover:bg-gray-100 text-gray-600 hover:text-gray-900 transition whitespace-nowrap">Residential</a>
+        <a href="#commercial" class="flex-shrink-0 px-3 py-1.5 rounded-lg hover:bg-gray-100 text-gray-600 hover:text-gray-900 transition whitespace-nowrap">Commercial</a>
+        <a href="#process" class="flex-shrink-0 px-3 py-1.5 rounded-lg hover:bg-gray-100 text-gray-600 hover:text-gray-900 transition whitespace-nowrap">Our Process</a>
+        <a href="#pricing" class="flex-shrink-0 px-3 py-1.5 rounded-lg hover:bg-gray-100 text-gray-600 hover:text-gray-900 transition whitespace-nowrap">Pricing</a>
+        <a href="#eco" class="flex-shrink-0 px-3 py-1.5 rounded-lg hover:bg-gray-100 text-gray-600 hover:text-gray-900 transition whitespace-nowrap">Eco-Friendly</a>
+        <a href="#faqs" class="flex-shrink-0 px-3 py-1.5 rounded-lg hover:bg-gray-100 text-gray-600 hover:text-gray-900 transition whitespace-nowrap">FAQs</a>
+      </nav>
+    </div>
+  </section>
+
+  <main class="bg-white">
+
+    <!-- Overview Section -->
+    <section id="overview" class="py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="font-heading text-3xl lg:text-4xl font-bold text-navy-900 mb-6">Professional Hauling Services in Tempe, Arizona</h2>
+          <div class="prose prose-lg text-gray-600 max-w-none space-y-4">
+            <p>
+              Whether you're clearing out a cluttered garage, managing a commercial renovation, or handling an estate cleanout, Fill &amp; Haul delivers dependable hauling and junk removal services throughout Tempe and Maricopa County. We understand that your time is valuable — that's why we offer same-day scheduling, flat-rate pricing, and a no-hassle removal process that gets the job done right the first time.
+            </p>
+            <p>
+              Tempe is a dynamic city — home to Arizona State University, thriving neighborhoods like Tempe Town Lake, McClintock, and South Tempe, and a bustling commercial corridor along Elliot Road and Baseline. From compact student apartments near campus to large commercial properties in the Tempe Tech Corridor, we serve every corner of the city with the same professional standard.
+            </p>
+            <p>
+              Our team handles everything from single-item pickups to complete property cleanouts. We bring the labor, the truck, and the expertise — all you need to do is show us what goes. Our eco-friendly disposal approach means usable items are donated, recyclables are diverted from landfills, and only true waste ends up in the dump.
+            </p>
+            <p>
+              Fill &amp; Haul is licensed, insured, and backed by a growing list of satisfied customers across the Valley. We're not just a junk removal company — we're a local Tempe business that takes pride in serving our community with transparency, care, and professionalism.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services" class="py-16 lg:py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="font-heading text-3xl lg:text-4xl font-bold text-navy-900 mb-4">Our Tempe Hauling &amp; Removal Services</h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">From single-item pickups to whole-property cleanouts, we handle it all. Select a service below to learn more.</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map(svc => (
+            <a href={svc.href} class="group bg-white rounded-2xl p-6 border border-gray-200 hover:border-brand-400 hover:shadow-lg transition block">
+              <h3 class="font-heading font-bold text-xl text-navy-900 mb-3 group-hover:text-brand-600 transition">{svc.title}</h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">{svc.desc}</p>
+              <span class="text-brand-600 text-sm font-semibold inline-flex items-center gap-1">
+                Learn more
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Residential Section -->
+    <section id="residential" class="py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-heading text-3xl lg:text-4xl font-bold text-navy-900 mb-6">Residential Hauling in Tempe</h2>
+            <div class="space-y-4 text-gray-600">
+              <p>Homeowners across Tempe trust Fill &amp; Haul to handle the jobs that are too big, too heavy, or too time-consuming to manage alone. Whether you're downsizing, spring cleaning, renovating, or settling an estate, we make the process simple and stress-free.</p>
+              <p>Our residential hauling services are designed around your schedule. We offer flexible morning and afternoon appointments Monday through Friday, with Saturday availability from 8am to 2pm. Our two-person crews arrive on time, work efficiently, and leave your property clean.</p>
+              <h3 class="font-heading font-bold text-xl text-navy-900 mt-6">Common Residential Jobs We Handle:</h3>
+              <ul class="space-y-2 mt-3">
+                {[
+                  'Garage and storage unit cleanouts',
+                  'Furniture and appliance removal',
+                  'Estate cleanouts and downsizing',
+                  'Basement and attic clearing',
+                  'Yard waste and landscaping debris',
+                  'Post-renovation debris removal',
+                  'Hot tub, shed, and playset removal',
+                  'Moving junk haul-away'
+                ].map(item => (
+                  <li class="flex items-start gap-2 text-sm">
+                    <svg class="w-5 h-5 text-brand-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <a href="/#contact" class="mt-8 inline-flex items-center justify-center bg-brand-500 hover:bg-brand-600 text-white font-semibold px-6 py-3 rounded-xl transition">Schedule Residential Pickup</a>
+          </div>
+          <div class="bg-gray-100 rounded-2xl p-8 border border-gray-200">
+            <h3 class="font-heading font-bold text-2xl text-navy-900 mb-4">Tempe Neighborhoods We Serve</h3>
+            <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+              {[
+                'Tempe Town Lake', 'McClintock', 'South Tempe', 'ASU Campus Area',
+                'Kyrene Corridor', 'Baseline & Elliot', 'Warner Ranch', 'Broadmor',
+                'Tempe West', 'Papago Park', 'Diablo Village', 'College Park'
+              ].map(n => (
+                <div class="flex items-center gap-2 py-1.5 border-b border-gray-200">
+                  <span class="w-1.5 h-1.5 bg-brand-500 rounded-full flex-shrink-0"></span>
+                  {n}
+                </div>
+              ))}
+            </div>
+            <p class="text-xs text-gray-500 mt-4">Also serving all zip codes: {city.zip_codes.join(', ')}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Commercial Section -->
+    <section id="commercial" class="py-16 lg:py-20 bg-navy-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="font-heading text-3xl lg:text-4xl font-bold mb-4">Commercial Hauling in Tempe</h2>
+          <p class="text-lg text-navy-200 max-w-2xl mx-auto">We partner with Tempe businesses, contractors, property managers, and real estate professionals to keep job sites clean and properties move-in ready.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          {[
+            { title: 'Property Managers', desc: 'Fast unit cleanouts between tenants. We remove all left-behind items and debris so your property is ready to rent.' },
+            { title: 'Realtors & Investors', desc: 'Pre-listing and estate cleanouts that make properties show-ready. We work fast and work around your showing schedule.' },
+            { title: 'Contractors', desc: 'Construction debris, drywall, lumber, flooring — we keep your job sites clean and compliant with reliable haul-away service.' },
+            { title: 'Office & Retail', desc: 'Furniture liquidation, equipment disposal, and full office cleanouts. We handle everything from one desk to an entire floor.' },
+            { title: 'HOAs & Community Managers', desc: 'Common area cleanouts, community event debris removal, and scheduled maintenance hauling for your Tempe HOA.' },
+            { title: 'Restaurants & Food Service', desc: 'Equipment removal, kitchen buildout debris, and renovation waste hauling with minimal disruption to your operations.' },
+          ].map(item => (
+            <div class="bg-white/10 border border-white/20 rounded-2xl p-6">
+              <h3 class="font-heading font-bold text-xl mb-3">{item.title}</h3>
+              <p class="text-navy-200 text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+        <div class="text-center mt-10">
+          <a href="/#contact" class="inline-flex items-center justify-center bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-4 rounded-xl transition text-lg">Request Commercial Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="font-heading text-3xl lg:text-4xl font-bold text-navy-900 mb-4">How Our Tempe Junk Removal Works</h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">Three simple steps to a clutter-free space.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          {[
+            { step: '1', title: 'Request Your Free Estimate', desc: 'Call (602) 632-5794 or fill out our online form. We'll provide a no-obligation quote based on the volume and type of items you need removed — usually within the hour.' },
+            { step: '2', title: 'We Show Up On Time', desc: 'Our two-person crew arrives at your Tempe location in our fully equipped truck. We'll walk through the items with you, confirm the job scope, and get to work immediately.' },
+            { step: '3', title: 'Done — Space Reclaimed', desc: 'We load everything, sweep up, and haul it away. Usable items go to local charities, recyclables go to certified facilities, and the rest is properly disposed of.' },
+          ].map(s => (
+            <div class="text-center">
+              <div class="w-16 h-16 bg-brand-500 text-white rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-4">{s.step}</div>
+              <h3 class="font-heading font-bold text-xl text-navy-900 mb-3">{s.title}</h3>
+              <p class="text-gray-600 leading-relaxed">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 lg:py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="font-heading text-3xl lg:text-4xl font-bold text-navy-900 mb-4">Junk Removal Pricing in Tempe</h2>
+            <p class="text-lg text-gray-600">Transparent, flat-rate pricing. No hidden fees, no surprise charges.</p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-6 mb-10">
+            {[
+              { size: 'Small Load', range: '$150 – $300', desc: 'A few items — single furniture pieces, small appliance, minor cleanout.', items: ['Single couch or mattress', '1–2 appliances', 'Small pile of debris'] },
+              { size: 'Medium Load', range: '$300 – $600', desc: 'Partial truckload — garage cleanout, bedroom furniture, renovation debris.', items: ['Full garage cleanout', 'Multiple furniture items', 'Partial room debris'] },
+              { size: 'Full Load', range: '$600 – $1,000+', desc: 'Full truckload — whole-home cleanout, large commercial job, estate clearance.', items: ['Whole-home cleanout', 'Estate cleanout', 'Large commercial job'] },
+            ].map(tier => (
+              <div class="bg-white border border-gray-200 rounded-2xl p-6">
+                <h3 class="font-heading font-bold text-xl text-navy-900 mb-1">{tier.size}</h3>
+                <div class="text-3xl font-bold text-brand-600 mb-3">{tier.range}</div>
+                <p class="text-sm text-gray-600 mb-4">{tier.desc}</p>
+                <ul class="space-y-1.5">
+                  {tier.items.map(i => (
+                    <li class="text-xs text-gray-500 flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 bg-brand-400 rounded-full flex-shrink-0"></span>
+                      {i}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div class="bg-brand-50 border border-brand-200 rounded-2xl p-6 text-center">
+            <p class="text-navy-700 font-medium mb-3">Prices vary based on volume, weight, and item type. Get your exact quote for free — no commitment required.</p>
+            <a href="/#contact" class="inline-flex items-center justify-center bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-3 rounded-xl transition">Get My Free Estimate</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Eco-Friendly Section -->
+    <section id="eco" class="py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-heading text-3xl lg:text-4xl font-bold text-navy-900 mb-6">Eco-Friendly Disposal in Tempe</h2>
+            <div class="space-y-4 text-gray-600">
+              <p>At Fill &amp; Haul, we believe hauling doesn't have to mean dumping. We go the extra mile to ensure items are handled responsibly — keeping usable goods in circulation and reducing waste sent to Arizona landfills.</p>
+              <p>Our eco-friendly disposal process includes donation drops to Tempe-area charities and thrift organizations, certified recycling for metals, electronics, and cardboard, and environmentally compliant disposal for everything else.</p>
+              <div class="grid grid-cols-3 gap-4 mt-6">
+                {[
+                  { label: 'Items Donated', stat: '40%+' },
+                  { label: 'Materials Recycled', stat: '30%+' },
+                  { label: 'Diverted from Landfill', stat: '70%+' }
+                ].map(s => (
+                  <div class="text-center bg-gray-50 rounded-xl p-4">
+                    <div class="text-3xl font-bold text-brand-600 mb-1">{s.stat}</div>
+                    <div class="text-xs text-gray-500">{s.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <h3 class="font-heading font-bold text-2xl text-navy-900">Where Your Items Go</h3>
+            {[
+              { icon: '🏠', title: 'Donated to Local Charities', desc: 'Furniture, clothing, appliances, and household goods in good condition are donated to Tempe-area organizations.' },
+              { icon: '♻️', title: 'Recycled at Certified Facilities', desc: 'Metals, electronics, cardboard, and other recyclables are taken to certified Maricopa County recycling centers.' },
+              { icon: '🗑️', title: 'Properly Disposed', desc: 'Items that cannot be reused or recycled are disposed of at licensed waste facilities in compliance with Arizona regulations.' },
+            ].map(item => (
+              <div class="flex gap-4 bg-gray-50 rounded-xl p-4 border border-gray-200">
+                <span class="text-3xl">{item.icon}</span>
+                <div>
+                  <h4 class="font-semibold text-navy-900 mb-1">{item.title}</h4>
+                  <p class="text-sm text-gray-600">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faqs" class="py-16 lg:py-20 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="font-heading text-3xl lg:text-4xl font-bold text-navy-900 mb-4">Frequently Asked Questions</h2>
+          <p class="text-lg text-gray-600">Everything you need to know about junk removal and hauling in Tempe.</p>
+        </div>
+        <div class="space-y-4">
+          {faqs.map((faq, i) => (
+            <details class="bg-white border border-gray-200 rounded-xl overflow-hidden group" id={`faq-${i}`}>
+              <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-navy-900 hover:bg-gray-50 transition list-none">
+                {faq.q}
+                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 ml-4 transition group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              </summary>
+              <div class="px-6 pb-5 text-gray-600 leading-relaxed text-sm border-t border-gray-100 pt-4">
+                {faq.a}
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Internal Links / Related Pages -->
+    <section class="py-16 bg-white border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-2xl font-bold text-navy-900 mb-8 text-center">Explore Our Tempe Removal Services</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          {services.map(svc => (
+            <a href={svc.href} class="text-center p-4 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition group">
+              <span class="text-sm font-semibold text-navy-700 group-hover:text-brand-700 transition">{svc.title}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 lg:py-20 bg-brand-500">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-heading text-3xl lg:text-4xl font-bold text-white mb-4">Ready to Reclaim Your Space?</h2>
+        <p class="text-xl text-white/80 mb-8">Get a free estimate today. Same-day service available throughout Tempe and the East Valley.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#contact" class="inline-flex items-center justify-center bg-white text-brand-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition text-lg">Get a Free Estimate</a>
+          <a href="tel:+16026325794" class="inline-flex items-center justify-center border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition text-lg">(602) 632-5794</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <Footer />
+</Layout>
