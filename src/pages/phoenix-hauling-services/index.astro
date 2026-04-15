@@ -1,0 +1,162 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+
+const pageTitle = 'Phoenix Hauling Services | Junk Removal & Debris Hauling | Fill & Haul';
+const pageDescription = 'Complete hauling and junk removal services in Phoenix, Arizona. Fill & Haul offers junk removal, debris removal, yard waste hauling, construction cleanup, and furniture removal. Same-day service. Free estimates.';
+
+const services = [
+  { title: 'Junk Removal', desc: 'Full-service junk removal for Phoenix homes and businesses. Furniture, electronics, appliances, and more hauled away fast.', href: '/phoenix/junk-removal/' },
+  { title: 'Debris Removal', desc: 'Professional debris removal throughout Phoenix. Construction waste, property debris, and post-storm cleanup.', href: '/phoenix/debris-removal/' },
+  { title: 'Yard Waste Hauling', desc: 'Phoenix yard waste pickup including branches, palm fronds, rocks, dirt, brush piles, and all landscaping debris.', href: '/phoenix/yard-waste-hauling/' },
+  { title: 'Construction Debris Removal', desc: 'Fast job site cleanup for Phoenix contractors. Drywall, lumber, concrete, roofing, and all construction waste.', href: '/phoenix/construction-debris-removal/' },
+  { title: 'Furniture & Appliance Removal', desc: 'We carry furniture and appliances out from wherever they are in your Phoenix home. No heavy lifting required.', href: '/phoenix/furniture-appliance-removal/' },
+];
+
+const faqs = [
+  { q: 'What hauling services do you offer in Phoenix?', a: 'Fill & Haul offers junk removal, debris removal, yard waste hauling, construction debris cleanup, and furniture and appliance removal throughout Phoenix and the Valley.' },
+  { q: 'Do you offer same-day hauling service in Phoenix?', a: 'Yes! Same-day service is available throughout Phoenix when you call early. We typically ask that you reach out before noon for same-day availability.' },
+  { q: 'What areas of Phoenix do you serve?', a: 'We serve all of Phoenix including Central Phoenix, North Phoenix, South Phoenix, Arcadia, Ahwatukee, Biltmore, Camelback, Deer Valley, Maryvale, North Mountain, and Paradise Valley Village.' },
+  { q: 'How do I get a free estimate for hauling in Phoenix?', a: 'Call us at (602) 632-5794 or fill out our online contact form. We offer free on-site estimates with no obligation before any work begins.' },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Fill & Haul",
+      "description": pageDescription,
+      "telephone": "+16026325794",
+      "url": "https://fillandhaul.com",
+      "areaServed": { "@type": "City", "name": "Phoenix, Arizona" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question", "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Phoenix Hauling Services", "item": "https://fillandhaul.com/phoenix-hauling-services/" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+
+  <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-200 mt-16 lg:mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-brand-600 transition">Home</a></li>
+        <li class="text-gray-400">/</li>
+        <li class="text-gray-700 font-medium">Phoenix Hauling Services</li>
+      </ol>
+    </div>
+  </nav>
+
+  <section class="bg-navy-900 text-white py-20" style="background: linear-gradient(135deg, #102a43 0%, #243b53 60%, #334e68 100%)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+          Hauling Services in <span class="text-brand-400">Phoenix, AZ</span>
+        </h1>
+        <p class="text-xl text-navy-200 mb-8">Phoenix's trusted hauling and junk removal company. Same-day service available across all Phoenix neighborhoods. Licensed, insured, and ready to haul.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#contact" class="inline-flex items-center justify-center bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-4 rounded-xl transition text-lg">Get a Free Estimate</a>
+          <a href="tel:+16026325794" class="inline-flex items-center justify-center border border-white/30 hover:border-white/60 text-white font-medium px-8 py-4 rounded-xl transition text-lg">(602) 632-5794</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="bg-white">
+    <section class="py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-4">All Phoenix Hauling & Junk Removal Services</h2>
+          <p class="text-gray-600 text-lg max-w-2xl mx-auto">From residential junk removal to commercial hauling and construction cleanup, Fill &amp; Haul handles it all across the Phoenix metro area.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map(service => (
+            <a href={service.href} class="block bg-gray-50 border border-gray-200 rounded-2xl p-6 hover:border-brand-400 hover:bg-brand-50 transition group">
+              <h3 class="font-heading font-bold text-xl text-navy-900 mb-3 group-hover:text-brand-700">{service.title}</h3>
+              <p class="text-gray-600 text-sm mb-4">{service.desc}</p>
+              <span class="text-brand-600 font-semibold text-sm group-hover:underline">Learn more →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto space-y-6 text-gray-600">
+          <h2 class="font-heading text-3xl font-bold text-navy-900">Why Phoenix Chooses Fill & Haul</h2>
+          <p>Fill &amp; Haul has built a reputation across Phoenix and the East Valley for showing up on time, working hard, and leaving properties cleaner than we found them. Our crews are professional, experienced, and equipped to handle jobs of any size.</p>
+          <p>We serve Phoenix homeowners, property managers, real estate agents, contractors, and commercial clients. Whether you have a single item to remove or an entire property to clear, we have the team and the trucks for the job.</p>
+
+          <div class="grid sm:grid-cols-2 gap-4 not-prose">
+            {[
+              { icon: '&#128336;', title: 'Same-Day Service Available', desc: 'Call before noon for same-day Phoenix hauling service.' },
+              { icon: '&#128176;', title: 'Upfront Flat-Rate Pricing', desc: 'Free on-site estimates. No hidden fees. Ever.' },
+              { icon: '&#9989;', title: 'Licensed & Insured', desc: 'Fully covered for residential and commercial Phoenix jobs.' },
+              { icon: '&#127807;', title: 'Eco-Friendly Disposal', desc: 'We donate, recycle, and responsibly dispose of all materials.' },
+            ].map(item => (
+              <div class="bg-white border border-gray-200 rounded-xl p-5 flex gap-4 items-start">
+                <div class="text-3xl" set:html={item.icon}></div>
+                <div>
+                  <strong class="text-navy-900 font-semibold block">{item.title}</strong>
+                  <p class="text-sm text-gray-500 mt-1">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="font-heading text-3xl font-bold text-navy-900 pt-4">Phoenix Hauling Service Area</h2>
+          <p>We cover all Phoenix zip codes including Central Phoenix, North Phoenix (85024, 85027, 85086), South Phoenix (85034, 85040), Arcadia (85018), Ahwatukee (85044, 85048), Biltmore (85016), Camelback (85014, 85016), Deer Valley (85027), Maryvale (85031, 85033), North Mountain (85021), and Paradise Valley Village (85032).</p>
+          <p>Also proudly serving nearby: <a href="/tempe-hauling-services/" class="text-brand-600 hover:underline">Tempe</a>, <a href="/scottsdale/" class="text-brand-600 hover:underline">Scottsdale</a>, <a href="/mesa/" class="text-brand-600 hover:underline">Mesa</a>, <a href="/chandler/" class="text-brand-600 hover:underline">Chandler</a>, and <a href="/gilbert/" class="text-brand-600 hover:underline">Gilbert</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-bold text-navy-900 mb-8 text-center">Phoenix Hauling FAQ</h2>
+        <div class="space-y-4">
+          {faqs.map((faq, i) => (
+            <details class="bg-gray-50 border border-gray-200 rounded-xl overflow-hidden group">
+              <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-navy-900 hover:bg-gray-100 transition list-none">
+                {faq.q}
+                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 ml-4 transition group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <div class="px-6 pb-5 text-gray-600 text-sm border-t border-gray-200 pt-4">{faq.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-brand-500">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-heading text-3xl font-bold text-white mb-4">Get Your Free Phoenix Hauling Estimate</h2>
+        <p class="text-xl text-white/80 mb-8">Same-day service available throughout Phoenix. Call now or request online.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#contact" class="inline-flex items-center justify-center bg-white text-brand-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition text-lg">Request Online</a>
+          <a href="tel:+16026325794" class="inline-flex items-center justify-center border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition text-lg">(602) 632-5794</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Footer />
+</Layout>
