@@ -1,0 +1,166 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+
+const pageTitle = 'Debris Removal Phoenix AZ | Fast Haul-Away | Fill & Haul';
+const pageDescription = 'Professional debris removal in Phoenix, AZ. Fill & Haul removes construction debris, yard waste, concrete, drywall, and all types of debris. Same-day service available. Free estimates.';
+
+const faqs = [
+  { q: 'What types of debris do you remove in Phoenix?', a: 'We remove construction debris, yard waste, concrete, drywall, lumber, roofing materials, dirt, rocks, and general property debris throughout Phoenix.' },
+  { q: 'How much does debris removal cost in Phoenix?', a: 'Debris removal in Phoenix typically costs between $175 and $800 depending on volume and type. Heavy materials like concrete cost more due to weight. We offer free on-site estimates.' },
+  { q: 'Do you handle post-renovation debris cleanup in Phoenix?', a: 'Yes! We specialize in post-renovation and construction debris cleanup for Phoenix homeowners, contractors, and property managers. We can haul away all leftover materials.' },
+  { q: 'How quickly can you remove debris in Phoenix?', a: 'Same-day debris removal is available throughout Phoenix when you call early. We also offer next-day service for larger jobs.' },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Debris Removal in Phoenix, AZ",
+      "provider": { "@type": "LocalBusiness", "name": "Fill & Haul", "telephone": "+16026325794" },
+      "areaServed": { "@type": "City", "name": "Phoenix, Arizona" },
+      "description": pageDescription,
+      "url": "https://fillandhaul.com/phoenix/debris-removal/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question", "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Phoenix Hauling Services", "item": "https://fillandhaul.com/phoenix-hauling-services/" },
+        { "@type": "ListItem", "position": 3, "name": "Debris Removal", "item": "https://fillandhaul.com/phoenix/debris-removal/" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+
+  <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-200 mt-16 lg:mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-brand-600 transition">Home</a></li>
+        <li class="text-gray-400">/</li>
+        <li><a href="/phoenix-hauling-services/" class="hover:text-brand-600 transition">Phoenix Hauling Services</a></li>
+        <li class="text-gray-400">/</li>
+        <li class="text-gray-700 font-medium">Debris Removal</li>
+      </ol>
+    </div>
+  </nav>
+
+  <section class="bg-navy-900 text-white py-20" style="background: linear-gradient(135deg, #102a43 0%, #243b53 60%, #334e68 100%)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+      <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-center lg:text-left">
+        Debris Removal in <span class="text-brand-400">Phoenix, AZ</span>
+      </h1>
+      <p class="text-xl text-navy-200 mb-8 text-center lg:text-left">Fast, affordable debris removal for Phoenix homeowners, contractors, and businesses. We haul away construction debris, yard waste, concrete, and more. Same-day service available.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+        <a href="/#contact" class="inline-flex items-center justify-center bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-4 rounded-xl transition text-lg">Get a Free Estimate</a>
+        <a href="tel:+16026325794" class="inline-flex items-center justify-center border border-white/30 hover:border-white/60 text-white font-medium px-8 py-4 rounded-xl transition text-lg">(602) 632-5794</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="bg-white">
+    <section class="py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto space-y-6 text-gray-600">
+          <h2 class="font-heading text-3xl font-bold text-navy-900">Phoenix Debris Removal You Can Count On</h2>
+          <p>Fill &amp; Haul provides fast, professional debris removal throughout Phoenix, Arizona. Whether you're wrapping up a renovation, clearing a construction site, or dealing with storm damage, our experienced team hauls it all away quickly and responsibly.</p>
+          <p>Phoenix's booming construction and renovation market means debris piles up fast. We work with homeowners, general contractors, remodelers, and property managers across the Valley to keep job sites clean and properties clear.</p>
+          <p>From Central Phoenix to North Phoenix, Arcadia, Ahwatukee, and all points in between, our crews are ready to tackle debris removal jobs of any size with same-day availability when you call early.</p>
+
+          <h2 class="font-heading text-3xl font-bold text-navy-900 pt-4">Types of Debris We Remove in Phoenix</h2>
+          <div class="grid sm:grid-cols-2 gap-3 not-prose">
+            {['Construction debris (drywall, lumber, nails)', 'Concrete and masonry rubble', 'Roofing shingles and underlayment', 'Flooring (tile, hardwood, carpet, vinyl)', 'Yard waste (branches, leaves, brush)', 'Dirt, soil, and rocks', 'Fencing and deck materials', 'Demo waste from full or partial teardowns', 'Post-renovation cleanup debris', 'Storm and wind damage cleanup'].map(item => (
+              <div class="flex items-start gap-2 text-sm bg-gray-50 rounded-lg p-3">
+                <svg class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                {item}
+              </div>
+            ))}
+          </div>
+
+          <h2 class="font-heading text-3xl font-bold text-navy-900 pt-4">Signs You Need Debris Removal in Phoenix</h2>
+          <p>Not sure if it's time to call? Here are common situations where Phoenix property owners reach out to Fill &amp; Haul:</p>
+          <ul class="space-y-2 list-disc list-inside">
+            <li>Your renovation is done but there's a pile of demo waste in the driveway</li>
+            <li>Your backyard landscaping project left behind rocks, dirt, and old plants</li>
+            <li>A storm left branches, fencing, and debris scattered across your property</li>
+            <li>Your contractor finished the job but didn't haul away the leftover materials</li>
+            <li>You're prepping a property for sale and need it cleared quickly</li>
+          </ul>
+
+          <h2 class="font-heading text-3xl font-bold text-navy-900 pt-4">Our Debris Removal Process in Phoenix</h2>
+          <ol class="space-y-4 list-none">
+            {[
+              { n: '1', t: 'Call for a Free Estimate', d: 'Contact us at (602) 632-5794 or request online. We will confirm availability and give you a free upfront estimate — no surprises.' },
+              { n: '2', t: 'We Arrive and Assess', d: 'Our crew arrives at your Phoenix property, reviews the debris with you, and starts loading immediately. No need to sort or move anything beforehand.' },
+              { n: '3', t: 'We Haul and Dispose Properly', d: 'We load all debris onto our truck and haul it away. Materials are recycled or disposed of responsibly at licensed Phoenix-area facilities.' },
+            ].map(s => (
+              <li class="flex gap-4 bg-gray-50 rounded-xl p-5">
+                <span class="w-10 h-10 bg-brand-500 text-white rounded-lg flex items-center justify-center font-bold text-lg flex-shrink-0">{s.n}</span>
+                <div>
+                  <strong class="text-navy-900">{s.t}</strong>
+                  <p class="text-sm mt-1">{s.d}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-bold text-navy-900 mb-8 text-center">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {faqs.map((faq, i) => (
+            <details class="bg-white border border-gray-200 rounded-xl overflow-hidden group">
+              <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-navy-900 hover:bg-gray-50 transition list-none">
+                {faq.q}
+                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 ml-4 transition group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <div class="px-6 pb-5 text-gray-600 text-sm border-t border-gray-100 pt-4">{faq.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-2xl font-bold text-navy-900 mb-6 text-center">Related Phoenix Services</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <a href="/phoenix-hauling-services/" class="text-center p-4 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition text-sm font-semibold text-navy-700 hover:text-brand-700">All Phoenix Services</a>
+          <a href="/phoenix/junk-removal/" class="text-center p-4 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition text-sm font-semibold text-navy-700 hover:text-brand-700">Junk Removal</a>
+          <a href="/phoenix/construction-debris-removal/" class="text-center p-4 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition text-sm font-semibold text-navy-700 hover:text-brand-700">Construction Debris Removal</a>
+          <a href="/phoenix/yard-waste-hauling/" class="text-center p-4 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition text-sm font-semibold text-navy-700 hover:text-brand-700">Yard Waste Hauling</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-brand-500">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-heading text-3xl font-bold text-white mb-4">Need Debris Removed in Phoenix?</h2>
+        <p class="text-xl text-white/80 mb-8">Get a free debris removal estimate in Phoenix today. Same-day service available.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#contact" class="inline-flex items-center justify-center bg-white text-brand-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition text-lg">Get a Free Estimate</a>
+          <a href="tel:+16026325794" class="inline-flex items-center justify-center border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition text-lg">(602) 632-5794</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Footer />
+</Layout>
