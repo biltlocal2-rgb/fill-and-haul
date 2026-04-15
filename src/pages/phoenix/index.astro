@@ -13,6 +13,14 @@ const faqs = [
   { q: 'Do you haul commercial junk in Phoenix?', a: 'Absolutely. We handle office cleanouts, warehouse cleanups, retail space clearing, and all types of commercial junk removal throughout Phoenix.' },
 ];
 
+const services = [
+  { title: 'Junk Removal', href: '/phoenix/junk-removal/', desc: 'Furniture, electronics, appliances, and all types of junk hauled away fast.' },
+  { title: 'Debris Removal', href: '/phoenix/debris-removal/', desc: 'Construction debris, yard waste, and property debris removed throughout Phoenix.' },
+  { title: 'Yard Waste Hauling', href: '/phoenix/yard-waste-hauling/', desc: 'Branches, palm fronds, rocks, dirt, and landscaping debris picked up same-day.' },
+  { title: 'Construction Debris', href: '/phoenix/construction-debris-removal/', desc: 'Job site cleanup for Phoenix contractors. Drywall, concrete, lumber, and more.' },
+  { title: 'Furniture & Appliance Removal', href: '/phoenix/furniture-appliance-removal/', desc: 'We carry it out from anywhere in your home. No heavy lifting required.' },
+];
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -70,12 +78,31 @@ const schema = {
     </div>
   </section>
 
-  <!-- Why Choose Us -->
+  <!-- Services Grid -->
   <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-navy-900 mb-4">Phoenix Hauling & Junk Removal Services</h2>
+        <p class="text-navy-500 text-lg max-w-2xl mx-auto">From residential cleanouts to commercial haul-aways, Fill &amp; Haul delivers fast, professional service across Phoenix. <a href="/phoenix-hauling-services/" class="text-brand-600 hover:underline">View all Phoenix hauling services</a>.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {services.map(s => (
+          <a href={s.href} class="block bg-gray-50 border border-gray-200 rounded-2xl p-6 hover:border-brand-400 hover:bg-brand-50 transition group">
+            <h3 class="font-heading font-bold text-lg text-navy-900 mb-2 group-hover:text-brand-700">{s.title}</h3>
+            <p class="text-navy-500 text-sm mb-3">{s.desc}</p>
+            <span class="text-brand-600 font-semibold text-sm group-hover:underline">Learn more →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
         <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-navy-900 mb-4">Phoenix's Reliable Junk Removal Company</h2>
-        <p class="text-navy-500 text-lg max-w-2xl mx-auto">From residential cleanouts to commercial haul-aways, Fill & Haul delivers fast, professional junk removal across the Phoenix metro.</p>
+        <p class="text-navy-500 text-lg max-w-2xl mx-auto">From residential cleanouts to commercial haul-aways, Fill &amp; Haul delivers fast, professional junk removal across the Phoenix metro.</p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
@@ -84,35 +111,10 @@ const schema = {
           { icon: '&#9989;', title: 'Licensed & Insured', desc: 'Fully licensed and insured for residential and commercial work in Phoenix.' },
           { icon: '&#127807;', title: 'Eco-Friendly Disposal', desc: 'We donate and recycle to keep as much as possible out of Phoenix landfills.' },
         ].map(item => (
-          <div class="bg-gray-50 rounded-2xl p-6 text-center">
+          <div class="bg-white rounded-2xl p-6 text-center">
             <div class="text-4xl mb-3" set:html={item.icon}></div>
             <h3 class="font-heading font-bold text-lg text-navy-900 mb-2">{item.title}</h3>
             <p class="text-navy-500 text-sm">{item.desc}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section class="py-16 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-4">What We Haul in Phoenix</h2>
-        <p class="text-navy-500 text-lg">Comprehensive junk removal for Phoenix homes, businesses, and properties.</p>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {[
-          { title: 'Furniture Removal', desc: 'Sofas, beds, dressers, tables - we clear any furniture from Phoenix homes and offices.' },
-          { title: 'Appliance Hauling', desc: 'Refrigerators, washers, dryers, and ovens removed safely and responsibly from Phoenix.' },
-          { title: 'Construction Debris', desc: 'Drywall, lumber, concrete, roofing - fast job site cleanup for Phoenix contractors.' },
-          { title: 'Yard Waste Hauling', desc: 'Tree branches, landscaping waste, rocks, and dirt hauled away from Phoenix properties.' },
-          { title: 'Estate & Property Cleanouts', desc: 'Full estate cleanouts and property cleanups throughout the Phoenix metro area.' },
-          { title: 'Commercial Junk Removal', desc: 'Office cleanouts, warehouse cleanup, and commercial hauling across Phoenix.' },
-        ].map(s => (
-          <div class="bg-white border border-navy-100 rounded-2xl p-6 hover:shadow-md transition">
-            <h3 class="font-heading font-bold text-lg text-navy-900 mb-2">{s.title}</h3>
-            <p class="text-navy-500 text-sm">{s.desc}</p>
           </div>
         ))}
       </div>
@@ -124,8 +126,8 @@ const schema = {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto text-center">
         <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-4">Serving All of Phoenix, AZ</h2>
-        <p class="text-navy-500 text-lg mb-6">We cover all Phoenix zip codes including 85001-85021 and all neighborhoods from Downtown to North Phoenix, Arcadia, Ahwatukee, and everything in between.</p>
-        <p class="text-navy-500">Also serving: <a href="/scottsdale/" class="text-brand-600 hover:underline">Scottsdale</a>, <a href="/tempe/" class="text-brand-600 hover:underline">Tempe</a>, <a href="/mesa/" class="text-brand-600 hover:underline">Mesa</a>, <a href="/chandler/" class="text-brand-600 hover:underline">Chandler</a>, and <a href="/gilbert/" class="text-brand-600 hover:underline">Gilbert</a>.</p>
+        <p class="text-navy-500 text-lg mb-6">We cover all Phoenix zip codes including 85001-85086 and all neighborhoods from Downtown to North Phoenix, Arcadia, Ahwatukee, and everything in between.</p>
+        <p class="text-navy-500">Also serving: <a href="/scottsdale/" class="text-brand-600 hover:underline">Scottsdale</a>, <a href="/tempe-hauling-services/" class="text-brand-600 hover:underline">Tempe</a>, <a href="/mesa/" class="text-brand-600 hover:underline">Mesa</a>, <a href="/chandler/" class="text-brand-600 hover:underline">Chandler</a>, and <a href="/gilbert/" class="text-brand-600 hover:underline">Gilbert</a>.</p>
       </div>
     </div>
   </section>
