@@ -1,0 +1,208 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+
+const pageTitle = 'Furniture & Appliance Removal Tempe AZ | Couch, Fridge & More | Fill & Haul';
+const pageDescription = 'Furniture and appliance removal in Tempe, AZ. Fill & Haul hauls away old couches, mattresses, refrigerators, washers, dryers, and more. Same-day service. Call (602) 632-5794.';
+
+const faqs = [
+  { q: 'Do you remove old furniture from inside the house?', a: 'Yes. Our crew will come inside, disconnect furniture from walls or tight spaces if needed, and carry everything out to the truck. You do not have to move anything to the curb — we handle full interior removal throughout Tempe.' },
+  { q: 'Can you haul away a refrigerator or washing machine?', a: 'Absolutely. We haul all major appliances including refrigerators, freezers, washing machines, dryers, dishwashers, ovens, and stoves. We disconnect and remove them safely and ensure they are recycled or disposed of responsibly.' },
+  { q: 'Do you donate furniture that is still in good condition?', a: 'When furniture is in donatable condition, we partner with local Tempe-area charities and donation centers to give it a second life rather than sending it to the landfill. Just let us know and we will make our best effort to find a donation partner.' },
+  { q: 'How much does furniture removal cost in Tempe?', a: 'Furniture and appliance removal in Tempe is priced by volume — how much space your items take up in our truck. Single item pickups typically start around $75-$150. Full room or multi-item loads are priced accordingly. We give you a firm quote before we start.' },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Service", "name": "Furniture and Appliance Removal in Tempe, AZ", "provider": { "@type": "LocalBusiness", "name": "Fill & Haul", "telephone": "+16026325794" }, "areaServed": { "@type": "City", "name": "Tempe" }, "serviceType": "Furniture and Appliance Removal", "url": "https://fillandhaul.com/tempe/furniture-appliance-removal/" },
+    { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
+    { "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tempe Hauling Services", "item": "https://fillandhaul.com/tempe-hauling-services/" },
+      { "@type": "ListItem", "position": 3, "name": "Furniture & Appliance Removal", "item": "https://fillandhaul.com/tempe/furniture-appliance-removal/" }
+    ]}
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+
+  <nav aria-label="Breadcrumb" class="bg-gray-100 border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-4 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-600">
+        <li><a href="/" class="hover:text-brand-500">Home</a></li>
+        <li class="text-gray-400">/</li>
+        <li><a href="/tempe-hauling-services/" class="hover:text-brand-500">Tempe Hauling Services</a></li>
+        <li class="text-gray-400">/</li>
+        <li class="text-gray-900 font-medium">Furniture & Appliance Removal</li>
+      </ol>
+    </div>
+  </nav>
+
+  <section class="bg-slate-800 text-white py-20 px-4">
+    <div class="max-w-5xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+        Furniture &amp; Appliance Removal in <span class="text-brand-500">Tempe, AZ</span>
+      </h1>
+      <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+        Old couch, broken fridge, unwanted mattress — we haul it away fast. Full interior removal service with no heavy lifting required from you. Same-day pickups available throughout Tempe.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:6026325794" class="bg-brand-500 hover:bg-brand-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors">Call (602) 632-5794</a>
+        <a href="/#estimate" class="border-2 border-white text-white hover:bg-white hover:text-slate-800 font-bold py-4 px-8 rounded-lg text-lg transition-colors">Get Free Estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="max-w-5xl mx-auto px-4 py-16">
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-slate-800 mb-6">Tempe's Furniture & Appliance Removal Experts</h2>
+      <p class="text-lg text-slate-600 mb-4">Getting rid of old furniture and large appliances is harder than it sounds. They are heavy, bulky, and most curbside pickup programs won't take them. That is where Fill & Haul comes in.</p>
+      <p class="text-lg text-slate-600 mb-4">We handle all the heavy lifting — literally. Our two-person crew comes inside your Tempe home, carries the furniture or appliance out, loads it into our truck, and takes it away. You just show us what needs to go. No rental trucks, no strained backs, no scheduling hassles with city pickup programs.</p>
+      <p class="text-lg text-slate-600">Whether you are upgrading furniture, clearing out a rental property, helping a family member move, or decluttering after years of accumulation, Fill & Haul provides fast and affordable furniture and appliance removal throughout Tempe and the East Valley.</p>
+    </section>
+
+    <section class="mb-16 bg-gray-50 rounded-2xl p-8">
+      <h2 class="text-3xl font-bold text-slate-800 mb-6">Furniture & Appliances We Remove in Tempe</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-bold text-slate-800 mb-4">Furniture</h3>
+          <ul class="space-y-2">
+            {['Sofas & sectionals', 'Loveseats & recliners', 'Mattresses & box springs', 'Bed frames & headboards', 'Dressers & armoires', 'Dining tables & chairs', 'Desks & office furniture', 'Bookshelves & cabinets', 'Entertainment centers', 'Patio & outdoor furniture'].map(item => (
+              <li class="flex items-center gap-3 text-slate-700"><span class="text-brand-500 font-bold">✓</span>{item}</li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-slate-800 mb-4">Appliances</h3>
+          <ul class="space-y-2">
+            {['Refrigerators & freezers', 'Washing machines & dryers', 'Dishwashers', 'Ovens & stoves / ranges', 'Microwaves', 'Air conditioners & window units', 'Water heaters', 'Exercise equipment', 'TVs & electronics', 'Hot tubs (with proper prep)'].map(item => (
+              <li class="flex items-center gap-3 text-slate-700"><span class="text-brand-500 font-bold">✓</span>{item}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-slate-800 mb-8">Why Tempe Residents Choose Fill & Haul for Furniture Removal</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          { icon: '🏠', title: 'Full Interior Service', desc: 'We come inside, navigate stairs and hallways, and remove furniture from any room — no need to drag it to the curb.' },
+          { icon: '⚡', title: 'Same-Day Available', desc: 'Most furniture and appliance removals in Tempe can be scheduled same-day. Call before noon for the best availability.' },
+          { icon: '♻️', title: 'Donation & Recycling First', desc: 'We donate usable furniture to local charities and recycle appliances responsibly — reducing landfill waste throughout Maricopa County.' },
+          { icon: '👥', title: 'Two-Person Crew', desc: 'Every job comes with a two-person team so heavy pieces are handled safely without damage to your home or belongings.' },
+          { icon: '💰', title: 'Transparent Pricing', desc: 'Volume-based pricing means you know the cost upfront. No hidden fees, no surprise charges after the job is done.' },
+          { icon: '📦', title: 'Any Quantity', desc: 'Single item pickup or full household cleanout — we handle it all. Pay only for what you need removed.' },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+            <div class="text-4xl mb-4">{item.icon}</div>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">{item.title}</h3>
+            <p class="text-slate-600 text-sm">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mb-16 bg-orange-50 border border-orange-200 rounded-2xl p-8">
+      <h2 class="text-3xl font-bold text-slate-800 mb-6">Responsible Appliance Disposal in Tempe</h2>
+      <p class="text-slate-700 mb-4">Appliances contain refrigerants, heavy metals, and other materials that must be handled properly to avoid environmental contamination. Improper appliance disposal is also illegal in Arizona.</p>
+      <p class="text-slate-700 mb-4">Fill & Haul handles all appliances in compliance with Arizona and EPA guidelines. Refrigerators and AC units are taken to certified refrigerant recovery facilities before any metal recycling occurs. Other appliances are taken to proper recycling or disposal facilities.</p>
+      <p class="text-slate-700">When you use Fill & Haul for appliance removal in Tempe, you can trust that your old refrigerator, washer, or AC unit is being disposed of the right way — not dumped illegally or sent to an unregulated facility.</p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-slate-800 mb-6">Common Furniture Removal Scenarios We Handle in Tempe</h2>
+      <div class="space-y-4">
+        {[
+          { title: 'Home Decluttering & Cleanouts', desc: 'Clearing years of accumulated furniture and appliances from a home or spare rooms. We remove everything in a single visit so you can reclaim your space.' },
+          { title: 'Furniture Upgrades', desc: 'New furniture coming in? We haul the old pieces away so your delivery team has room and you do not have to store old items in the garage.' },
+          { title: 'Estate & Senior Moves', desc: 'Helping a parent or family member downsize or move to assisted living. We handle all heavy lifting with care and respect.' },
+          { title: 'Rental Property Turnover', desc: 'Tenants leaving furniture behind is common. We clear it out fast so you can clean, repair, and re-rent your Tempe property quickly.' },
+          { title: 'Mattress Removal', desc: 'Mattresses cannot go in regular trash bins and are a hassle to transport. We haul them away — single or multiple — quickly and affordably.' },
+          { title: 'Post-Move Cleanout', desc: 'Did previous owners or renters leave furniture behind after moving? We show up, remove everything they left, and dispose of it properly.' },
+        ].map(item => (
+          <div class="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl shadow-sm">
+            <span class="text-brand-500 text-2xl mt-1">→</span>
+            <div>
+              <h3 class="font-bold text-slate-800 mb-1">{item.title}</h3>
+              <p class="text-slate-600 text-sm">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mb-16 bg-slate-800 text-white rounded-2xl p-8">
+      <h2 class="text-3xl font-bold mb-8 text-center">How Furniture & Appliance Removal Works</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        {[
+          { step: '1', title: 'Call or Request Online', desc: 'Tell us what you need removed and your Tempe address. We give you a price estimate right away.' },
+          { step: '2', title: 'Schedule Your Pickup', desc: 'Same-day or next-day slots available. We give you a 2-hour arrival window so you are not waiting all day.' },
+          { step: '3', title: 'We Carry It Out', desc: 'Our two-person crew comes in, navigates any stairs or tight spaces, and carries everything out safely.' },
+          { step: '4', title: 'Donate, Recycle, Dispose', desc: 'Usable items go to charity. Appliances are recycled responsibly. Everything else is disposed of at licensed Tempe-area facilities.' },
+        ].map(item => (
+          <div class="text-center">
+            <div class="w-12 h-12 rounded-full bg-brand-500 text-white font-bold text-xl flex items-center justify-center mx-auto mb-4">{item.step}</div>
+            <h3 class="font-bold text-lg mb-2">{item.title}</h3>
+            <p class="text-slate-300 text-sm">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-slate-800 mb-8">Frequently Asked Questions — Furniture & Appliance Removal Tempe</h2>
+      <div class="space-y-4">
+        {faqs.map(faq => (
+          <details class="border border-gray-200 rounded-xl overflow-hidden group">
+            <summary class="flex items-center justify-between p-5 cursor-pointer bg-white hover:bg-gray-50 font-semibold text-slate-800 list-none">
+              {faq.q}
+              <span class="text-brand-500 text-xl transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <div class="p-5 pt-0 bg-white text-slate-600">
+              <p class="pt-4 border-t border-gray-100">{faq.a}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-slate-800 mb-6">Related Hauling Services in Tempe</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {[
+          { title: 'Junk Removal', desc: 'Household junk, clutter, and miscellaneous items removed fast.', href: '/tempe/junk-removal/' },
+          { title: 'Debris Removal', desc: 'Construction and renovation debris hauled away.', href: '/tempe/debris-removal/' },
+          { title: 'Yard Waste Hauling', desc: 'Grass, branches, leaves, and landscaping debris removed.', href: '/tempe/yard-waste-hauling/' },
+          { title: 'Construction Debris Removal', desc: 'Job site cleanups for contractors and builders throughout Tempe.', href: '/tempe/construction-debris-removal/' },
+          { title: 'All Tempe Hauling Services', desc: 'See our full range of hauling and removal services for Tempe.', href: '/tempe-hauling-services/' },
+        ].map(link => (
+          <a href={link.href} class="block p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:border-brand-500 hover:shadow-md transition-all">
+            <h3 class="font-bold text-slate-800 mb-1">{link.title}</h3>
+            <p class="text-sm text-slate-500">{link.desc}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+  </main>
+
+  <section class="bg-brand-500 text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Ready to Remove That Old Furniture?</h2>
+      <p class="text-lg mb-8 text-orange-100">Same-day furniture and appliance removal in Tempe. We do all the heavy lifting — call now or get a free estimate online.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:6026325794" class="bg-white text-brand-500 hover:bg-orange-50 font-bold py-4 px-8 rounded-lg text-lg transition-colors">Call (602) 632-5794</a>
+        <a href="/#estimate" class="border-2 border-white text-white hover:bg-orange-600 font-bold py-4 px-8 rounded-lg text-lg transition-colors">Get Free Estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Footer />
+</Layout>
