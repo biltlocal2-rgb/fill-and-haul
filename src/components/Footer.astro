@@ -7,15 +7,22 @@ const year = new Date().getFullYear();
     <div class="grid md:grid-cols-3 gap-8 mb-8">
       <!-- Brand -->
       <div>
-        <div class="flex items-center space-x-2 mb-4">
-          <div class="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center">
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M8 7h8m-8 4h8m-4 4v4m-6-4h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
-            </svg>
-          </div>
+        <a href="/" class="flex items-center space-x-2 mb-4">
+          <!-- Hauling trailer icon in brand orange, no background box -->
+          <svg class="w-9 h-9 text-brand-500" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <!-- Trailer body -->
+            <rect x="2" y="7" width="15" height="8" rx="1.5" />
+            <!-- Hitch bar -->
+            <line x1="17" y1="11" x2="22" y2="11" />
+            <!-- Hitch ball -->
+            <circle cx="22" cy="11" r="1" />
+            <!-- Left wheel -->
+            <circle cx="6" cy="17" r="2" />
+            <!-- Right wheel -->
+            <circle cx="13" cy="17" r="2" />
+          </svg>
           <span class="font-heading font-extrabold text-lg text-white">Fill &amp; Haul</span>
-        </div>
+        </a>
         <p class="text-sm leading-relaxed">
           Professional junk removal and hauling services serving Tempe and the entire Maricopa County area.
         </p>
