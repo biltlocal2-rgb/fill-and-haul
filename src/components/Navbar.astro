@@ -5,8 +5,9 @@
 <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 lg:h-20">
+
       <!-- Logo -->
-      <a href="#" class="flex items-center space-x-2">
+      <a href="#" class="flex items-center space-x-2 flex-shrink-0">
         <div class="w-10 h-10 bg-brand-500 rounded-lg flex items-center justify-center">
           <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -17,36 +18,41 @@
       </a>
 
       <!-- Desktop Nav -->
-      <div class="hidden md:flex items-center space-x-8">
-        <a href="#services" class="text-sm font-medium text-white/80 hover:text-white transition">Services</a>
-        <a href="#how-it-works" class="text-sm font-medium text-white/80 hover:text-white transition">How It Works</a>
-        <a href="#areas" class="text-sm font-medium text-white/80 hover:text-white transition">Service Areas</a>
+      <div class="hidden lg:flex items-center gap-6 flex-shrink-0">
+        <a href="#" class="text-sm font-medium text-white/80 hover:text-white transition whitespace-nowrap">Home</a>
+        <a href="#services" class="text-sm font-medium text-white/80 hover:text-white transition whitespace-nowrap">Services</a>
+        <a href="#junk-removal" class="text-sm font-medium text-white/80 hover:text-white transition whitespace-nowrap">Junk Removal</a>
+        <a href="#debris-removal" class="text-sm font-medium text-white/80 hover:text-white transition whitespace-nowrap">Debris Removal</a>
+        <a href="tel:6026325794" class="text-sm font-medium text-white/80 hover:text-white transition whitespace-nowrap">(602)-632-5794</a>
         <a href="#contact"
-          class="bg-brand-500 hover:bg-brand-600 text-white font-semibold px-5 py-2.5 rounded-lg transition text-sm">
-          Get Free Estimate
+          class="flex-shrink-0 bg-brand-500 hover:bg-brand-600 text-white font-semibold px-5 py-2.5 rounded-lg transition text-sm whitespace-nowrap">
+          Get Free Quote
         </a>
       </div>
 
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="md:hidden text-white p-2" aria-label="Open menu">
+      <button id="mobile-menu-btn" class="lg:hidden text-white p-2" aria-label="Open menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
+
     </div>
 
     <!-- Mobile Nav -->
-    <div id="mobile-menu" class="md:hidden hidden pb-4">
+    <div id="mobile-menu" class="lg:hidden hidden pb-4">
       <div class="flex flex-col space-y-3">
+        <a href="#" class="mobile-link text-white/80 hover:text-white transition px-2 py-1">Home</a>
         <a href="#services" class="mobile-link text-white/80 hover:text-white transition px-2 py-1">Services</a>
-        <a href="#how-it-works" class="mobile-link text-white/80 hover:text-white transition px-2 py-1">How It Works</a>
-        <a href="#areas" class="mobile-link text-white/80 hover:text-white transition px-2 py-1">Service Areas</a>
-        <a href="#contact"
-          class="mobile-link bg-brand-500 hover:bg-brand-600 text-white font-semibold px-5 py-2.5 rounded-lg transition text-center">
-          Get Free Estimate
+        <a href="#junk-removal" class="mobile-link text-white/80 hover:text-white transition px-2 py-1">Junk Removal</a>
+        <a href="#debris-removal" class="mobile-link text-white/80 hover:text-white transition px-2 py-1">Debris Removal</a>
+        <a href="tel:6026325794" class="mobile-link text-white/80 hover:text-white transition px-2 py-1">(602)-632-5794</a>
+        <a href="#contact" class="mobile-link bg-brand-500 hover:bg-brand-600 text-white font-semibold px-5 py-2.5 rounded-lg transition text-center">
+          Get Free Quote
         </a>
       </div>
     </div>
+
   </div>
 </nav>
 
