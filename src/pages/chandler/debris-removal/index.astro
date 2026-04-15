@@ -1,0 +1,144 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+
+const pageTitle = 'Debris Removal Chandler AZ | Fast Cleanup | Fill & Haul';
+const pageDescription = 'Professional debris removal in Chandler, AZ. Fill & Haul clears renovation debris, remodel waste, and construction debris from Chandler homes and job sites. Same-day service available.';
+
+const faqs = [
+  { q: 'What types of debris do you remove in Chandler?', a: 'We remove renovation debris, drywall, tile, flooring, lumber, concrete, remodel waste, old fixtures, and general construction debris from Chandler homes and job sites.' },
+  { q: 'Do you serve Chandler contractors and homeowners?', a: 'Yes! We work with Chandler homeowners doing DIY projects and contractors needing fast, reliable debris haul-away throughout all Chandler neighborhoods.' },
+  { q: 'How quickly can you remove debris in Chandler?', a: 'Same-day debris removal in Chandler for jobs scheduled before noon. All Chandler zip codes covered including 85224-85249.' },
+  { q: 'Do you haul concrete and tile in Chandler?', a: 'Yes, we haul heavy materials including concrete, tile, pavers, and masonry debris from Chandler properties with our heavy-load trucks.' },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Debris Removal in Chandler, AZ",
+      "provider": { "@type": "LocalBusiness", "name": "Fill & Haul", "telephone": "+16026325794" },
+      "areaServed": { "@type": "City", "name": "Chandler, Arizona" },
+      "description": pageDescription,
+      "url": "https://fillandhaul.com/chandler/debris-removal/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Chandler", "item": "https://fillandhaul.com/chandler/" },
+        { "@type": "ListItem", "position": 3, "name": "Debris Removal", "item": "https://fillandhaul.com/chandler/debris-removal/" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+  <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-200 mt-16 lg:mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center space-x-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-brand-600 transition">Home</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li><a href="/chandler/" class="hover:text-brand-600 transition">Chandler</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li class="text-navy-700 font-medium">Debris Removal</li>
+      </ol>
+    </div>
+  </nav>
+  <section class="bg-navy-900 text-white py-20" style="background: linear-gradient(135deg, #102a43 0%, #243b53 60%, #334e68 100%)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-center lg:text-left">Debris Removal in <span class="text-brand-400">Chandler, AZ</span></h1>
+        <p class="text-xl text-navy-200 mb-8 text-center lg:text-left">Fast debris removal for Chandler renovation projects and construction sites. We haul away drywall, tile, flooring, lumber, and any remodel waste — same-day available throughout Chandler.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <a href="/#contact" class="inline-flex items-center justify-center bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-4 rounded-xl transition text-lg">Get a Free Estimate</a>
+          <a href="tel:+16026325794" class="inline-flex items-center justify-center border border-white/30 hover:border-white/60 text-white font-medium px-8 py-4 rounded-xl transition text-lg">(602) 632-5794</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <main>
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">Types of Debris We Remove in Chandler</h2>
+        <div class="grid sm:grid-cols-2 gap-3 max-w-4xl mx-auto">
+          {['Drywall & plaster', 'Tile & flooring materials', 'Lumber & wood scraps', 'Concrete & masonry', 'Old fixtures & cabinets', 'Roofing materials', 'Insulation & framing waste', 'Pavers & gravel', 'Renovation cleanup waste', 'Mixed construction debris'].map(item => (
+            <div class="flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3"><span class="text-brand-500 font-bold text-lg">&#10003;</span><span class="text-navy-700 text-sm font-medium">{item}</span></div>
+          ))}
+        </div>
+      </div>
+    </section>
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">Signs You Need Debris Removal in Chandler</h2>
+        <ul class="space-y-4 text-navy-600">
+          <li class="flex gap-3"><span class="text-brand-500 font-bold mt-1">&#10003;</span><span>Your Chandler renovation has piled up drywall, tile, and demo debris that needs to be cleared.</span></li>
+          <li class="flex gap-3"><span class="text-brand-500 font-bold mt-1">&#10003;</span><span>Your Chandler contractor needs a reliable debris haul partner to keep active job sites clean.</span></li>
+          <li class="flex gap-3"><span class="text-brand-500 font-bold mt-1">&#10003;</span><span>You have heavy concrete or masonry from a Chandler pool or patio project.</span></li>
+          <li class="flex gap-3"><span class="text-brand-500 font-bold mt-1">&#10003;</span><span>A remodel in Chandler has accumulated waste that cannot wait for a dumpster pickup.</span></li>
+          <li class="flex gap-3"><span class="text-brand-500 font-bold mt-1">&#10003;</span><span>Your Chandler commercial construction site needs same-day debris haul-away.</span></li>
+        </ul>
+      </div>
+    </section>
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-12 text-center">Our Chandler Debris Removal Process</h2>
+        <div class="space-y-8">
+          {[
+            { step: '1', title: 'Schedule Your Chandler Pickup', desc: 'Call (602) 632-5794 or request online. Same-day debris removal available throughout Chandler.' },
+            { step: '2', title: 'On-Site Assessment', desc: 'We assess debris type and volume at your Chandler property and provide a firm upfront quote.' },
+            { step: '3', title: 'Fast Haul-Away & Cleanup', desc: 'We load all debris and leave your Chandler property clean. We responsibly recycle whenever possible.' },
+          ].map(p => (
+            <div class="flex gap-6 items-start">
+              <div class="flex-shrink-0 w-12 h-12 bg-brand-500 text-white rounded-full flex items-center justify-center font-heading font-extrabold text-xl">{p.step}</div>
+              <div><h3 class="font-heading font-bold text-xl text-navy-900 mb-2">{p.title}</h3><p class="text-navy-500">{p.desc}</p></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">Chandler Debris Removal FAQ</h2>
+        <div class="space-y-4">
+          {faqs.map(f => (
+            <details class="group bg-white rounded-2xl border border-navy-100 overflow-hidden">
+              <summary class="list-none flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-navy-900">{f.q}<svg class="w-5 h-5 text-brand-500 flex-shrink-0 ml-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></summary>
+              <div class="px-6 pb-4 text-navy-500 text-sm">{f.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">More Chandler Hauling Services</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[{ title: 'Chandler Hauling Services', href: '/chandler-hauling-services/' }, { title: 'Junk Removal', href: '/chandler/junk-removal/' }, { title: 'Construction Debris Removal', href: '/chandler/construction-debris-removal/' }, { title: 'Furniture & Appliance Removal', href: '/chandler/furniture-appliance-removal/' }].map(s => (
+            <a href={s.href} class="bg-gray-50 border border-navy-100 rounded-xl p-4 text-center hover:border-brand-300 hover:shadow-sm transition"><span class="font-semibold text-navy-800 text-sm">{s.title}</span></a>
+          ))}
+        </div>
+      </div>
+    </section>
+    <section class="py-16 bg-brand-500">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-heading text-3xl font-extrabold text-white mb-4">Schedule Debris Removal in Chandler Today</h2>
+        <p class="text-white/90 text-lg mb-8">Fast, reliable debris removal throughout Chandler. Same-day service available.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:+16026325794" class="inline-flex items-center justify-center bg-white text-brand-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition text-lg">(602) 632-5794</a>
+          <a href="/#contact" class="inline-flex items-center justify-center border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition text-lg">Get a Free Estimate</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
