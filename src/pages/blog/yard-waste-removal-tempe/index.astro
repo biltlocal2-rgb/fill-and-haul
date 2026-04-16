@@ -1,0 +1,261 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+
+const pageTitle = "Yard Waste Removal in Tempe: Trimmings, Branches & Debris | Fill & Haul";
+const pageDescription = "Tempe's rules for yard waste disposal, bulky waste pickup schedules, and when hiring a hauler is the faster option for large yard cleanups in the East Valley, AZ.";
+
+const faqs = [
+  {
+    q: "Does the City of Tempe offer free yard waste pickup?",
+    a: "Yes. The City of Tempe provides curbside yard waste collection as part of regular refuse service. Green waste containers (brown/green bins) are collected on a scheduled basis. For large amounts of yard debris from a major cleanout or landscaping project, you may need to call for a bulky waste pickup or hire a private hauler."
+  },
+  {
+    q: "Can I put palm fronds in Tempe's green waste bin?",
+    a: "Palm fronds that fit within the container with the lid closed are generally accepted. Oversized fronds should be cut to size or placed separately for bulky waste pickup. Contact the City of Tempe Environmental Utilities for specific guidelines."
+  },
+  {
+    q: "What is the best time of year for yard waste removal in Tempe?",
+    a: "Spring (March–April) and fall (October–November) are peak seasons for yard work and debris removal in Arizona, as temperatures are mild. Summer heat makes outdoor labor difficult and tree trimming is often avoided as it can stress heat-burdened plants."
+  },
+  {
+    q: "Can yard waste be composted instead of hauled away?",
+    a: "Yes. Grass clippings, leaves, and small branches can be composted on-site. Maricopa County and the City of Tempe offer composting education and subsidized compost bin programs. However, large volumes of tree trimmings, palm fronds, and bulky green waste are not practical for home composting."
+  },
+  {
+    q: "How do I dispose of a large dead tree in Tempe?",
+    a: "Large dead trees should be removed by a licensed arborist. Once cut down, the resulting wood and debris needs to be hauled away. Fill & Haul can remove and haul away the resulting brush, logs, and green debris after a tree service has done the cutting."
+  }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://fillandhaul.com/blog/yard-waste-removal-tempe/#article",
+      "headline": "Yard Waste Removal in Tempe: What to Do With Trimmings, Branches & Debris",
+      "description": "Tempe rules for yard waste disposal, bulky pickup schedules, and when to hire a professional hauler for large cleanups.",
+      "datePublished": "2026-04-15",
+      "dateModified": "2026-04-15",
+      "author": { "@type": "Organization", "name": "Fill & Haul", "url": "https://fillandhaul.com" },
+      "publisher": { "@type": "Organization", "name": "Fill & Haul", "url": "https://fillandhaul.com" },
+      "mainEntityOfPage": "https://fillandhaul.com/blog/yard-waste-removal-tempe/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fillandhaul.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Yard Waste Removal Tempe", "item": "https://fillandhaul.com/blog/yard-waste-removal-tempe/" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+
+  <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-200 mt-16 lg:mt-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center space-x-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-brand-500">Home</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li><a href="/blog/" class="hover:text-brand-500">Blog</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li class="text-gray-900 font-medium">Yard Waste Removal Tempe</li>
+      </ol>
+    </div>
+  </nav>
+
+  <section class="py-12 bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-lime-100 text-lime-800 text-xs font-semibold px-3 py-1 rounded-full">Yard & Outdoor</span>
+        <span class="text-gray-400 text-sm">6 min read · April 15, 2026</span>
+      </div>
+      <h1 class="text-3xl lg:text-4xl font-bold text-navy-900 mb-4 leading-tight">
+        Yard Waste Removal in Tempe: <span class="text-brand-500">Trimmings, Branches & Debris</span>
+      </h1>
+      <p class="text-xl text-gray-600 leading-relaxed">
+        Tempe's desert landscape generates significant yard waste — especially after trimming season, storm cleanups, and landscaping overhauls. Here's what you can do with it all, including when to call for professional hauling.
+      </p>
+    </div>
+  </section>
+
+  <article class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-8 mb-4">Tempe's Yard Waste Disposal Options</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Tempe residents have several options for managing yard waste, ranging from free city services to professional hauling. The right choice depends on the volume of debris, urgency, and your specific landscaping situation.
+      </p>
+
+      <div class="grid sm:grid-cols-3 gap-4 mb-8">
+        <div class="bg-lime-50 rounded-xl p-4 border border-lime-200 text-center">
+          <div class="text-2xl mb-2">🗑️</div>
+          <h3 class="font-bold text-navy-900 mb-1 text-sm">Curbside Green Waste</h3>
+          <p class="text-xs text-gray-600">Free. For regular weekly or bi-weekly debris that fits in your green bin.</p>
+        </div>
+        <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 text-center">
+          <div class="text-2xl mb-2">📞</div>
+          <h3 class="font-bold text-navy-900 mb-1 text-sm">Bulky Waste Pickup</h3>
+          <p class="text-xs text-gray-600">Free. Call-in service for large piles that won't fit in your regular bin.</p>
+        </div>
+        <div class="bg-brand-50 rounded-xl p-4 border border-brand-200 text-center">
+          <div class="text-2xl mb-2">🚛</div>
+          <h3 class="font-bold text-navy-900 mb-1 text-sm">Private Hauler</h3>
+          <p class="text-xs text-gray-600">Same-day. For large volumes, immediate removal, or commercial properties.</p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">City of Tempe Bulky Waste Program</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The City of Tempe offers a Bulky Waste Collection program for items too large for regular curbside bins. Residents can request a pickup for yard debris, branches, palm fronds, and large quantities of clippings. Key things to know:
+      </p>
+      <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+        <li>Items must be placed at the curb by 5:00 AM on your scheduled pickup day</li>
+        <li>Bundled branches should be no longer than 4 feet and no heavier than 50 pounds per bundle</li>
+        <li>Palm fronds should be stacked and bundled separately from other green waste</li>
+        <li>Soil, rocks, and dirt are generally NOT accepted in the green waste program</li>
+        <li>Call 480-350-8696 or use the MyTempe app to schedule a bulky waste pickup</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">Common Yard Waste in Arizona</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Tempe's desert and suburban landscapes generate distinctive debris types:</p>
+      <div class="grid sm:grid-cols-2 gap-4 mb-8">
+        <div class="bg-gray-50 rounded-xl p-4 border border-gray-200">
+          <h3 class="font-bold text-navy-900 mb-2">🌴 Palm Trees</h3>
+          <p class="text-sm text-gray-700">Palm fronds are heavy, spiked, and bulky. Annual trimming generates large volumes that won't fit in standard bins. A private hauler is often the fastest solution for large palm cleanups.</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4 border border-gray-200">
+          <h3 class="font-bold text-navy-900 mb-2">🌵 Cactus Removal</h3>
+          <p class="text-sm text-gray-700">Saguaro and other large cactus require special handling. They're heavy, spiky, and may have protected status. Verify legal status before removal and hire licensed professionals for large specimens.</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4 border border-gray-200">
+          <h3 class="font-bold text-navy-900 mb-2">🌿 Oleander & Shrub Trimming</h3>
+          <p class="text-sm text-gray-700">Common in Tempe landscaping, oleander and other drought-tolerant shrubs produce significant clippings during fall trim season. Note that oleander is toxic — handle with gloves.</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4 border border-gray-200">
+          <h3 class="font-bold text-navy-900 mb-2">🍃 Tree Branches & Limbs</h3>
+          <p class="text-sm text-gray-700">Monsoon season (July–September) frequently drops large limbs. Post-storm cleanups often generate more debris than the bulky waste program can handle in a single pickup.</p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">When to Call a Private Hauler Instead of the City</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">The city's bulky waste program is great for routine cleanups, but there are situations where hiring a private junk removal company is the better choice:</p>
+      <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+        <li><strong>Large volumes:</strong> A landscaping overhaul, full yard redesign, or major storm cleanup can generate 2–3+ truckloads of debris</li>
+        <li><strong>Same-day need:</strong> City pickups require advance scheduling; a private hauler can often arrive the same day</li>
+        <li><strong>Commercial properties:</strong> HOAs, rental properties, and businesses often have more debris than residential city services allow</li>
+        <li><strong>Mixed debris:</strong> Yard waste mixed with other junk (old furniture, equipment) doesn't qualify for green waste programs</li>
+        <li><strong>Gravel, rocks, and soil:</strong> Not accepted by city programs but can often be hauled by private companies (weight-based pricing applies)</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">Yard Waste Pricing With Fill & Haul</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Yard waste pricing is volume-based. Because green debris is bulky but relatively light, pricing is typically by truck volume rather than weight. A standard yard waste haul in Tempe:
+      </p>
+      <div class="bg-gray-50 rounded-2xl p-6 mb-8">
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex justify-between items-center border-b border-gray-200 pb-2"><span>Small yard cleanup (1/4 truck)</span><strong>$125 – $200</strong></li>
+          <li class="flex justify-between items-center border-b border-gray-200 pb-2"><span>Medium cleanup (1/2 truck)</span><strong>$200 – $325</strong></li>
+          <li class="flex justify-between items-center border-b border-gray-200 pb-2"><span>Large cleanup (full truck)</span><strong>$400 – $550</strong></li>
+          <li class="flex items-start gap-2 pt-1 text-sm text-gray-500"><span>* Heavy materials (rock, gravel, soil) are priced by weight. Prices include all disposal fees.</span></li>
+        </ul>
+      </div>
+
+      <!-- FAQ -->
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-6">Frequently Asked Questions</h2>
+      <div class="space-y-3 mb-10">
+        {faqs.map(faq => (
+          <details class="group bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+            <summary class="flex justify-between items-center p-5 cursor-pointer font-semibold text-navy-900 list-none">
+              {faq.q}
+              <svg class="w-5 h-5 text-brand-500 flex-shrink-0 ml-3 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-5 pb-5 text-gray-600 leading-relaxed">{faq.a}</div>
+          </details>
+        ))}
+      </div>
+
+      <!-- Related -->
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-6">Related Services</h2>
+      <div class="grid sm:grid-cols-2 gap-4 mb-10">
+        <a href="/tempe/yard-waste-hauling/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">🌿</span>
+          <span class="font-semibold text-navy-900">Yard Waste Hauling Tempe</span>
+        </a>
+        <a href="/tempe-hauling-services/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">🏠</span>
+          <span class="font-semibold text-navy-900">Tempe Hauling Services</span>
+        </a>
+        <a href="/blog/eco-friendly-junk-disposal-tempe-arizona/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">♻️</span>
+          <span class="font-semibold text-navy-900">Eco-Friendly Disposal Guide</span>
+        </a>
+        <a href="/locations/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">📍</span>
+          <span class="font-semibold text-navy-900">All Service Locations</span>
+        </a>
+      </div>
+
+      <!-- Sources -->
+      <div class="border-t border-gray-200 pt-8 mt-8">
+        <h3 class="text-lg font-bold text-navy-900 mb-4">Sources & Further Reading</h3>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li>
+            <a href="https://www.tempe.gov/government/community-services/environmental-sustainability/recycling/solid-waste-diversion" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              City of Tempe — Solid Waste & Green Waste Diversion Programs
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tempe.gov/government/community-services/neighborhood-resources/bulky-waste-collection" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              City of Tempe — Bulky Waste Collection Program
+            </a>
+          </li>
+          <li>
+            <a href="https://www.maricopa.gov/625/Household-Hazardous-Waste" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              Maricopa County — Composting & Green Waste Programs
+            </a>
+          </li>
+          <li>
+            <a href="https://www.azgfd.com/wildlife/threatened-endangered-species/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              Arizona Game and Fish Department — Protected Species (Saguaro Cactus)
+            </a>
+          </li>
+          <li>
+            <a href="https://www.epa.gov/recycle/composting-home" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              U.S. EPA — Composting at Home
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </article>
+
+  <section class="py-16 bg-brand-500">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Same-Day Yard Waste Removal in Tempe</h2>
+      <p class="text-white/90 text-lg mb-8">Palm fronds, branches, brush, and green debris hauled fast. Call before noon for same-day service.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/#contact" class="bg-white text-brand-500 font-bold px-8 py-4 rounded-xl hover:bg-gray-50 transition-colors">Get a Free Quote</a>
+        <a href="tel:+16026325794" class="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-brand-600 transition-colors">(602) 632-5794</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Footer />
+</Layout>
