@@ -1,0 +1,185 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+
+const pageTitle = "Junk Removal & Hauling Blog | Fill & Haul Tempe AZ";
+const pageDescription = "Expert tips, guides, and resources on junk removal, hauling, debris disposal, and home cleanouts in Tempe and the East Valley, Arizona.";
+
+const posts = [
+  {
+    slug: "how-to-prepare-for-junk-removal-day",
+    title: "How to Prepare for Junk Removal Day: A Complete Checklist",
+    description: "Get the most out of your junk removal appointment with this step-by-step checklist. Learn what to sort, set aside, and expect on pickup day.",
+    date: "April 10, 2026",
+    category: "Tips & Guides",
+    readTime: "6 min read"
+  },
+  {
+    slug: "what-items-cannot-be-taken-by-junk-removal",
+    title: "What Items Junk Removal Companies Cannot Take (And Why)",
+    description: "Hazardous materials, chemicals, and certain electronics require special disposal. Learn what's off-limits and how to properly dispose of restricted items in Arizona.",
+    date: "April 11, 2026",
+    category: "Tips & Guides",
+    readTime: "7 min read"
+  },
+  {
+    slug: "junk-removal-vs-dumpster-rental",
+    title: "Junk Removal vs. Dumpster Rental: Which Is Right for You?",
+    description: "Comparing full-service junk removal to dumpster rental? Here's a detailed breakdown of costs, convenience, and best use cases for each option.",
+    date: "April 12, 2026",
+    category: "Cost & Pricing",
+    readTime: "8 min read"
+  },
+  {
+    slug: "how-much-does-junk-removal-cost-arizona",
+    title: "How Much Does Junk Removal Cost in Arizona? (2026 Pricing Guide)",
+    description: "Understand junk removal pricing in the Phoenix metro area. What factors affect cost, average price ranges, and how to get the best value.",
+    date: "April 13, 2026",
+    category: "Cost & Pricing",
+    readTime: "7 min read"
+  },
+  {
+    slug: "eco-friendly-junk-disposal-tempe-arizona",
+    title: "Eco-Friendly Junk Disposal in Tempe, Arizona: What Gets Recycled?",
+    description: "How responsible haulers divert items from landfill through donation, recycling, and proper disposal. What happens to your junk after it leaves your property.",
+    date: "April 14, 2026",
+    category: "Environment",
+    readTime: "6 min read"
+  },
+  {
+    slug: "construction-debris-removal-guide",
+    title: "Construction Debris Removal: A Contractor's Complete Guide",
+    description: "Managing post-construction waste efficiently. From drywall and lumber to concrete and roofing materials — how to handle job-site cleanup in Arizona.",
+    date: "April 15, 2026",
+    category: "Commercial",
+    readTime: "8 min read"
+  },
+  {
+    slug: "estate-cleanout-guide",
+    title: "Estate Cleanout Guide: How to Clear a Home After a Loved One Passes",
+    description: "A compassionate, practical guide to organizing and executing an estate cleanout. Timeline, tips for sorting items, and when to call a professional hauler.",
+    date: "April 15, 2026",
+    category: "Residential",
+    readTime: "9 min read"
+  },
+  {
+    slug: "yard-waste-removal-tempe",
+    title: "Yard Waste Removal in Tempe: What to Do With Trimmings, Branches & Debris",
+    description: "Tempe's rules for yard waste disposal, bulk pickup schedules, and when hiring a hauler is the faster and smarter option for large cleanups.",
+    date: "April 15, 2026",
+    category: "Yard & Outdoor",
+    readTime: "6 min read"
+  }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Blog",
+      "@id": "https://fillandhaul.com/blog/#blog",
+      "name": "Fill & Haul Blog",
+      "url": "https://fillandhaul.com/blog/",
+      "description": "Expert tips, guides, and resources on junk removal and hauling in Tempe and the East Valley.",
+      "publisher": {
+        "@type": "LocalBusiness",
+        "name": "Fill & Haul",
+        "url": "https://fillandhaul.com"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fillandhaul.com/blog/" }
+      ]
+    }
+  ]
+};
+
+const categoryColors: Record<string, string> = {
+  "Tips & Guides": "bg-blue-100 text-blue-800",
+  "Cost & Pricing": "bg-green-100 text-green-800",
+  "Environment": "bg-emerald-100 text-emerald-800",
+  "Commercial": "bg-purple-100 text-purple-800",
+  "Residential": "bg-orange-100 text-orange-800",
+  "Yard & Outdoor": "bg-lime-100 text-lime-800"
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-200 mt-16 lg:mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center space-x-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-brand-500">Home</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li class="text-gray-900 font-medium">Blog</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="py-16 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-brand-50 text-brand-600 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">Resources & Guides</span>
+      <h1 class="text-4xl lg:text-5xl font-bold text-navy-900 mb-4">
+        Junk Removal & Hauling <span class="text-brand-500">Blog</span>
+      </h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Expert tips, cost guides, and local resources for homeowners, contractors, and property managers in Tempe and the East Valley.
+      </p>
+    </div>
+  </section>
+
+  <!-- Blog Grid -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {posts.map(post => (
+          <article class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-200 flex flex-col">
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center justify-between mb-3">
+                <span class={`text-xs font-semibold px-3 py-1 rounded-full ${categoryColors[post.category] || 'bg-gray-100 text-gray-700'}`}>
+                  {post.category}
+                </span>
+                <span class="text-xs text-gray-400">{post.readTime}</span>
+              </div>
+              <h2 class="text-lg font-bold text-navy-900 mb-2 leading-snug">
+                <a href={`/blog/${post.slug}/`} class="hover:text-brand-500 transition-colors">
+                  {post.title}
+                </a>
+              </h2>
+              <p class="text-gray-600 text-sm flex-1 mb-4">{post.description}</p>
+              <div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
+                <span class="text-xs text-gray-400">{post.date}</span>
+                <a href={`/blog/${post.slug}/`} class="text-brand-500 text-sm font-semibold hover:text-brand-600 flex items-center gap-1">
+                  Read more
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-brand-500">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Ready to Clear the Clutter?</h2>
+      <p class="text-white/90 text-lg mb-8">Same-day service available. Flat-rate pricing. Licensed & insured.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/#contact" class="bg-white text-brand-500 font-bold px-8 py-4 rounded-xl hover:bg-gray-50 transition-colors">Get a Free Quote</a>
+        <a href="tel:+16026325794" class="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-brand-600 transition-colors">(602) 632-5794</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Footer />
+</Layout>
