@@ -1,0 +1,272 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+
+const pageTitle = "What Items Junk Removal Companies Cannot Take (And Why) | Fill & Haul";
+const pageDescription = "Hazardous materials, chemicals, and certain electronics require special disposal. Learn what's off-limits for junk removal in Arizona and how to properly dispose of restricted items.";
+
+const faqs = [
+  {
+    q: "Can junk removal companies take paint?",
+    a: "No. Liquid paint is classified as hazardous waste and cannot be transported in a standard junk removal truck. Dried paint cans may be accepted — check with your hauler. Arizona has HHW events where you can drop off liquid paint for free."
+  },
+  {
+    q: "Can junk removal take old televisions and monitors?",
+    a: "Most junk removal companies can take TVs and monitors but may charge a small electronics fee due to recycling costs. Arizona requires proper e-waste recycling for screens containing lead and other heavy metals."
+  },
+  {
+    q: "What happens to items that can't be hauled?",
+    a: "A good junk removal company will let you know in advance and help point you to the right local disposal resource — whether that's a county HHW event, an e-waste drop-off, or a specialized disposal facility."
+  },
+  {
+    q: "Can junk removal take medical equipment?",
+    a: "Standard medical equipment like wheelchairs, hospital beds, and walkers is typically fine. However, sharps, medications, and biohazardous waste require specialized medical waste disposal and cannot be taken."
+  },
+  {
+    q: "Are there items that cost extra to remove?",
+    a: "Yes. Heavy or specialty items like refrigerants-containing appliances (refrigerators, AC units), pianos, hot tubs, and large safes often carry an additional fee due to weight, hazardous materials, or special handling requirements."
+  }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://fillandhaul.com/blog/what-items-cannot-be-taken-by-junk-removal/#article",
+      "headline": "What Items Junk Removal Companies Cannot Take (And Why)",
+      "description": "Hazardous materials, chemicals, and certain electronics require special disposal in Arizona.",
+      "datePublished": "2026-04-11",
+      "dateModified": "2026-04-11",
+      "author": { "@type": "Organization", "name": "Fill & Haul", "url": "https://fillandhaul.com" },
+      "publisher": { "@type": "Organization", "name": "Fill & Haul", "url": "https://fillandhaul.com" },
+      "mainEntityOfPage": "https://fillandhaul.com/blog/what-items-cannot-be-taken-by-junk-removal/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fillandhaul.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "What Items Cannot Be Taken", "item": "https://fillandhaul.com/blog/what-items-cannot-be-taken-by-junk-removal/" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+
+  <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-200 mt-16 lg:mt-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center space-x-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-brand-500">Home</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li><a href="/blog/" class="hover:text-brand-500">Blog</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li class="text-gray-900 font-medium">Items Junk Removal Cannot Take</li>
+      </ol>
+    </div>
+  </nav>
+
+  <section class="py-12 bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Tips & Guides</span>
+        <span class="text-gray-400 text-sm">7 min read · April 11, 2026</span>
+      </div>
+      <h1 class="text-3xl lg:text-4xl font-bold text-navy-900 mb-4 leading-tight">
+        What Items Junk Removal Companies <span class="text-brand-500">Cannot Take</span> (And Why)
+      </h1>
+      <p class="text-xl text-gray-600 leading-relaxed">
+        Not everything can go on the truck. Understanding which items are restricted — and where to take them instead — saves time and prevents costly surprises on pickup day.
+      </p>
+    </div>
+  </section>
+
+  <article class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-8 mb-4">Why Certain Items Are Restricted</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Junk removal companies operate under federal, state, and local environmental regulations that govern the transport and disposal of hazardous materials. The EPA classifies many common household items as hazardous waste, meaning improper disposal can result in fines, environmental contamination, and legal liability for the hauler.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        In Arizona, the Arizona Department of Environmental Quality (ADEQ) enforces these rules at the state level. Maricopa County provides free Household Hazardous Waste (HHW) events to help residents dispose of restricted materials safely and legally.
+      </p>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">Hazardous Household Chemicals</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">These items are almost universally rejected by junk removal companies:</p>
+      <div class="grid sm:grid-cols-2 gap-4 mb-6">
+        <div class="bg-red-50 border border-red-200 rounded-xl p-4">
+          <h3 class="font-bold text-red-800 mb-2">❌ Not Accepted</h3>
+          <ul class="space-y-1 text-sm text-red-700">
+            <li>• Liquid paint (latex & oil-based)</li>
+            <li>• Paint thinner & solvents</li>
+            <li>• Pesticides & herbicides</li>
+            <li>• Pool chemicals</li>
+            <li>• Automotive fluids (oil, antifreeze, brake fluid)</li>
+            <li>• Propane tanks & gas cylinders</li>
+            <li>• Fertilizers</li>
+            <li>• Bleach & corrosive cleaners</li>
+          </ul>
+        </div>
+        <div class="bg-green-50 border border-green-200 rounded-xl p-4">
+          <h3 class="font-bold text-green-800 mb-2">✓ Usually Accepted</h3>
+          <ul class="space-y-1 text-sm text-green-700">
+            <li>• Dried/empty paint cans</li>
+            <li>• Most furniture & mattresses</li>
+            <li>• Appliances (may have added fee)</li>
+            <li>• Electronics (e-waste fee may apply)</li>
+            <li>• Yard waste & green debris</li>
+            <li>• Construction debris</li>
+            <li>• Clothing & household goods</li>
+            <li>• Metal & scrap</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">Electronics and E-Waste</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Arizona requires that certain electronics be recycled rather than landfilled. Items like CRT televisions and monitors contain lead and mercury. Flat-panel TVs, computers, and smartphones contain rare earth metals that can be recovered through responsible recycling.
+      </p>
+      <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+        <li>CRT TVs and monitors — contain lead, require special recycling</li>
+        <li>Laptops and desktop computers — batteries may need separate handling</li>
+        <li>Printers — may contain ink cartridges classified as hazardous</li>
+        <li>Cell phones and tablets — contain lithium batteries</li>
+      </ul>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Many junk removal companies will take electronics for an additional e-waste recycling fee. Always ask in advance. Alternatively, Best Buy, Staples, and local Goodwill locations in Tempe and the East Valley accept electronics for recycling at no charge.
+      </p>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">Appliances Containing Refrigerants</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Refrigerators, freezers, window air conditioners, and dehumidifiers contain refrigerant gases (Freon or modern equivalents) that are federally regulated under Section 608 of the Clean Air Act. These appliances must be properly degassed by a certified technician before disposal.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Many junk removal companies can handle refrigerator and AC removal but will charge an additional fee to cover proper refrigerant recovery. This is legal, necessary, and protects the environment. Always confirm this capability when booking.
+      </p>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">Medical Waste and Pharmaceuticals</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Used syringes, needles, and other sharps are biohazardous waste and cannot be transported in standard junk removal trucks. Similarly, expired or unused medications cannot be disposed of in regular trash or recycling.
+      </p>
+      <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+        <li>Sharps containers — take to a pharmacy with a sharps program</li>
+        <li>Medications — many Walgreens and CVS locations in Tempe have drug take-back kiosks</li>
+        <li>Biohazardous materials — require a licensed medical waste disposal company</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">Asbestos and Hazardous Building Materials</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Homes built before 1980 may contain asbestos in floor tiles, insulation, roofing materials, and textured ceilings. Asbestos is a known carcinogen and its removal, transport, and disposal are heavily regulated under federal and Arizona law.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        If you suspect asbestos, do not disturb the material. Hire a licensed Arizona asbestos abatement contractor before any junk removal or renovation work begins. ADEQ maintains a list of licensed abatement contractors on its website.
+      </p>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">Where to Dispose of Restricted Items in Arizona</h2>
+      <div class="bg-gray-50 rounded-2xl p-6 mb-8">
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">→</span> <strong>Maricopa County HHW Events:</strong> Free drop-off for paints, chemicals, automotive fluids</li>
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">→</span> <strong>City of Tempe Bulky Waste:</strong> Large items curbside pickup on scheduled days</li>
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">→</span> <strong>Best Buy / Staples:</strong> Electronics recycling at no charge</li>
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">→</span> <strong>Walgreens / CVS:</strong> Medication take-back kiosks</li>
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">→</span> <strong>ADEQ Licensed Contractors:</strong> Asbestos and hazardous building materials</li>
+        </ul>
+      </div>
+
+      <!-- FAQ -->
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-6">Frequently Asked Questions</h2>
+      <div class="space-y-3 mb-10">
+        {faqs.map(faq => (
+          <details class="group bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+            <summary class="flex justify-between items-center p-5 cursor-pointer font-semibold text-navy-900 list-none">
+              {faq.q}
+              <svg class="w-5 h-5 text-brand-500 flex-shrink-0 ml-3 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-5 pb-5 text-gray-600 leading-relaxed">{faq.a}</div>
+          </details>
+        ))}
+      </div>
+
+      <!-- Related Services -->
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-6">Related Services</h2>
+      <div class="grid sm:grid-cols-2 gap-4 mb-10">
+        <a href="/tempe-hauling-services/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">🏠</span>
+          <span class="font-semibold text-navy-900">Tempe Hauling Services</span>
+        </a>
+        <a href="/tempe/debris-removal/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">🧹</span>
+          <span class="font-semibold text-navy-900">Debris Removal Tempe</span>
+        </a>
+        <a href="/tempe/construction-debris-removal/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">🏗️</span>
+          <span class="font-semibold text-navy-900">Construction Debris Removal</span>
+        </a>
+        <a href="/blog/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">📖</span>
+          <span class="font-semibold text-navy-900">Back to Blog</span>
+        </a>
+      </div>
+
+      <!-- Sources -->
+      <div class="border-t border-gray-200 pt-8 mt-8">
+        <h3 class="text-lg font-bold text-navy-900 mb-4">Sources & Further Reading</h3>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li>
+            <a href="https://www.maricopa.gov/625/Household-Hazardous-Waste" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              Maricopa County — Household Hazardous Waste Program
+            </a>
+          </li>
+          <li>
+            <a href="https://www.azdeq.gov/environ/waste/collect/hwcollect.html" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              Arizona Department of Environmental Quality (ADEQ) — Hazardous Waste Collection
+            </a>
+          </li>
+          <li>
+            <a href="https://www.epa.gov/section608" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              U.S. EPA — Section 608: Refrigerant Management Requirements
+            </a>
+          </li>
+          <li>
+            <a href="https://www.epa.gov/asbestos" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              U.S. EPA — Asbestos: Basic Information
+            </a>
+          </li>
+          <li>
+            <a href="https://www.dea.gov/takebackday" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              DEA National Prescription Drug Take-Back Program
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </article>
+
+  <section class="py-16 bg-brand-500">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Questions About What We Can Haul?</h2>
+      <p class="text-white/90 text-lg mb-8">Call us before your appointment — we'll tell you exactly what we can and can't take, and help you find alternatives for restricted items.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/#contact" class="bg-white text-brand-500 font-bold px-8 py-4 rounded-xl hover:bg-gray-50 transition-colors">Get a Free Quote</a>
+        <a href="tel:+16026325794" class="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-brand-600 transition-colors">(602) 632-5794</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Footer />
+</Layout>
