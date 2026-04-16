@@ -1,0 +1,250 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+
+const pageTitle = "Eco-Friendly Junk Disposal in Tempe, Arizona: What Gets Recycled? | Fill & Haul";
+const pageDescription = "How responsible haulers divert items from landfill through donation, recycling, and proper disposal in Tempe, AZ. Find out what happens to your junk after pickup.";
+
+const faqs = [
+  {
+    q: "How do junk removal companies decide what gets donated vs. thrown away?",
+    a: "Reputable companies sort loads at a transfer facility or on-site before disposal. Items in good condition — furniture, electronics, clothing, household goods — are redirected to donation centers. Damaged or unsanitary items go to the landfill or appropriate recycling stream."
+  },
+  {
+    q: "What percentage of junk actually gets recycled?",
+    a: "Responsible haulers can divert 30–60% of a typical residential load from landfill through a combination of donation, metal recycling, e-waste recycling, and material recovery. The exact percentage depends on what you're getting rid of."
+  },
+  {
+    q: "Does Tempe have a recycling program for large items?",
+    a: "The City of Tempe offers a Bulky Waste Collection program for items too large for standard recycling. Residents can schedule a pickup for items like furniture and appliances. Electronics and hazardous materials are handled separately through HHW and e-waste events."
+  },
+  {
+    q: "Can I request that my items be donated rather than thrown away?",
+    a: "Yes. When booking junk removal with Fill & Haul, let us know if you'd prefer your usable items to be donated. We work with local Tempe-area charities including A New Leaf and St. Vincent de Paul."
+  },
+  {
+    q: "Is junk removal better for the environment than using a dumpster?",
+    a: "Generally yes. Dumpsters typically go straight to landfill, while full-service junk removal allows for sorting and diversion. Choosing a company with a documented diversion program makes the biggest environmental difference."
+  }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://fillandhaul.com/blog/eco-friendly-junk-disposal-tempe-arizona/#article",
+      "headline": "Eco-Friendly Junk Disposal in Tempe, Arizona: What Gets Recycled?",
+      "description": "How responsible junk haulers divert materials from landfill through donation and recycling in Tempe, AZ.",
+      "datePublished": "2026-04-14",
+      "dateModified": "2026-04-14",
+      "author": { "@type": "Organization", "name": "Fill & Haul", "url": "https://fillandhaul.com" },
+      "publisher": { "@type": "Organization", "name": "Fill & Haul", "url": "https://fillandhaul.com" },
+      "mainEntityOfPage": "https://fillandhaul.com/blog/eco-friendly-junk-disposal-tempe-arizona/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fillandhaul.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Eco-Friendly Junk Disposal Tempe", "item": "https://fillandhaul.com/blog/eco-friendly-junk-disposal-tempe-arizona/" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+
+  <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-200 mt-16 lg:mt-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center space-x-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-brand-500">Home</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li><a href="/blog/" class="hover:text-brand-500">Blog</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li class="text-gray-900 font-medium">Eco-Friendly Junk Disposal Tempe</li>
+      </ol>
+    </div>
+  </nav>
+
+  <section class="py-12 bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-3 py-1 rounded-full">Environment</span>
+        <span class="text-gray-400 text-sm">6 min read · April 14, 2026</span>
+      </div>
+      <h1 class="text-3xl lg:text-4xl font-bold text-navy-900 mb-4 leading-tight">
+        Eco-Friendly Junk Disposal in Tempe, Arizona: <span class="text-brand-500">What Gets Recycled?</span>
+      </h1>
+      <p class="text-xl text-gray-600 leading-relaxed">
+        Not all junk ends up in a landfill. Here's how responsible haulers sort, divert, and recycle materials — and what you can do to make your cleanout as green as possible.
+      </p>
+    </div>
+  </section>
+
+  <article class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-8 mb-4">Arizona's Waste Diversion Challenge</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Arizona diverts approximately 25% of municipal solid waste from landfills — below the national average of around 32%. Maricopa County, which includes Tempe, processes millions of tons of solid waste annually at facilities like the Butterfield Station Landfill in Eloy, and the Surprise Regional Landfill.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Responsible junk removal companies play a meaningful role in improving these numbers by sorting loads and routing usable materials to donation centers, scrap metal recyclers, e-waste processors, and material recovery facilities — rather than sending everything to a landfill.
+      </p>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">What Happens to Your Junk After Pickup</h2>
+      <div class="space-y-4 mb-8">
+        <div class="flex items-start gap-4 p-4 bg-emerald-50 rounded-xl border border-emerald-200">
+          <span class="text-2xl">♻️</span>
+          <div>
+            <h3 class="font-bold text-navy-900 mb-1">Scrap Metal Recycling</h3>
+            <p class="text-sm text-gray-700">Appliances, metal bed frames, exercise equipment, and other metals are delivered to local scrap yards. Steel, aluminum, and copper are melted down and reused in manufacturing. Metal recycling diverts some of the heaviest items from landfills.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-blue-50 rounded-xl border border-blue-200">
+          <span class="text-2xl">🎁</span>
+          <div>
+            <h3 class="font-bold text-navy-900 mb-1">Donation to Local Charities</h3>
+            <p class="text-sm text-gray-700">Furniture, clothing, kitchenware, books, and working electronics in good condition are delivered to organizations like A New Leaf, St. Vincent de Paul, and Goodwill — all of which have locations in or near Tempe. These organizations resell items or distribute them to families in need.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-purple-50 rounded-xl border border-purple-200">
+          <span class="text-2xl">💻</span>
+          <div>
+            <h3 class="font-bold text-navy-900 mb-1">E-Waste Recycling</h3>
+            <p class="text-sm text-gray-700">Televisions, computers, monitors, and other electronics are routed to certified e-waste processors. Arizona e-waste recyclers recover valuable metals like gold, silver, palladium, and copper while safely managing hazardous components like lead and mercury.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-lime-50 rounded-xl border border-lime-200">
+          <span class="text-2xl">🌱</span>
+          <div>
+            <h3 class="font-bold text-navy-900 mb-1">Yard Waste Composting</h3>
+            <p class="text-sm text-gray-700">Organic yard waste — grass clippings, branches, leaves, and trimmings — can be diverted to composting facilities. Maricopa County and the City of Tempe have programs supporting organic waste diversion, including drop-off locations for green waste.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-orange-50 rounded-xl border border-orange-200">
+          <span class="text-2xl">🏗️</span>
+          <div>
+            <h3 class="font-bold text-navy-900 mb-1">Construction Material Recovery</h3>
+            <p class="text-sm text-gray-700">Clean lumber, drywall, concrete, and roofing materials from renovation projects can often be diverted to material recovery facilities or habitat for humanity ReStores. Concrete is frequently crushed and recycled into road base aggregate.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">How to Make Your Cleanout More Eco-Friendly</h2>
+      <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+        <li>Sort items before pickup: separate donatable goods from true garbage</li>
+        <li>Choose a hauler with a documented diversion or recycling program</li>
+        <li>Drop off electronics at certified e-waste locations rather than putting them in the truck</li>
+        <li>Schedule yard waste separately from household junk to enable composting</li>
+        <li>Sell or donate usable furniture on Facebook Marketplace, OfferUp, or Craigslist before calling a hauler</li>
+        <li>Use Maricopa County's HHW events for paints, chemicals, and batteries</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">Tempe's Recycling and Waste Diversion Resources</h2>
+      <div class="bg-gray-50 rounded-2xl p-6 mb-8">
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">→</span> <strong>City of Tempe Curbside Recycling:</strong> Single-stream recycling collected every other week</li>
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">→</span> <strong>Bulky Waste Collection:</strong> Furniture and large items picked up curbside by appointment</li>
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">→</span> <strong>Maricopa County HHW Events:</strong> Free drop-off for paints, chemicals, and batteries</li>
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">→</span> <strong>Best Buy Electronics Recycling:</strong> Free drop-off for most consumer electronics at Tempe locations</li>
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">→</span> <strong>A New Leaf:</strong> Accepts furniture, appliances, and household goods for donation</li>
+        </ul>
+      </div>
+
+      <!-- FAQ -->
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-6">Frequently Asked Questions</h2>
+      <div class="space-y-3 mb-10">
+        {faqs.map(faq => (
+          <details class="group bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+            <summary class="flex justify-between items-center p-5 cursor-pointer font-semibold text-navy-900 list-none">
+              {faq.q}
+              <svg class="w-5 h-5 text-brand-500 flex-shrink-0 ml-3 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-5 pb-5 text-gray-600 leading-relaxed">{faq.a}</div>
+          </details>
+        ))}
+      </div>
+
+      <!-- Related -->
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-6">Related Services</h2>
+      <div class="grid sm:grid-cols-2 gap-4 mb-10">
+        <a href="/tempe/yard-waste-hauling/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">🌿</span>
+          <span class="font-semibold text-navy-900">Yard Waste Hauling Tempe</span>
+        </a>
+        <a href="/tempe/junk-removal/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">🗑️</span>
+          <span class="font-semibold text-navy-900">Junk Removal Tempe</span>
+        </a>
+        <a href="/blog/what-items-cannot-be-taken-by-junk-removal/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">⚠️</span>
+          <span class="font-semibold text-navy-900">Items Junk Removal Cannot Take</span>
+        </a>
+        <a href="/locations/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">📍</span>
+          <span class="font-semibold text-navy-900">All Service Locations</span>
+        </a>
+      </div>
+
+      <!-- Sources -->
+      <div class="border-t border-gray-200 pt-8 mt-8">
+        <h3 class="text-lg font-bold text-navy-900 mb-4">Sources & Further Reading</h3>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li>
+            <a href="https://www.tempe.gov/government/community-services/environmental-sustainability/recycling" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              City of Tempe — Recycling & Waste Diversion Programs
+            </a>
+          </li>
+          <li>
+            <a href="https://www.maricopa.gov/625/Household-Hazardous-Waste" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              Maricopa County — Household Hazardous Waste Disposal
+            </a>
+          </li>
+          <li>
+            <a href="https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/national-overview-facts-and-figures-materials" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              U.S. EPA — National Overview: Facts and Figures on Materials, Wastes and Recycling
+            </a>
+          </li>
+          <li>
+            <a href="https://www.azdeq.gov/environ/waste/solid/index.html" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              Arizona DEQ — Solid Waste Management
+            </a>
+          </li>
+          <li>
+            <a href="https://www.anewleaf.org/donate/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              A New Leaf — Tempe Donation Guidelines
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </article>
+
+  <section class="py-16 bg-brand-500">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Eco-Friendly Hauling in Tempe</h2>
+      <p class="text-white/90 text-lg mb-8">We sort every load for maximum diversion from landfill. Ask about our donation program when you book.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/#contact" class="bg-white text-brand-500 font-bold px-8 py-4 rounded-xl hover:bg-gray-50 transition-colors">Get a Free Quote</a>
+        <a href="tel:+16026325794" class="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-brand-600 transition-colors">(602) 632-5794</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Footer />
+</Layout>
