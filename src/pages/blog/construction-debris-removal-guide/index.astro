@@ -1,0 +1,254 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+
+const pageTitle = "Construction Debris Removal: A Contractor's Complete Guide | Fill & Haul";
+const pageDescription = "Managing post-construction waste in Arizona. From drywall and lumber to concrete and roofing — how contractors handle job-site cleanup efficiently in Tempe and the East Valley.";
+
+const faqs = [
+  {
+    q: "What types of construction debris can junk removal companies haul?",
+    a: "Most junk removal companies can haul clean construction debris including drywall, lumber, concrete, tile, roofing shingles, carpet, flooring, and general renovation waste. Hazardous materials like asbestos, lead paint, and chemicals require licensed abatement contractors."
+  },
+  {
+    q: "Is construction debris heavier than regular junk?",
+    a: "Yes, significantly. Concrete, tile, brick, and roofing materials are extremely dense. Many junk removal companies charge by weight rather than volume for heavy construction debris, and may have per-ton pricing. Always confirm pricing before scheduling."
+  },
+  {
+    q: "Do I need a dumpster or can a junk removal crew handle my job site?",
+    a: "For single-phase projects or end-of-project cleanups, a junk removal crew is often faster and more cost-effective. For ongoing multi-day projects continuously generating debris, a dumpster rental may be more practical. Many contractors use both: a dumpster during the project and junk removal for the final cleanup."
+  },
+  {
+    q: "Can concrete and brick be recycled in Arizona?",
+    a: "Yes. Clean concrete and brick are commonly recycled at aggregate recycling facilities in the Phoenix metro area. Crushed concrete is reused as road base, fill material, and erosion control. Ask your hauler whether they can route concrete to a recycling facility."
+  },
+  {
+    q: "What Arizona permits are required for construction waste disposal?",
+    a: "For standard residential renovation debris, no special permits are required beyond what your contractor already holds. Commercial demolition projects may require a waste management plan under Maricopa County or City of Tempe regulations. Asbestos and lead abatement always require ADEQ notification."
+  }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://fillandhaul.com/blog/construction-debris-removal-guide/#article",
+      "headline": "Construction Debris Removal: A Contractor's Complete Guide",
+      "description": "How to manage post-construction waste efficiently in Arizona — from job-site cleanup to responsible disposal.",
+      "datePublished": "2026-04-15",
+      "dateModified": "2026-04-15",
+      "author": { "@type": "Organization", "name": "Fill & Haul", "url": "https://fillandhaul.com" },
+      "publisher": { "@type": "Organization", "name": "Fill & Haul", "url": "https://fillandhaul.com" },
+      "mainEntityOfPage": "https://fillandhaul.com/blog/construction-debris-removal-guide/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fillandhaul.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Construction Debris Removal Guide", "item": "https://fillandhaul.com/blog/construction-debris-removal-guide/" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+
+  <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-200 mt-16 lg:mt-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center space-x-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-brand-500">Home</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li><a href="/blog/" class="hover:text-brand-500">Blog</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li class="text-gray-900 font-medium">Construction Debris Removal Guide</li>
+      </ol>
+    </div>
+  </nav>
+
+  <section class="py-12 bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Commercial</span>
+        <span class="text-gray-400 text-sm">8 min read · April 15, 2026</span>
+      </div>
+      <h1 class="text-3xl lg:text-4xl font-bold text-navy-900 mb-4 leading-tight">
+        Construction Debris Removal: <span class="text-brand-500">A Contractor's Complete Guide</span>
+      </h1>
+      <p class="text-xl text-gray-600 leading-relaxed">
+        Post-construction cleanup is a critical — and often underestimated — phase of any project. Here's how Arizona contractors and homeowners can manage construction debris efficiently, safely, and cost-effectively.
+      </p>
+    </div>
+  </section>
+
+  <article class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-8 mb-4">Types of Construction Debris</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Construction and renovation projects generate several distinct categories of waste, each with different handling requirements:</p>
+      <div class="grid sm:grid-cols-2 gap-4 mb-8">
+        <div class="bg-gray-50 rounded-xl p-4 border border-gray-200">
+          <h3 class="font-bold text-navy-900 mb-2">✓ Standard Debris (Haul Away)</h3>
+          <ul class="space-y-1 text-sm text-gray-700">
+            <li>• Drywall / gypsum board</li>
+            <li>• Lumber and wood scraps</li>
+            <li>• Roofing shingles and underlayment</li>
+            <li>• Carpet and pad</li>
+            <li>• Ceramic and porcelain tile</li>
+            <li>• Vinyl and laminate flooring</li>
+            <li>• Cabinets and countertops</li>
+            <li>• Insulation (non-asbestos)</li>
+          </ul>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4 border border-gray-200">
+          <h3 class="font-bold text-navy-900 mb-2">⚠️ Heavy Materials (Special Pricing)</h3>
+          <ul class="space-y-1 text-sm text-gray-700">
+            <li>• Concrete and masonry</li>
+            <li>• Brick and block</li>
+            <li>• Stone and gravel</li>
+            <li>• Soil and dirt</li>
+            <li>• Stucco</li>
+            <li>• Metal framing and ductwork</li>
+            <li>• Windows and glass</li>
+            <li>• Plumbing and electrical fixtures</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">Job-Site Cleanup Best Practices</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Experienced contractors build debris management into their project timeline and budget from day one. Here's the workflow that minimizes cleanup cost and maximizes site safety:
+      </p>
+      <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+        <li><strong>Separate material streams from the start:</strong> Keep lumber, drywall, concrete, and metal in separate piles to enable recycling and simplify disposal</li>
+        <li><strong>Use designated drop zones:</strong> Designate a specific area for debris staging near the truck access point</li>
+        <li><strong>Schedule interim hauls for long projects:</strong> Don't let debris accumulate to the point it becomes a safety hazard or blocks workflow</li>
+        <li><strong>Protect flooring and finished surfaces:</strong> Use drop cloths and barriers before hauling debris through completed areas</li>
+        <li><strong>Document hazardous material locations:</strong> If asbestos or lead paint is suspected, flag it immediately before any demolition</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">Asbestos and Lead Paint: Arizona Rules</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Homes and commercial buildings constructed before 1980 may contain asbestos-containing materials (ACMs) in floor tiles, pipe insulation, ceiling texture, and roofing. The Arizona Department of Environmental Quality (ADEQ) requires that asbestos be surveyed and abated by licensed professionals before demolition or renovation that disturbs the material.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Lead-based paint is similarly regulated under Arizona and EPA rules. Contractors working on pre-1978 housing must follow EPA's Renovation, Repair, and Painting (RRP) Rule requirements, including using certified renovators and specific containment and cleaning procedures.
+      </p>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">Concrete Recycling in the Phoenix Metro</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Clean concrete is one of the most recyclable construction materials. Phoenix-area aggregate recycling facilities crush old concrete into base course aggregate (Class II Base Course), which is used extensively in road construction, parking lots, and drainage projects. Recycling concrete diverts heavy material from already-strained Arizona landfills and reduces the need for quarried aggregate.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        When booking construction debris removal with Fill & Haul, ask specifically about routing clean concrete, brick, and masonry to a recycling facility rather than the landfill.
+      </p>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">Final Cleanup Checklist for Contractors</h2>
+      <div class="bg-gray-50 rounded-2xl p-6 mb-8">
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">✓</span> All loose debris and scraps bagged or piled for removal</li>
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">✓</span> Heavy materials (concrete, brick) staged separately from light debris</li>
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">✓</span> Hazardous materials (asbestos, lead, chemicals) documented and segregated</li>
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">✓</span> Salvageable materials (doors, fixtures, lumber) set aside for donation or resale</li>
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">✓</span> Truck access route cleared and confirmed with hauler</li>
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">✓</span> Interior surfaces protected before debris transport through finished areas</li>
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">✓</span> Final broom sweep and walkthrough completed</li>
+        </ul>
+      </div>
+
+      <!-- FAQ -->
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-6">Frequently Asked Questions</h2>
+      <div class="space-y-3 mb-10">
+        {faqs.map(faq => (
+          <details class="group bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+            <summary class="flex justify-between items-center p-5 cursor-pointer font-semibold text-navy-900 list-none">
+              {faq.q}
+              <svg class="w-5 h-5 text-brand-500 flex-shrink-0 ml-3 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-5 pb-5 text-gray-600 leading-relaxed">{faq.a}</div>
+          </details>
+        ))}
+      </div>
+
+      <!-- Related -->
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-6">Related Services</h2>
+      <div class="grid sm:grid-cols-2 gap-4 mb-10">
+        <a href="/tempe/construction-debris-removal/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">🏗️</span>
+          <span class="font-semibold text-navy-900">Construction Debris Removal Tempe</span>
+        </a>
+        <a href="/phoenix/construction-debris-removal/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">🏗️</span>
+          <span class="font-semibold text-navy-900">Construction Debris Removal Phoenix</span>
+        </a>
+        <a href="/tempe-hauling-services/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">🏠</span>
+          <span class="font-semibold text-navy-900">Tempe Hauling Services</span>
+        </a>
+        <a href="/locations/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">📍</span>
+          <span class="font-semibold text-navy-900">All Service Locations</span>
+        </a>
+      </div>
+
+      <!-- Sources -->
+      <div class="border-t border-gray-200 pt-8 mt-8">
+        <h3 class="text-lg font-bold text-navy-900 mb-4">Sources & Further Reading</h3>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li>
+            <a href="https://www.azdeq.gov/environ/waste/asbestos/index.html" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              Arizona DEQ — Asbestos Regulatory Program
+            </a>
+          </li>
+          <li>
+            <a href="https://www.epa.gov/lead/renovation-repair-and-painting-program" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              U.S. EPA — Renovation, Repair, and Painting (RRP) Rule
+            </a>
+          </li>
+          <li>
+            <a href="https://www.epa.gov/smm/construction-and-demolition-debris" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              U.S. EPA — Construction and Demolition Debris Management
+            </a>
+          </li>
+          <li>
+            <a href="https://www.maricopa.gov/2709/Solid-Waste-Management" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              Maricopa County — Solid Waste Management Division
+            </a>
+          </li>
+          <li>
+            <a href="https://www.azdeq.gov/environ/waste/solid/index.html" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              Arizona DEQ — Solid Waste Program
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </article>
+
+  <section class="py-16 bg-brand-500">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Need Job-Site Cleanup in Tempe or the East Valley?</h2>
+      <p class="text-white/90 text-lg mb-8">We haul construction debris, renovation waste, and heavy materials. Licensed, insured, and same-day available.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/#contact" class="bg-white text-brand-500 font-bold px-8 py-4 rounded-xl hover:bg-gray-50 transition-colors">Get a Free Quote</a>
+        <a href="tel:+16026325794" class="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-brand-600 transition-colors">(602) 632-5794</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Footer />
+</Layout>
