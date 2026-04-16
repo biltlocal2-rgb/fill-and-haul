@@ -1,0 +1,266 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+
+const pageTitle = "How to Prepare for Junk Removal Day: A Complete Checklist | Fill & Haul";
+const pageDescription = "Get the most out of your junk removal appointment with this step-by-step checklist. Learn what to sort, set aside, and expect on pickup day in Tempe, AZ.";
+
+const faqs = [
+  {
+    q: "Do I need to be home for junk removal?",
+    a: "In most cases, yes — someone needs to be present to grant access and approve which items are taken. However, some companies allow curbside or garage pickups if you've arranged it in advance."
+  },
+  {
+    q: "Should I disassemble furniture before junk removal?",
+    a: "No. Most junk removal crews handle disassembly as part of the service. Leave large items intact and let the team break them down as needed."
+  },
+  {
+    q: "How far in advance should I book junk removal?",
+    a: "For same-day or next-day service, call the morning of. For larger jobs like estate cleanouts, booking 2–3 days ahead ensures crew availability and the right truck size."
+  },
+  {
+    q: "What if I'm not sure which items I want removed?",
+    a: "Walk through with the crew when they arrive. A reputable company will give you time to make decisions — nothing gets taken without your explicit approval."
+  },
+  {
+    q: "Can junk removal crews go into my attic or basement?",
+    a: "Yes, most full-service haulers will retrieve items from attics, basements, and tight spaces. Confirm this when booking as it may affect pricing."
+  }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://fillandhaul.com/blog/how-to-prepare-for-junk-removal-day/#article",
+      "headline": "How to Prepare for Junk Removal Day: A Complete Checklist",
+      "description": "Get the most out of your junk removal appointment with this step-by-step checklist.",
+      "datePublished": "2026-04-10",
+      "dateModified": "2026-04-10",
+      "author": { "@type": "Organization", "name": "Fill & Haul", "url": "https://fillandhaul.com" },
+      "publisher": { "@type": "Organization", "name": "Fill & Haul", "url": "https://fillandhaul.com" },
+      "mainEntityOfPage": "https://fillandhaul.com/blog/how-to-prepare-for-junk-removal-day/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fillandhaul.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "How to Prepare for Junk Removal Day", "item": "https://fillandhaul.com/blog/how-to-prepare-for-junk-removal-day/" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-200 mt-16 lg:mt-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center space-x-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-brand-500">Home</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li><a href="/blog/" class="hover:text-brand-500">Blog</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li class="text-gray-900 font-medium">How to Prepare for Junk Removal Day</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="py-12 bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Tips & Guides</span>
+        <span class="text-gray-400 text-sm">6 min read · April 10, 2026</span>
+      </div>
+      <h1 class="text-3xl lg:text-4xl font-bold text-navy-900 mb-4 leading-tight">
+        How to Prepare for <span class="text-brand-500">Junk Removal Day</span>: A Complete Checklist
+      </h1>
+      <p class="text-xl text-gray-600 leading-relaxed">
+        A little prep goes a long way. Here's exactly what to do before your junk removal crew arrives to make the appointment faster, safer, and more affordable.
+      </p>
+    </div>
+  </section>
+
+  <!-- Article Body -->
+  <article class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg max-w-none">
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-8 mb-4">Why Preparation Matters</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Junk removal companies typically charge by volume — the amount of space your items take up in the truck. When your items are accessible, sorted, and ready to go, crews work faster, which often means a lower final price. Disorganized or blocked-in items slow everything down and can add to labor costs.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        In Tempe and the broader Phoenix metro, heat is also a factor. Scheduling your appointment for the morning means crews work in cooler conditions, resulting in more efficient hauls, especially for heavy furniture, appliances, and construction debris.
+      </p>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">Step 1: Walk Through and Identify Everything</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Before your appointment, walk through every room, garage, shed, and outdoor space. Make a mental or written list of every item you want removed. It's helpful to use sticky notes or painter's tape to mark items going out vs. items staying.
+      </p>
+      <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+        <li>Check under beds, in closets, and behind furniture</li>
+        <li>Don't forget the garage — old tools, paint cans, sporting equipment</li>
+        <li>Include outdoor spaces: patio furniture, yard debris, old grills</li>
+        <li>Check the attic and basement if accessible</li>
+        <li>Look for items in storage units that could be cleared at the same time</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">Step 2: Separate Hazardous and Restricted Items</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Most junk removal companies — including Fill & Haul — cannot legally transport certain hazardous materials. Identifying these ahead of time prevents delays on the day of your appointment.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">Items that typically require separate disposal include:</p>
+      <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+        <li>Paint, solvents, and automotive fluids</li>
+        <li>Propane tanks and compressed gas cylinders</li>
+        <li>Batteries (especially lead-acid car batteries)</li>
+        <li>Pesticides, herbicides, and fertilizers</li>
+        <li>Medical waste and sharps</li>
+      </ul>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Maricopa County operates Household Hazardous Waste (HHW) drop-off events throughout the year. Check the county's environmental services website for the current schedule.
+      </p>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">Step 3: Create a Clear Path</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Junk removal crews need to safely move large, heavy items out of your home. Narrow hallways, sharp turns, and blocked doorways slow the process and increase the risk of property damage.
+      </p>
+      <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+        <li>Move vehicles out of the driveway to give the truck direct access</li>
+        <li>Clear walkways and hallways of rugs, toys, or small obstacles</li>
+        <li>If items are in a garage, pull them to the front or center</li>
+        <li>Unlock gates, sheds, or storage rooms the crew will need to access</li>
+        <li>Let your crew know about any fragile flooring, low ceilings, or tight turns</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">Step 4: Set Aside Items to Keep, Donate, or Sell</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Before the crew arrives, make final decisions on items you might want to donate or sell. Once something is on the truck, it's gone. Many reputable junk removal companies — including Fill & Haul — will drop off usable items at local donation centers as part of the haul.
+      </p>
+      <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+        <li>Set donation items in a separate pile or room labeled "Donate"</li>
+        <li>Place high-value items you want to sell in a different area</li>
+        <li>Be ready to make quick decisions — crews work on a schedule</li>
+        <li>Tempe charities like A New Leaf and St. Vincent de Paul accept furniture and household goods</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">Step 5: Know Your Pricing Structure</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Most junk removal companies in Arizona charge by truck volume — typically 1/8 load increments up to a full truck. Before your appointment, estimate how much space your items will take so you're not surprised by the price.
+      </p>
+      <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+        <li>A few boxes and a small couch: roughly 1/8 truck</li>
+        <li>A full room cleanout: roughly 1/4 to 1/2 truck</li>
+        <li>Full garage or estate cleanout: 3/4 to full truck</li>
+        <li>Request an upfront quote before the crew begins loading</li>
+        <li>Ask if heavy item fees apply for appliances, pianos, or safes</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">Day-Of Checklist</h2>
+      <div class="bg-gray-50 rounded-2xl p-6 mb-8">
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">✓</span> Move vehicles from the driveway</li>
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">✓</span> Unlock all gates and access points</li>
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">✓</span> Separate hazardous items (not for pickup)</li>
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">✓</span> Label donation items clearly</li>
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">✓</span> Clear hallways and pathways</li>
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">✓</span> Have a form of payment ready</li>
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">✓</span> Be present to approve what gets taken</li>
+          <li class="flex items-start gap-3"><span class="text-brand-500 font-bold mt-0.5">✓</span> Do a final walk-through after the crew finishes</li>
+        </ul>
+      </div>
+
+      <!-- FAQ -->
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-6">Frequently Asked Questions</h2>
+      <div class="space-y-3 mb-10">
+        {faqs.map(faq => (
+          <details class="group bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+            <summary class="flex justify-between items-center p-5 cursor-pointer font-semibold text-navy-900 list-none">
+              {faq.q}
+              <svg class="w-5 h-5 text-brand-500 flex-shrink-0 ml-3 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-5 pb-5 text-gray-600 leading-relaxed">{faq.a}</div>
+          </details>
+        ))}
+      </div>
+
+      <!-- Related Services -->
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-6">Our Junk Removal Services</h2>
+      <div class="grid sm:grid-cols-2 gap-4 mb-10">
+        <a href="/tempe-hauling-services/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">🏠</span>
+          <span class="font-semibold text-navy-900">Tempe Hauling Services</span>
+        </a>
+        <a href="/tempe/junk-removal/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">🗑️</span>
+          <span class="font-semibold text-navy-900">Junk Removal Tempe</span>
+        </a>
+        <a href="/tempe/furniture-appliance-removal/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">🛋️</span>
+          <span class="font-semibold text-navy-900">Furniture & Appliance Removal</span>
+        </a>
+        <a href="/locations/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">📍</span>
+          <span class="font-semibold text-navy-900">All Service Locations</span>
+        </a>
+      </div>
+
+      <!-- Sources -->
+      <div class="border-t border-gray-200 pt-8 mt-8">
+        <h3 class="text-lg font-bold text-navy-900 mb-4">Sources & Further Reading</h3>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li>
+            <a href="https://www.maricopa.gov/625/Household-Hazardous-Waste" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              Maricopa County — Household Hazardous Waste Disposal Program
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tempe.gov/government/community-services/neighborhood-resources/bulky-waste-collection" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              City of Tempe — Bulky Waste Collection Schedule
+            </a>
+          </li>
+          <li>
+            <a href="https://www.epa.gov/recycle/frequent-questions-recycling" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              U.S. EPA — Frequent Questions About Recycling
+            </a>
+          </li>
+          <li>
+            <a href="https://www.anewleaf.org/donate/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              A New Leaf Tempe — Donation Guidelines
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- CTA -->
+  <section class="py-16 bg-brand-500">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Ready to Schedule Your Pickup?</h2>
+      <p class="text-white/90 text-lg mb-8">Same-day service in Tempe and the East Valley. Get a free, no-obligation quote.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/#contact" class="bg-white text-brand-500 font-bold px-8 py-4 rounded-xl hover:bg-gray-50 transition-colors">Get a Free Quote</a>
+        <a href="tel:+16026325794" class="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-brand-600 transition-colors">(602) 632-5794</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Footer />
+</Layout>
