@@ -1,0 +1,281 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+
+const pageTitle = "Junk Removal vs. Dumpster Rental: Which Is Right for You? | Fill & Haul";
+const pageDescription = "Comparing full-service junk removal to dumpster rental in Arizona? Detailed breakdown of costs, convenience, and best use cases to help you decide.";
+
+const faqs = [
+  {
+    q: "Which is cheaper: junk removal or dumpster rental?",
+    a: "For small to medium cleanouts, junk removal is often cheaper when you factor in dumpster delivery fees, rental period charges, overage fees, and the cost of your own labor. For large, ongoing projects that span multiple days, dumpster rental may offer more value."
+  },
+  {
+    q: "Can I put any type of junk in a dumpster?",
+    a: "No. Dumpster rental companies have the same restrictions on hazardous materials as junk removal companies. Additionally, some dumpster companies prohibit mattresses, tires, and electronics. Always read the rental agreement carefully."
+  },
+  {
+    q: "How long can I keep a rental dumpster?",
+    a: "Most dumpster rentals in Arizona include a 3-7 day rental window. Extended rental periods typically incur daily fees of $5-$20 per day. If your project runs long, costs add up quickly."
+  },
+  {
+    q: "Is junk removal available same-day in Tempe?",
+    a: "Yes. Fill & Haul offers same-day and next-day junk removal service throughout Tempe and the East Valley. Call (602) 632-5794 before noon for same-day scheduling availability."
+  },
+  {
+    q: "Do I need a permit for a dumpster in my driveway in Tempe?",
+    a: "If the dumpster is entirely on your private property (driveway), no permit is typically required. However, if it extends onto the public street or sidewalk, the City of Tempe requires a Right-of-Way permit from the Transportation Department."
+  }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://fillandhaul.com/blog/junk-removal-vs-dumpster-rental/#article",
+      "headline": "Junk Removal vs. Dumpster Rental: Which Is Right for You?",
+      "description": "A detailed comparison of full-service junk removal vs. dumpster rental for Arizona homeowners and contractors.",
+      "datePublished": "2026-04-12",
+      "dateModified": "2026-04-12",
+      "author": { "@type": "Organization", "name": "Fill & Haul", "url": "https://fillandhaul.com" },
+      "publisher": { "@type": "Organization", "name": "Fill & Haul", "url": "https://fillandhaul.com" },
+      "mainEntityOfPage": "https://fillandhaul.com/blog/junk-removal-vs-dumpster-rental/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fillandhaul.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Junk Removal vs. Dumpster Rental", "item": "https://fillandhaul.com/blog/junk-removal-vs-dumpster-rental/" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+
+  <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-200 mt-16 lg:mt-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center space-x-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-brand-500">Home</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li><a href="/blog/" class="hover:text-brand-500">Blog</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li class="text-gray-900 font-medium">Junk Removal vs. Dumpster Rental</li>
+      </ol>
+    </div>
+  </nav>
+
+  <section class="py-12 bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Cost & Pricing</span>
+        <span class="text-gray-400 text-sm">8 min read · April 12, 2026</span>
+      </div>
+      <h1 class="text-3xl lg:text-4xl font-bold text-navy-900 mb-4 leading-tight">
+        Junk Removal vs. <span class="text-brand-500">Dumpster Rental</span>: Which Is Right for You?
+      </h1>
+      <p class="text-xl text-gray-600 leading-relaxed">
+        Two popular options, very different experiences. Here's a head-to-head comparison to help Arizona homeowners and contractors choose the right approach for their project.
+      </p>
+    </div>
+  </section>
+
+  <article class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-8 mb-4">The Core Difference</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Junk removal is a full-service option: a crew arrives, loads your items onto a truck, and hauls everything away — typically in a single appointment. Dumpster rental is a self-service option: a large container is dropped at your property, you fill it at your own pace, and the company picks it up when you're done.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Both have their place. The right choice depends on your timeline, the type and volume of material, your physical ability to load items, and your budget.
+      </p>
+
+      <!-- Comparison Table -->
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">Side-by-Side Comparison</h2>
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="text-left p-3 font-bold text-navy-900 border border-gray-200">Factor</th>
+              <th class="text-left p-3 font-bold text-brand-500 border border-gray-200">Full-Service Junk Removal</th>
+              <th class="text-left p-3 font-bold text-navy-900 border border-gray-200">Dumpster Rental</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white">
+              <td class="p-3 border border-gray-200 font-medium">Labor</td>
+              <td class="p-3 border border-gray-200 text-green-700">✓ Crew does all the work</td>
+              <td class="p-3 border border-gray-200 text-red-700">✗ You load everything yourself</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="p-3 border border-gray-200 font-medium">Speed</td>
+              <td class="p-3 border border-gray-200 text-green-700">✓ Same-day, 1-2 hours typical</td>
+              <td class="p-3 border border-gray-200 text-gray-600">3–7 day rental window</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="p-3 border border-gray-200 font-medium">Best for</td>
+              <td class="p-3 border border-gray-200">Single cleanouts, furniture, appliances</td>
+              <td class="p-3 border border-gray-200">Multi-day renovations, large debris volume</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="p-3 border border-gray-200 font-medium">Pricing</td>
+              <td class="p-3 border border-gray-200">By truck volume (transparent upfront)</td>
+              <td class="p-3 border border-gray-200">Flat rental + weight overage fees</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="p-3 border border-gray-200 font-medium">Space needed</td>
+              <td class="p-3 border border-gray-200 text-green-700">✓ No equipment on property</td>
+              <td class="p-3 border border-gray-200 text-red-700">✗ Large container on driveway</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="p-3 border border-gray-200 font-medium">Permits</td>
+              <td class="p-3 border border-gray-200 text-green-700">✓ None required</td>
+              <td class="p-3 border border-gray-200">May need permit for street placement</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="p-3 border border-gray-200 font-medium">Eco-friendliness</td>
+              <td class="p-3 border border-gray-200 text-green-700">✓ Items sorted for donation/recycling</td>
+              <td class="p-3 border border-gray-200">Most goes directly to landfill</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">When to Choose Full-Service Junk Removal</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Junk removal is the better choice when:</p>
+      <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+        <li>You need the job done today or tomorrow with no physical effort on your part</li>
+        <li>You're clearing furniture, appliances, or household goods that need sorting for donation vs. disposal</li>
+        <li>You live in a neighborhood or HOA community that restricts dumpsters in driveways or on streets</li>
+        <li>The items are heavy, bulky, or require disassembly (sofas, bed frames, workout equipment)</li>
+        <li>You're doing a whole-house cleanout, estate cleanout, or hoarder cleanout</li>
+        <li>You want to minimize the time a container sits in your yard or driveway</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">When to Choose Dumpster Rental</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Dumpster rental is the better choice when:</p>
+      <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+        <li>You're doing a multi-day renovation project that generates debris continuously</li>
+        <li>You have high-volume, heavy material like roofing shingles or concrete that exceeds a single truck load</li>
+        <li>You want to work on your own schedule and fill the container over several days</li>
+        <li>You have the physical ability and manpower to load everything yourself</li>
+        <li>Your project is generating material that doesn't need sorting (pure construction debris)</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-4">Cost Breakdown: Arizona Averages (2026)</h2>
+      <div class="grid sm:grid-cols-2 gap-6 mb-8">
+        <div class="bg-brand-50 rounded-2xl p-6 border border-brand-200">
+          <h3 class="font-bold text-brand-700 mb-3">Junk Removal Pricing</h3>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li>1/8 truck load: <strong>$75 – $120</strong></li>
+            <li>1/4 truck load: <strong>$125 – $200</strong></li>
+            <li>1/2 truck load: <strong>$200 – $350</strong></li>
+            <li>Full truck load: <strong>$400 – $600</strong></li>
+            <li class="text-gray-500 text-xs pt-2">Crew labor included. No overage fees.</li>
+          </ul>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+          <h3 class="font-bold text-navy-900 mb-3">Dumpster Rental Pricing</h3>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li>10-yard dumpster: <strong>$275 – $400</strong></li>
+            <li>15-yard dumpster: <strong>$325 – $475</strong></li>
+            <li>20-yard dumpster: <strong>$375 – $550</strong></li>
+            <li>30-yard dumpster: <strong>$450 – $700</strong></li>
+            <li class="text-gray-500 text-xs pt-2">Labor not included. Overage fees apply.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-6">Frequently Asked Questions</h2>
+      <div class="space-y-3 mb-10">
+        {faqs.map(faq => (
+          <details class="group bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+            <summary class="flex justify-between items-center p-5 cursor-pointer font-semibold text-navy-900 list-none">
+              {faq.q}
+              <svg class="w-5 h-5 text-brand-500 flex-shrink-0 ml-3 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-5 pb-5 text-gray-600 leading-relaxed">{faq.a}</div>
+          </details>
+        ))}
+      </div>
+
+      <!-- Related -->
+      <h2 class="text-2xl font-bold text-navy-900 mt-10 mb-6">Related Services</h2>
+      <div class="grid sm:grid-cols-2 gap-4 mb-10">
+        <a href="/tempe/junk-removal/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">🗑️</span>
+          <span class="font-semibold text-navy-900">Junk Removal Tempe</span>
+        </a>
+        <a href="/tempe/construction-debris-removal/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">🏗️</span>
+          <span class="font-semibold text-navy-900">Construction Debris Removal</span>
+        </a>
+        <a href="/blog/how-much-does-junk-removal-cost-arizona/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">💰</span>
+          <span class="font-semibold text-navy-900">Junk Removal Cost Guide Arizona</span>
+        </a>
+        <a href="/locations/" class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-brand-400 hover:bg-brand-50 transition-colors">
+          <span class="text-brand-500 text-xl">📍</span>
+          <span class="font-semibold text-navy-900">All Service Locations</span>
+        </a>
+      </div>
+
+      <!-- Sources -->
+      <div class="border-t border-gray-200 pt-8 mt-8">
+        <h3 class="text-lg font-bold text-navy-900 mb-4">Sources & Further Reading</h3>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li>
+            <a href="https://www.tempe.gov/government/public-works/transportation/right-of-way-permits" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              City of Tempe — Right-of-Way Permits
+            </a>
+          </li>
+          <li>
+            <a href="https://www.epa.gov/smm/sustainable-materials-management-non-hazardous-materials-and-waste-management-hierarchy" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              U.S. EPA — Sustainable Materials Management Hierarchy
+            </a>
+          </li>
+          <li>
+            <a href="https://www.angi.com/articles/how-much-does-dumpster-rental-cost.htm" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              Angi — Average Dumpster Rental Costs by Size (2025)
+            </a>
+          </li>
+          <li>
+            <a href="https://www.homeadvisor.com/cost/environmental-safety/junk-removal/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline">
+              HomeAdvisor — Junk Removal Cost Guide
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </article>
+
+  <section class="py-16 bg-brand-500">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Skip the Dumpster. Let Us Handle It.</h2>
+      <p class="text-white/90 text-lg mb-8">Full-service junk removal in Tempe. We load, haul, and sort. Same-day available.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/#contact" class="bg-white text-brand-500 font-bold px-8 py-4 rounded-xl hover:bg-gray-50 transition-colors">Get a Free Quote</a>
+        <a href="tel:+16026325794" class="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-brand-600 transition-colors">(602) 632-5794</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Footer />
+</Layout>
