@@ -1,0 +1,217 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+
+const pageTitle = "Furniture & Appliance Removal in Gilbert, AZ | Fill & Haul";
+const pageDescription = "Professional furniture and appliance removal in Gilbert, AZ. We haul away sofas, beds, refrigerators, washers, dryers, and more. Same-day service. Call (602) 632-5794.";
+
+const faqs = [
+  { q: "What furniture and appliances do you remove in Gilbert?", a: "We remove all types of furniture including sofas, sectionals, beds, mattresses, dressers, dining sets, and office furniture. For appliances, we haul away refrigerators, freezers, washers, dryers, dishwashers, stoves, and more throughout Gilbert." },
+  { q: "Do you offer same-day furniture pickup in Gilbert?", a: "Yes! We offer same-day and next-day furniture and appliance removal throughout Gilbert including Val Vista Lakes, Power Ranch, Morrison Ranch, Agritopia, Finley Farms, and Higley. Call (602) 632-5794." },
+  { q: "Can you remove heavy appliances from upstairs or tight spaces in Gilbert?", a: "Absolutely. Our crew handles heavy appliance removal from any floor or tight space throughout Gilbert. We bring the proper equipment and experience to do it safely." },
+  { q: "Do you donate or recycle furniture and appliances from Gilbert homes?", a: "Yes. Fill & Haul prioritizes eco-friendly disposal. We donate usable furniture and appliances to Gilbert-area charities and recycle appliances responsibly." },
+  { q: "How much does furniture and appliance removal cost in Gilbert?", a: "Pricing depends on the number and size of items. Call (602) 632-5794 for a free estimate. We offer transparent flat-rate pricing with no hidden fees for all Gilbert pickups." }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Furniture & Appliance Removal in Gilbert, AZ",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Fill & Haul",
+        "telephone": "+16026325794",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tempe",
+          "addressRegion": "AZ",
+          "postalCode": "85281",
+          "addressCountry": "US"
+        }
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Gilbert",
+        "containedInPlace": { "@type": "State", "name": "Arizona" }
+      },
+      "description": "Professional furniture and appliance removal in Gilbert, AZ. Old sofas, beds, refrigerators, washers, and more removed with eco-friendly disposal."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fillandhaul.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Gilbert Hauling Services", "item": "https://fillandhaul.com/gilbert-hauling-services/" },
+        { "@type": "ListItem", "position": 3, "name": "Furniture & Appliance Removal", "item": "https://fillandhaul.com/gilbert/furniture-appliance-removal/" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+
+  <!-- Breadcrumb -->
+  <nav class="bg-gray-50 border-b border-gray-200 mt-16 lg:mt-20" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center space-x-2 text-sm text-navy-500">
+        <li><a href="/" class="hover:text-brand-500 transition">Home</a></li>
+        <li class="text-gray-400">/</li>
+        <li><a href="/gilbert-hauling-services/" class="hover:text-brand-500 transition">Gilbert Hauling Services</a></li>
+        <li class="text-gray-400">/</li>
+        <li class="text-navy-800 font-medium">Furniture & Appliance Removal</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative py-20 lg:py-28 text-white" style="background: linear-gradient(135deg, #102a43 0%, #243b53 60%, #334e68 100%)">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-brand-400 font-semibold text-sm uppercase tracking-widest mb-4">Gilbert, AZ</p>
+      <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+        Furniture & Appliance Removal<br/>
+        <span class="text-brand-400">in Gilbert, AZ</span>
+      </h1>
+      <p class="text-white/80 text-xl mb-10 max-w-2xl mx-auto">
+        We haul away old sofas, beds, refrigerators, washers, dryers, and more from your Gilbert home. Eco-friendly donation and recycling whenever possible.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+16026325794" class="inline-flex items-center justify-center bg-white text-brand-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition text-lg">(602) 632-5794</a>
+        <a href="/#contact" class="inline-flex items-center justify-center border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition text-lg">Get a Free Estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Remove -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-4 text-center">Furniture & Appliances We Remove in Gilbert</h2>
+      <p class="text-navy-600 text-center mb-10 max-w-2xl mx-auto">Whether you're upgrading, downsizing, or clearing out, we handle all pickup and disposal in Gilbert.</p>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {[
+          "Sofas, sectionals, and loveseats",
+          "Beds, mattresses, and bed frames",
+          "Dressers, armoires, and wardrobes",
+          "Dining tables and chairs",
+          "Refrigerators and freezers",
+          "Washers and dryers",
+          "Dishwashers and stoves",
+          "Televisions and electronics",
+          "Office furniture and desks",
+          "Hot tubs and outdoor furniture"
+        ].map(item => (
+          <div class="flex items-center gap-3 bg-gray-50 rounded-xl px-5 py-4 border border-gray-100">
+            <svg class="w-5 h-5 text-brand-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            <span class="text-navy-800 font-medium">{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Signs You Need This -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">Signs You Need Furniture or Appliance Removal in Gilbert</h2>
+      <ul class="space-y-4">
+        {[
+          "You bought new furniture and need the old pieces hauled away from your Gilbert home",
+          "Your garage or spare room is packed with old appliances and furniture you can't move alone",
+          "You're moving in or out of a Gilbert home and need items removed quickly",
+          "You have a broken appliance that regular trash pickup won't accept",
+          "You're clearing out an estate or rental property in Gilbert and need full removal"
+        ].map(sign => (
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-brand-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span class="text-navy-700 text-lg">{sign}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-4 text-center">How Gilbert Furniture & Appliance Removal Works</h2>
+      <p class="text-navy-600 text-center mb-10">Fast, hassle-free pickup from your Gilbert home.</p>
+      <div class="space-y-6">
+        {[
+          { step: "1", title: "Schedule Your Pickup", desc: "Call (602) 632-5794 or use our online form. We confirm a same-day or next-day appointment at your Gilbert address." },
+          { step: "2", title: "We Load Everything", desc: "Our crew arrives on time and removes all items — no dragging to the curb required. We work from any room in your home." },
+          { step: "3", title: "Eco-Friendly Disposal", desc: "We donate working furniture and appliances to Gilbert-area charities when possible. Everything else is recycled responsibly." }
+        ].map(s => (
+          <div class="flex items-start gap-5">
+            <div class="w-12 h-12 bg-brand-500 rounded-full flex items-center justify-center text-white font-extrabold text-xl flex-shrink-0">{s.step}</div>
+            <div>
+              <h3 class="font-heading text-xl font-bold text-navy-900 mb-1">{s.title}</h3>
+              <p class="text-navy-600">{s.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-4">Gilbert Neighborhoods We Serve</h2>
+      <p class="text-navy-600 mb-6">We pick up furniture and appliances throughout all of Gilbert including <strong>Val Vista Lakes, Finley Farms, Power Ranch, Morrison Ranch, Agritopia,</strong> and <strong>Higley</strong>. Zip codes: 85233, 85234, 85295, 85296, 85297, 85298.</p>
+      <p class="text-navy-600">Also serving <a href="/chandler-hauling-services/" class="text-brand-500 hover:underline">Chandler</a>, <a href="/mesa-hauling-services/" class="text-brand-500 hover:underline">Mesa</a>, <a href="/tempe-hauling-services/" class="text-brand-500 hover:underline">Tempe</a>, and <a href="/phoenix-hauling-services/" class="text-brand-500 hover:underline">Phoenix</a>.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">Gilbert Furniture & Appliance Removal FAQ</h2>
+      <div class="space-y-4">
+        {faqs.map(f => (
+          <details class="group bg-white rounded-2xl border border-navy-100 overflow-hidden">
+            <summary class="list-none flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-navy-900">{f.q}<svg class="w-5 h-5 text-brand-500 flex-shrink-0 ml-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+            <div class="px-6 pb-4 text-navy-500 text-sm">{f.a}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading text-3xl font-extrabold text-navy-900 mb-8 text-center">More Gilbert Hauling Services</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {[{ title: 'Gilbert Hauling Services', href: '/gilbert-hauling-services/' }, { title: 'Junk Removal', href: '/gilbert/junk-removal/' }, { title: 'Debris Removal', href: '/gilbert/debris-removal/' }, { title: 'Construction Debris Removal', href: '/gilbert/construction-debris-removal/' }].map(s => (
+          <a href={s.href} class="bg-gray-50 border border-navy-100 rounded-xl p-4 text-center hover:border-brand-300 hover:shadow-sm transition"><span class="font-semibold text-navy-800 text-sm">{s.title}</span></a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-brand-500">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-heading text-3xl font-extrabold text-white mb-4">Schedule Furniture & Appliance Removal in Gilbert Today</h2>
+      <p class="text-white/90 text-lg mb-8">Fast, eco-friendly pickup from your Gilbert home or business. Same-day service available.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+16026325794" class="inline-flex items-center justify-center bg-white text-brand-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition text-lg">(602) 632-5794</a>
+        <a href="/#contact" class="inline-flex items-center justify-center border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition text-lg">Get a Free Estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+</Layout>
