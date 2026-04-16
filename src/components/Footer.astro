@@ -3,8 +3,8 @@ const year = new Date().getFullYear();
 ---
 
 <footer class="bg-navy-900 text-navy-300 py-12">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid md:grid-cols-3 gap-8 mb-8">
+  <div class="max-w-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
       <!-- Brand -->
       <div>
         <a href="/" class="flex items-center space-x-2 mb-4">
@@ -32,10 +32,27 @@ const year = new Date().getFullYear();
       <div>
         <h4 class="font-semibold text-white mb-4">Quick Links</h4>
         <ul class="space-y-2 text-sm">
-          <li><a href="/tempe-hauling-services/" class="hover:text-white transition">Services</a></li>
-          <li><a href="/tempe/junk-removal/" class="hover:text-white transition">Junk Removal</a></li>
-          <li><a href="/tempe/debris-removal/" class="hover:text-white transition">Debris Removal</a></li>
-          <li><a href="/#contact" class="hover:text-white transition">Get Estimate</a></li>
+          <li><a href="/tempe-hauling-services/" class="hover:text-brand-400 transition">Tempe Hauling Services</a></li>
+          <li><a href="/tempe/junk-removal/" class="hover:text-brand-400 transition">Tempe Junk Removal</a></li>
+          <li><a href="/tempe/debris-removal/" class="hover:text-brand-400 transition">Tempe Debris Removal</a></li>
+          <li><a href="/#contact" class="hover:text-brand-400 transition">Get a Free Estimate</a></li>
+          <li><a href="/locations/" class="hover:text-brand-400 transition">All Service Locations</a></li>
+        </ul>
+      </div>
+
+      <!-- Locations We Serve -->
+      <div>
+        <h4 class="font-semibold text-white mb-4">
+          <a href="/#areas" class="hover:text-brand-400 transition">Locations We Serve</a>
+        </h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/phoenix-hauling-services/" class="hover:text-brand-400 transition">Phoenix</a></li>
+          <li><a href="/scottsdale-hauling-services/" class="hover:text-brand-400 transition">Scottsdale</a></li>
+          <li><a href="/tempe-hauling-services/" class="hover:text-brand-400 transition">Tempe</a></li>
+          <li><a href="/mesa-hauling-services/" class="hover:text-brand-400 transition">Mesa</a></li>
+          <li><a href="/chandler-hauling-services/" class="hover:text-brand-400 transition">Chandler</a></li>
+          <li><a href="/gilbert-hauling-services/" class="hover:text-brand-400 transition">Gilbert</a></li>
+          <li><a href="/locations/" class="hover:text-brand-400 transition font-medium text-brand-400">View All &rarr;</a></li>
         </ul>
       </div>
 
@@ -43,19 +60,30 @@ const year = new Date().getFullYear();
       <div>
         <h4 class="font-semibold text-white mb-4">Contact</h4>
         <ul class="space-y-2 text-sm">
-          <li>Tempe, AZ &mdash; East Valley</li>
-          <li><a href="tel:+16026325794" class="hover:text-white transition">(602) 632-5794</a></li>
+          <li>
+            <a href="tel:+16026325794" class="hover:text-brand-400 transition flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              (602) 632-5794
+            </a>
+          </li>
+          <li>
+            <span class="flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              Tempe, AZ &amp; East Valley
+            </span>
+          </li>
+          <li>
+            <a href="/#contact" class="hover:text-brand-400 transition flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              Get a Free Estimate
+            </a>
+          </li>
         </ul>
       </div>
     </div>
 
-    <div class="border-t border-navy-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-      <p class="text-sm">&copy; {year} Fill &amp; Haul. All rights reserved.</p>
-      <div class="flex items-center gap-4 text-sm text-navy-500">
-        <span>Proudly serving the East Valley</span>
-        <span class="text-navy-700">|</span>
-        <a href="/sitemap-index.xml" class="hover:text-white transition">Sitemap</a>
-      </div>
+    <div class="border-t border-navy-700 pt-6 text-center text-sm">
+      <p>&copy; {year} Fill &amp; Haul. All rights reserved. Serving Tempe, Phoenix, Scottsdale, Mesa, Chandler, Gilbert &amp; the East Valley.</p>
     </div>
   </div>
 </footer>
