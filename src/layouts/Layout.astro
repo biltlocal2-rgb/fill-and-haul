@@ -2,14 +2,17 @@
 interface Props {
   title: string;
   description?: string;
+  ogImage?: string;
 }
 
 const {
   title,
-  description = 'Fast, affordable junk removal and hauling services in Phoenix and Maricopa County. Serving homeowners, realtors, and property managers. Get a free estimate today!',
+  description = 'Fast, affordable junk removal and hauling services in Tempe and Maricopa County. Serving homeowners, realtors, and property managers. Get a free estimate today!',
+  ogImage = '/images/hero-garage-junk.jpg',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, 'https://fillandhaul.com');
+const ogImageURL = new URL(ogImage, 'https://fillandhaul.com');
 ---
 
 <!doctype html>
@@ -19,8 +22,18 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://fillandhaul.com');
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="keywords" content="junk removal Phoenix, hauling services Maricopa County, junk hauling Arizona, property cleanout Phoenix, furniture removal, appliance hauling, Fill and Haul" />
+    <meta name="keywords" content="junk removal Tempe, hauling services Maricopa County, junk hauling Arizona, property cleanout Tempe, furniture removal, appliance hauling, Fill and Haul" />
     <link rel="canonical" href={canonicalURL} />
+
+    <!-- Theme & Mobile -->
+    <meta name="theme-color" content="#f97316" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- Geo / Local SEO -->
+    <meta name="geo.region" content="US-AZ" />
+    <meta name="geo.placename" content="Tempe, Arizona" />
+    <meta name="geo.position" content="33.4255;-111.9400" />
+    <meta name="ICBM" content="33.4255, -111.9400" />
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
@@ -28,9 +41,23 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://fillandhaul.com');
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Fill &amp; Haul" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Sitemap autodiscovery -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -42,10 +69,11 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://fillandhaul.com');
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Fill & Haul",
-      "description": "Professional junk removal and hauling services in Phoenix and Maricopa County, Arizona.",
+      "description": "Professional junk removal and hauling services in Tempe and Maricopa County, Arizona.",
       "url": "https://fillandhaul.com",
       "telephone": "+16026325794",
       "priceRange": "$150-$1000+",
+      "image": "https://fillandhaul.com/images/hero-garage-junk.jpg",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -60,9 +88,19 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://fillandhaul.com');
           "closes": "14:00"
         }
       ],
-      "areaServed": { "@type": "AdministrativeArea", "name": "Maricopa County, Arizona" },
-      "serviceType": ["Junk Removal", "Hauling", "Property Cleanout", "Debris Removal"],
-      "address": { "@type": "PostalAddress", "addressLocality": "Phoenix", "addressRegion": "AZ", "addressCountry": "US" }
+      "areaServed": [
+        { "@type": "City", "name": "Tempe, Arizona" },
+        { "@type": "City", "name": "Phoenix, Arizona" },
+        { "@type": "City", "name": "Scottsdale, Arizona" },
+        { "@type": "City", "name": "Mesa, Arizona" },
+        { "@type": "City", "name": "Chandler, Arizona" },
+        { "@type": "City", "name": "Gilbert, Arizona" }
+      ],
+      "serviceType": ["Junk Removal", "Hauling", "Property Cleanout", "Debris Removal", "Furniture Removal", "Appliance Removal", "Yard Waste Hauling", "Construction Debris Removal"],
+      "address": { "@type": "PostalAddress", "streetAddress": "Tempe", "addressLocality": "Tempe", "addressRegion": "AZ", "postalCode": "85281", "addressCountry": "US" },
+      "sameAs": [
+        "https://fillandhaul.com"
+      ]
     })} />
   </head>
   <body class="bg-white text-navy-900 antialiased">
