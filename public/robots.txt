@@ -1,4 +1,57 @@
+# Fill & Haul - robots.txt
+# Optimized for AEO, AIO, GEO, and traditional SEO crawling
+
+# Allow all standard crawlers
 User-agent: *
 Allow: /
 
+# Google (Search + AI Overview)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Common Crawl (used by many AI training sets)
+User-agent: CCBot
+Allow: /
+
+# Bing / Copilot
+User-agent: Bingbot
+Allow: /
+
+User-agent: msnbot
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+# Sitemaps
 Sitemap: https://fillandhaul.com/sitemap-index.xml
+Sitemap: https://fillandhaul.com/sitemap-0.xml
